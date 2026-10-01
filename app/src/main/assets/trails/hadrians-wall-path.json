@@ -1,0 +1,199 @@
+{
+  "id": "hadrians-wall-path",
+  "name": "Hadrian's Wall Path",
+  "route": "Wallsend to Bowness-on-Solway",
+  "startLabel": "Wallsend",
+  "endLabel": "Bowness",
+  "colour": "#4a4a4a",
+  "subtitle": "Wallsend (Segedunum), Newcastle, coast to coast along the Wall to Bowness-on-Solway",
+  "footer": "Route and section structure from the official National Trail route pages (nationaltrail.co.uk); 84 miles in total. The AD122 bus follows the Wall in the central section in season. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Wallsend (Segedunum)",
+      "milesFromStart": 0.0,
+      "note": "Metro",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newcastle Quayside",
+      "milesFromStart": 4.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newburn",
+      "milesFromStart": 10.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Heddon-on-the-Wall",
+      "milesFromStart": 15.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Harlow Hill",
+      "milesFromStart": 20.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Port Gate (A68)",
+      "milesFromStart": 24.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chollerford",
+      "milesFromStart": 30.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Limestone Corner",
+      "milesFromStart": 33.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Housesteads Fort",
+      "milesFromStart": 39.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Steel Rigg (Once Brewed)",
+      "milesFromStart": 42.0,
+      "note": "AD122 bus",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Walltown Crags",
+      "milesFromStart": 47.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Greenhead",
+      "milesFromStart": 48.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gilsland",
+      "milesFromStart": 51.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Birdoswald Fort",
+      "milesFromStart": 53.0,
+      "note": "AD122 bus",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Banks",
+      "milesFromStart": 56.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Walton",
+      "milesFromStart": 58.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Crosby-on-Eden",
+      "milesFromStart": 63.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Carlisle",
+      "milesFromStart": 69.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Burgh by Sands",
+      "milesFromStart": 74.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Drumburgh",
+      "milesFromStart": 78.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Port Carlisle",
+      "milesFromStart": 82.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bowness-on-Solway",
+      "milesFromStart": 84.0,
+      "note": "finish; buses",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Wallsend (Segedunum)",
+      "toLandmark": "Heddon-on-the-Wall",
+      "note": "Flat, riverside through Newcastle"
+    },
+    {
+      "fromLandmark": "Heddon-on-the-Wall",
+      "toLandmark": "Chollerford",
+      "note": "Farmland, gently rolling"
+    },
+    {
+      "fromLandmark": "Chollerford",
+      "toLandmark": "Steel Rigg (Once Brewed)",
+      "note": "Wall country; switchbacks begin"
+    },
+    {
+      "fromLandmark": "Steel Rigg (Once Brewed)",
+      "toLandmark": "Birdoswald Fort",
+      "note": "Short but the steepest crags"
+    },
+    {
+      "fromLandmark": "Birdoswald Fort",
+      "toLandmark": "Carlisle",
+      "note": "Gentle"
+    },
+    {
+      "fromLandmark": "Carlisle",
+      "toLandmark": "Bowness-on-Solway",
+      "note": "Flat; check tides on the marsh"
+    }
+  ],
+  "gpxAsset": null
+}

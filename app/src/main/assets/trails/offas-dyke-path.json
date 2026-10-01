@@ -1,0 +1,388 @@
+{
+  "id": "offas-dyke-path",
+  "name": "Offa's Dyke Path",
+  "route": "Sedbury Cliffs to Prestatyn",
+  "startLabel": "Sedbury",
+  "endLabel": "Prestatyn",
+  "colour": "#1f5f5b",
+  "subtitle": "Sedbury Cliffs near Chepstow along the Wales–England border to Prestatyn",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). Lots of stiles and steep climbs; the Clun hills north of Knighton are the toughest stretch. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Sedbury Cliffs",
+      "milesFromStart": 0.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chepstow",
+      "milesFromStart": 1.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Devil's Pulpit (above Tintern)",
+      "milesFromStart": 6.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Brockweir",
+      "milesFromStart": 8.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Redbrook",
+      "milesFromStart": 13.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "The Kymin",
+      "milesFromStart": 16.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Monmouth",
+      "milesFromStart": 17.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "White Castle",
+      "milesFromStart": 24.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llantilio Crossenny",
+      "milesFromStart": 27.0,
+      "note": "taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llangattock Lingoed",
+      "milesFromStart": 30.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pandy",
+      "milesFromStart": 34.25,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hatterrall Hill",
+      "milesFromStart": 36.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hatterrall Ridge (Longtown path)",
+      "milesFromStart": 40.0,
+      "note": "descend 1.5 mi to Longtown; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hay Bluff",
+      "milesFromStart": 45.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hay-on-Wye",
+      "milesFromStart": 51.75,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newchurch",
+      "milesFromStart": 57.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gladestry",
+      "milesFromStart": 60.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hergest Ridge",
+      "milesFromStart": 63.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kington",
+      "milesFromStart": 66.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rushock Hill",
+      "milesFromStart": 70.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pilleth",
+      "milesFromStart": 74.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Knighton",
+      "milesFromStart": 80.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llanfair Hill",
+      "milesFromStart": 84.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newcastle on Clun",
+      "milesFromStart": 88.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Churchtown",
+      "milesFromStart": 92.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Brompton Crossroads",
+      "milesFromStart": 95.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Montgomery",
+      "milesFromStart": 97.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Beacon Ring",
+      "milesFromStart": 103.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Buttington Bridge (Welshpool)",
+      "milesFromStart": 107.3,
+      "note": "station at Welshpool",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Four Crosses",
+      "milesFromStart": 113.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llanymynech",
+      "milesFromStart": 117.8,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Trefonen",
+      "milesFromStart": 123.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Oswestry Old Racecourse",
+      "milesFromStart": 126.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chirk Mill",
+      "milesFromStart": 131.8,
+      "note": "Chirk station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Froncysyllte (Pontcysyllte Aqueduct)",
+      "milesFromStart": 136.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "World's End",
+      "milesFromStart": 142.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llandegla",
+      "milesFromStart": 147.3,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clwyd Gate",
+      "milesFromStart": 152.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Moel Famau (Jubilee Tower)",
+      "milesFromStart": 156.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Moel Arthur",
+      "milesFromStart": 159.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llangwyfan (Penycloddiau car park)",
+      "milesFromStart": 161.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bodfari",
+      "milesFromStart": 164.8,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rhuallt",
+      "milesFromStart": 169.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Prestatyn",
+      "milesFromStart": 176.8,
+      "note": "finish; station",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Sedbury Cliffs",
+      "toLandmark": "Redbrook",
+      "note": "Wye valley woods"
+    },
+    {
+      "fromLandmark": "Redbrook",
+      "toLandmark": "Llantilio Crossenny",
+      "note": "Monmouth at 4 mi; farmland and stiles"
+    },
+    {
+      "fromLandmark": "Llantilio Crossenny",
+      "toLandmark": "Hatterrall Ridge (Longtown path)",
+      "note": "Onto the Black Mountains ridge; +1.5 mi descent"
+    },
+    {
+      "fromLandmark": "Hatterrall Ridge (Longtown path)",
+      "toLandmark": "Hay-on-Wye",
+      "note": "High ridge then long descent"
+    },
+    {
+      "fromLandmark": "Hay-on-Wye",
+      "toLandmark": "Kington",
+      "note": "Hergest Ridge"
+    },
+    {
+      "fromLandmark": "Kington",
+      "toLandmark": "Knighton",
+      "note": null
+    },
+    {
+      "fromLandmark": "Knighton",
+      "toLandmark": "Brompton Crossroads",
+      "note": "Toughest: Clun switchback; can split at Newcastle on Clun (8 mi)"
+    },
+    {
+      "fromLandmark": "Brompton Crossroads",
+      "toLandmark": "Buttington Bridge (Welshpool)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Buttington Bridge (Welshpool)",
+      "toLandmark": "Llanymynech",
+      "note": "Flat canal and riverside"
+    },
+    {
+      "fromLandmark": "Llanymynech",
+      "toLandmark": "Chirk Mill",
+      "note": null
+    },
+    {
+      "fromLandmark": "Chirk Mill",
+      "toLandmark": "Llandegla",
+      "note": "Pontcysyllte Aqueduct, Eglwyseg scree path"
+    },
+    {
+      "fromLandmark": "Llandegla",
+      "toLandmark": "Llangwyfan (Penycloddiau car park)",
+      "note": "Clwydian hilltops"
+    },
+    {
+      "fromLandmark": "Llangwyfan (Penycloddiau car park)",
+      "toLandmark": "Prestatyn",
+      "note": "Bodfari at 3.3 mi"
+    }
+  ],
+  "gpxAsset": null
+}

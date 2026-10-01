@@ -1,0 +1,92 @@
+{
+  "stageLogs": [
+    {
+      "trailId": "thames-path",
+      "stageIndex": 0,
+      "dateWalked": "2026-06-17",
+      "steps": 41131,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 1,
+      "dateWalked": "2026-07-01",
+      "steps": 35676,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 2,
+      "dateWalked": "2026-07-09",
+      "steps": 28793,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 3,
+      "dateWalked": "2026-07-13",
+      "steps": 23150,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 4,
+      "dateWalked": "2026-07-15",
+      "steps": 28628,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 5,
+      "dateWalked": "2026-08-17",
+      "steps": 21164,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 6,
+      "dateWalked": "2026-09-01",
+      "steps": 31021,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 7,
+      "dateWalked": "2026-09-08",
+      "steps": 48392,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 8,
+      "dateWalked": "2026-09-09",
+      "steps": 31380,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 9,
+      "dateWalked": "2026-09-17",
+      "steps": 40185,
+      "notes": null,
+      "actualMiles": null
+    },
+    {
+      "trailId": "thames-path",
+      "stageIndex": 10,
+      "dateWalked": "2026-09-18",
+      "steps": 37064,
+      "notes": null,
+      "actualMiles": null
+    }
+  ]
+}

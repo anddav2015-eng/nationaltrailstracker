@@ -1,0 +1,240 @@
+{
+  "id": "glyndwrs-way",
+  "name": "Glyndŵr's Way",
+  "route": "Knighton to Welshpool",
+  "startLabel": "Knighton",
+  "endLabel": "Welshpool",
+  "colour": "#6b2a2a",
+  "subtitle": "Knighton through the hills of mid-Wales via Machynlleth to Welshpool",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). This is remote country: few buses, so most stage ends need a pre-booked taxi. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Knighton",
+      "milesFromStart": 0.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llangunllo",
+      "milesFromStart": 6.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Beacon Hill",
+      "milesFromStart": 11.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Felindre",
+      "milesFromStart": 15.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llanbadarn Fynydd",
+      "milesFromStart": 22.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Castell y Blaidd",
+      "milesFromStart": 25.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abbeycwmhir",
+      "milesFromStart": 30.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bwlch-y-sarnau",
+      "milesFromStart": 34.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llanidloes",
+      "milesFromStart": 46.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clywedog Dam",
+      "milesFromStart": 50.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Staylittle",
+      "milesFromStart": 57.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dylife",
+      "milesFromStart": 60.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Glaslyn",
+      "milesFromStart": 64.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Foel Fadian",
+      "milesFromStart": 65.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Machynlleth",
+      "milesFromStart": 75.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abercegir",
+      "milesFromStart": 82.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Commins Coch",
+      "milesFromStart": 86.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llanbrynmair",
+      "milesFromStart": 91.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llangadfan",
+      "milesFromStart": 100.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Llanwddyn (Lake Vyrnwy)",
+      "milesFromStart": 109.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dolanog",
+      "milesFromStart": 114.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pontrobert",
+      "milesFromStart": 118.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Meifod",
+      "milesFromStart": 124.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Y Golfa",
+      "milesFromStart": 131.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Welshpool",
+      "milesFromStart": 135.0,
+      "note": "finish; station",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Knighton",
+      "toLandmark": "Felindre",
+      "note": "Beacon Hill moorland"
+    },
+    {
+      "fromLandmark": "Felindre",
+      "toLandmark": "Abbeycwmhir",
+      "note": "Remote moorland"
+    },
+    {
+      "fromLandmark": "Abbeycwmhir",
+      "toLandmark": "Llanidloes",
+      "note": null
+    },
+    {
+      "fromLandmark": "Llanidloes",
+      "toLandmark": "Dylife",
+      "note": "Clywedog reservoir"
+    },
+    {
+      "fromLandmark": "Dylife",
+      "toLandmark": "Machynlleth",
+      "note": "High moorland; Glaslyn"
+    },
+    {
+      "fromLandmark": "Machynlleth",
+      "toLandmark": "Llanbrynmair",
+      "note": "Ridge walking"
+    },
+    {
+      "fromLandmark": "Llanbrynmair",
+      "toLandmark": "Llangadfan",
+      "note": "Short; forestry"
+    },
+    {
+      "fromLandmark": "Llangadfan",
+      "toLandmark": "Dolanog",
+      "note": "Via Lake Vyrnwy"
+    },
+    {
+      "fromLandmark": "Dolanog",
+      "toLandmark": "Meifod",
+      "note": "Riverside, gentle"
+    },
+    {
+      "fromLandmark": "Meifod",
+      "toLandmark": "Welshpool",
+      "note": "Y Golfa climb near the end"
+    }
+  ],
+  "gpxAsset": null
+}

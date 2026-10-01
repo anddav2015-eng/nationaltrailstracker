@@ -1,0 +1,199 @@
+{
+  "id": "yorkshire-wolds-way",
+  "name": "Yorkshire Wolds Way",
+  "route": "Hessle to Filey Brigg",
+  "startLabel": "Hessle",
+  "endLabel": "Filey Brigg",
+  "colour": "#7a6a1a",
+  "subtitle": "Hessle on the Humber through the chalk Wolds to Filey Brigg",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk), via the Goodmanham branch. The sections add up to 81.5 miles; the official figure is 'just under 80'. Gentle hills but some steep dry-valley climbs. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Hessle (Humber Bridge)",
+      "milesFromStart": 0.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "North Ferriby",
+      "milesFromStart": 3.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Welton",
+      "milesFromStart": 7.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Brantingham",
+      "milesFromStart": 10.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "South Cave",
+      "milesFromStart": 13.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "High Hunsley Beacon",
+      "milesFromStart": 17.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Goodmanham",
+      "milesFromStart": 25.0,
+      "note": "Market Weighton buses ~1 mi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Londesborough",
+      "milesFromStart": 28.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Nunburnholme",
+      "milesFromStart": 30.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Millington",
+      "milesFromStart": 33.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Huggate",
+      "milesFromStart": 39.0,
+      "note": "pub; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Fridaythorpe",
+      "milesFromStart": 41.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thixendale",
+      "milesFromStart": 45.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wharram Percy",
+      "milesFromStart": 49.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Settrington Beacon",
+      "milesFromStart": 55.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wintringham",
+      "milesFromStart": 58.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sherburn",
+      "milesFromStart": 64.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ganton",
+      "milesFromStart": 67.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Staxton Brow",
+      "milesFromStart": 70.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Muston",
+      "milesFromStart": 78.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Filey",
+      "milesFromStart": 80.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Filey Brigg",
+      "milesFromStart": 81.5,
+      "note": "finish",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Hessle (Humber Bridge)",
+      "toLandmark": "South Cave",
+      "note": "Humber foreshore then first Wolds climb"
+    },
+    {
+      "fromLandmark": "South Cave",
+      "toLandmark": "Goodmanham",
+      "note": null
+    },
+    {
+      "fromLandmark": "Goodmanham",
+      "toLandmark": "Huggate",
+      "note": "Steep dale climbs near Millington"
+    },
+    {
+      "fromLandmark": "Huggate",
+      "toLandmark": "Wharram Percy",
+      "note": "Short; Thixendale"
+    },
+    {
+      "fromLandmark": "Wharram Percy",
+      "toLandmark": "Sherburn",
+      "note": "Highest point near Wintringham"
+    },
+    {
+      "fromLandmark": "Sherburn",
+      "toLandmark": "Filey Brigg",
+      "note": "Longest but gentle; bail-out at Staxton (5.5 mi)"
+    }
+  ],
+  "gpxAsset": null
+}

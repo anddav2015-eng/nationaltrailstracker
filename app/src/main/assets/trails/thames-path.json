@@ -1,0 +1,740 @@
+{
+  "id": "thames-path",
+  "name": "Thames Path",
+  "route": "Sea to Source",
+  "startLabel": "Woolwich",
+  "endLabel": "Source",
+  "colour": "#1b4f72",
+  "subtitle": "Woolwich Ferry to the Source near Kemble, Gloucestershire",
+  "footer": "Distances sourced from walkthethames.co.uk (Ordnance Survey 1:25,000). GPS distances on the ground will be slightly longer, especially through London where the path has more twists and turns. Stages 3 and 5 now start where the previous stage ended (Kingston and Eton & Windsor), so all 183.1 miles are counted.",
+  "landmarks": [
+    {
+      "name": "Woolwich Ferry",
+      "milesFromStart": 0.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thames Barrier",
+      "milesFromStart": 1.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "North Greenwich",
+      "milesFromStart": 2.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Greenwich",
+      "milesFromStart": 5.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Canary Wharf Pier",
+      "milesFromStart": 7.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rotherhithe & Wapping",
+      "milesFromStart": 9.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tower Bridge",
+      "milesFromStart": 10.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "London Bridge",
+      "milesFromStart": 11.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Southwark Bridge",
+      "milesFromStart": 11.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Blackfriars Bridge",
+      "milesFromStart": 11.9,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Waterloo Bridge",
+      "milesFromStart": 12.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Westminster Bridge",
+      "milesFromStart": 13.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lambeth Bridge",
+      "milesFromStart": 13.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Vauxhall Bridge",
+      "milesFromStart": 14.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chelsea Bridge",
+      "milesFromStart": 15.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Albert Bridge",
+      "milesFromStart": 16.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Battersea Bridge",
+      "milesFromStart": 16.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wandsworth Bridge",
+      "milesFromStart": 18.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Putney Bridge (cross to north)",
+      "milesFromStart": 19.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hammersmith Bridge (cross to south)",
+      "milesFromStart": 21.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Barnes Bridge",
+      "milesFromStart": 23.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kew Bridge",
+      "milesFromStart": 25.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Richmond Lock & Isleworth",
+      "milesFromStart": 27.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Richmond",
+      "milesFromStart": 28.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ham House Ferry / Twickenham",
+      "milesFromStart": 29.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Teddington Lock",
+      "milesFromStart": 31.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kingston upon Thames",
+      "milesFromStart": 32.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hampton Court",
+      "milesFromStart": 35.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sunbury Lock",
+      "milesFromStart": 38.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Walton-on-Thames",
+      "milesFromStart": 40.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shepperton Ferry (cross to north)",
+      "milesFromStart": 41.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chertsey Bridge",
+      "milesFromStart": 43.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Laleham",
+      "milesFromStart": 45.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Staines",
+      "milesFromStart": 47.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Runnymede",
+      "milesFromStart": 50.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bells of Ouzeley",
+      "milesFromStart": 50.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Albert Bridge, Old Windsor",
+      "milesFromStart": 52.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Datchet",
+      "milesFromStart": 54.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Eton & Windsor",
+      "milesFromStart": 55.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dorney Lake",
+      "milesFromStart": 57.9,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dorney / Bray Marina",
+      "milesFromStart": 59.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Maidenhead",
+      "milesFromStart": 62.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cookham",
+      "milesFromStart": 65.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bourne End",
+      "milesFromStart": 66.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Marlow",
+      "milesFromStart": 69.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hurley",
+      "milesFromStart": 72.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Aston",
+      "milesFromStart": 75.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hambleden Lock",
+      "milesFromStart": 76.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Remenham",
+      "milesFromStart": 77.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Henley-on-Thames",
+      "milesFromStart": 78.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shiplake",
+      "milesFromStart": 82.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shiplake College Boathouse",
+      "milesFromStart": 84.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sonning",
+      "milesFromStart": 86.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kennet Canal / Reading",
+      "milesFromStart": 88.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Reading Bridge",
+      "milesFromStart": 89.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tilehurst",
+      "milesFromStart": 92.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Purley on Thames",
+      "milesFromStart": 93.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Whitchurch & Pangbourne",
+      "milesFromStart": 96.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Goring & Streatley",
+      "milesFromStart": 100.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Moulsford",
+      "milesFromStart": 102.9,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cholsey",
+      "milesFromStart": 104.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wallingford",
+      "milesFromStart": 107.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Benson",
+      "milesFromStart": 109.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shillingford",
+      "milesFromStart": 110.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dorchester",
+      "milesFromStart": 112.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Days Lock / Little Wittenham",
+      "milesFromStart": 112.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clifton Hampden",
+      "milesFromStart": 115.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Culham Lock",
+      "milesFromStart": 118.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Culham Old Bridge",
+      "milesFromStart": 119.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abingdon",
+      "milesFromStart": 120.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Radley Boat House",
+      "milesFromStart": 124.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sandford Lock",
+      "milesFromStart": 126.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Iffley Lock",
+      "milesFromStart": 127.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Donnington Bridge",
+      "milesFromStart": 128.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Folly Bridge, Oxford",
+      "milesFromStart": 129.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Osney Bridge, Oxford",
+      "milesFromStart": 130.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Godstow Bridge",
+      "milesFromStart": 132.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Swinford Bridge",
+      "milesFromStart": 136.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pinkhill Lock",
+      "milesFromStart": 137.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bablock Hythe",
+      "milesFromStart": 140.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Northmoor Lock",
+      "milesFromStart": 141.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newbridge",
+      "milesFromStart": 143.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shifford Lock",
+      "milesFromStart": 146.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tadpole Bridge",
+      "milesFromStart": 149.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Radcot Bridge",
+      "milesFromStart": 153.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kelmscott",
+      "milesFromStart": 156.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Buscot",
+      "milesFromStart": 158.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lechlade",
+      "milesFromStart": 160.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hannington Bridge",
+      "milesFromStart": 164.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Castle Eaton",
+      "milesFromStart": 166.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cricklade",
+      "milesFromStart": 170.9,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Water Hay Car Park",
+      "milesFromStart": 175.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ashton Keynes",
+      "milesFromStart": 176.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Somerford Keynes",
+      "milesFromStart": 178.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Source of the Thames",
+      "milesFromStart": 183.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Woolwich Ferry",
+      "toLandmark": "Wandsworth Bridge",
+      "note": null
+    },
+    {
+      "fromLandmark": "Wandsworth Bridge",
+      "toLandmark": "Kingston upon Thames",
+      "note": null
+    },
+    {
+      "fromLandmark": "Kingston upon Thames",
+      "toLandmark": "Staines",
+      "note": null
+    },
+    {
+      "fromLandmark": "Staines",
+      "toLandmark": "Eton & Windsor",
+      "note": null
+    },
+    {
+      "fromLandmark": "Eton & Windsor",
+      "toLandmark": "Marlow",
+      "note": null
+    },
+    {
+      "fromLandmark": "Marlow",
+      "toLandmark": "Henley-on-Thames",
+      "note": null
+    },
+    {
+      "fromLandmark": "Henley-on-Thames",
+      "toLandmark": "Tilehurst",
+      "note": null
+    },
+    {
+      "fromLandmark": "Tilehurst",
+      "toLandmark": "Clifton Hampden",
+      "note": null
+    },
+    {
+      "fromLandmark": "Clifton Hampden",
+      "toLandmark": "Osney Bridge, Oxford",
+      "note": null
+    },
+    {
+      "fromLandmark": "Osney Bridge, Oxford",
+      "toLandmark": "Tadpole Bridge",
+      "note": null
+    },
+    {
+      "fromLandmark": "Tadpole Bridge",
+      "toLandmark": "Castle Eaton",
+      "note": null
+    },
+    {
+      "fromLandmark": "Castle Eaton",
+      "toLandmark": "Source of the Thames",
+      "note": null
+    }
+  ],
+  "gpxAsset": null
+}

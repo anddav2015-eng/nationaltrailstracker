@@ -1,0 +1,305 @@
+{
+  "id": "cotswold-way",
+  "name": "Cotswold Way",
+  "route": "Chipping Campden to Bath",
+  "startLabel": "Chipping Campden",
+  "endLabel": "Bath",
+  "colour": "#8a6d1d",
+  "subtitle": "Chipping Campden, Gloucestershire along the Cotswold escarpment to Bath Abbey",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). The escarpment means lots of short, steep climbs even though the hills are not high. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Chipping Campden",
+      "milesFromStart": 0.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dover's Hill",
+      "milesFromStart": 1.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Broadway Tower",
+      "milesFromStart": 5.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Broadway",
+      "milesFromStart": 6.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stanton",
+      "milesFromStart": 9.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wood Stanway",
+      "milesFromStart": 12.5,
+      "note": "taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hailes Abbey",
+      "milesFromStart": 15.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Winchcombe",
+      "milesFromStart": 17.9,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Belas Knap",
+      "milesFromStart": 20.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cleeve Hill",
+      "milesFromStart": 23.5,
+      "note": "buses to Cheltenham",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cleeve Common summit",
+      "milesFromStart": 25.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dowdeswell",
+      "milesFromStart": 29.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Seven Springs",
+      "milesFromStart": 31.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Leckhampton Hill",
+      "milesFromStart": 33.7,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Crickley Hill Country Park",
+      "milesFromStart": 36.5,
+      "note": "taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Birdlip",
+      "milesFromStart": 39.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cooper's Hill",
+      "milesFromStart": 42.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Painswick Beacon",
+      "milesFromStart": 45.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Painswick",
+      "milesFromStart": 47.9,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Haresfield Beacon",
+      "milesFromStart": 51.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "King's Stanley",
+      "milesFromStart": 55.7,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Coaley Peak",
+      "milesFromStart": 58.5,
+      "note": "picnic site; taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dursley",
+      "milesFromStart": 62.9,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stinchcombe Hill",
+      "milesFromStart": 64.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tyndale Monument",
+      "milesFromStart": 67.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wotton-under-Edge",
+      "milesFromStart": 70.2,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hawkesbury Upton",
+      "milesFromStart": 77.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Horton",
+      "milesFromStart": 80.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Old Sodbury",
+      "milesFromStart": 83.0,
+      "note": "pub; buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tormarton",
+      "milesFromStart": 85.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dyrham",
+      "milesFromStart": 88.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cold Ashton",
+      "milesFromStart": 91.9,
+      "note": "taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lansdown",
+      "milesFromStart": 96.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Weston",
+      "milesFromStart": 99.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bath Abbey",
+      "milesFromStart": 102.1,
+      "note": "finish; station",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Chipping Campden",
+      "toLandmark": "Wood Stanway",
+      "note": "Broadway at 6 mi (buses)"
+    },
+    {
+      "fromLandmark": "Wood Stanway",
+      "toLandmark": "Cleeve Hill",
+      "note": "Winchcombe at 5.4 mi"
+    },
+    {
+      "fromLandmark": "Cleeve Hill",
+      "toLandmark": "Crickley Hill Country Park",
+      "note": "Highest point on Cleeve Common"
+    },
+    {
+      "fromLandmark": "Crickley Hill Country Park",
+      "toLandmark": "Painswick",
+      "note": "Steep Cooper's Hill"
+    },
+    {
+      "fromLandmark": "Painswick",
+      "toLandmark": "Coaley Peak",
+      "note": "Haresfield Beacon; King's Stanley (buses) at 7.8 mi"
+    },
+    {
+      "fromLandmark": "Coaley Peak",
+      "toLandmark": "Wotton-under-Edge",
+      "note": "Cam Long Down, Dursley (buses) at 4.4 mi, Stinchcombe Hill"
+    },
+    {
+      "fromLandmark": "Wotton-under-Edge",
+      "toLandmark": "Old Sodbury",
+      "note": null
+    },
+    {
+      "fromLandmark": "Old Sodbury",
+      "toLandmark": "Cold Ashton",
+      "note": null
+    },
+    {
+      "fromLandmark": "Cold Ashton",
+      "toLandmark": "Bath Abbey",
+      "note": null
+    }
+  ],
+  "gpxAsset": null
+}

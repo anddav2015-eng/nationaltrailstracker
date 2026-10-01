@@ -1,0 +1,321 @@
+{
+  "id": "south-downs-way",
+  "name": "South Downs Way",
+  "route": "Winchester to Eastbourne",
+  "startLabel": "Winchester",
+  "endLabel": "Eastbourne",
+  "colour": "#2e5a1c",
+  "subtitle": "Winchester, Hampshire to Eastbourne, East Sussex via the Seven Sisters coast",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Winchester (King Alfred statue / City Mill)",
+      "milesFromStart": 0.0,
+      "note": "station ~1 mile",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chilcomb",
+      "milesFromStart": 3.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cheesefoot Head",
+      "milesFromStart": 4.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Holden Farm",
+      "milesFromStart": 7.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Millbury's Inn",
+      "milesFromStart": 9.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Beacon Hill NNR",
+      "milesFromStart": 11.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Exton (River Meon)",
+      "milesFromStart": 13.0,
+      "note": "pub, buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Old Winchester Hill",
+      "milesFromStart": 15.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sustainability Centre (East Meon)",
+      "milesFromStart": 20.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Butser Hill",
+      "milesFromStart": 23.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Queen Elizabeth Country Park",
+      "milesFromStart": 25.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Buriton",
+      "milesFromStart": 27.5,
+      "note": "Petersfield station ~2.5 miles",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Uppark",
+      "milesFromStart": 30.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Harting Down",
+      "milesFromStart": 32.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Devil's Jumps",
+      "milesFromStart": 35.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cocking Hill (A286)",
+      "milesFromStart": 37.5,
+      "note": "buses to Midhurst / Chichester",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Graffham Down",
+      "milesFromStart": 41.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bignor Hill",
+      "milesFromStart": 45.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Amberley (River Arun)",
+      "milesFromStart": 49.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rackham Hill",
+      "milesFromStart": 51.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Washington (A24)",
+      "milesFromStart": 55.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chanctonbury Ring",
+      "milesFromStart": 57.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "River Adur (Upper Beeding)",
+      "milesFromStart": 62.5,
+      "note": "buses via Bramber / Steyning",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Truleigh Hill",
+      "milesFromStart": 64.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Devil's Dyke",
+      "milesFromStart": 66.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pyecombe (A23)",
+      "milesFromStart": 71.0,
+      "note": "buses – bail-out point",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Jack & Jill Windmills, Clayton",
+      "milesFromStart": 72.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ditchling Beacon",
+      "milesFromStart": 74.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Housedean Farm (A27)",
+      "milesFromStart": 79.0,
+      "note": "buses to Lewes / Brighton",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Southease (River Ouse)",
+      "milesFromStart": 83.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Firle Beacon",
+      "milesFromStart": 87.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Alfriston (River Cuckmere)",
+      "milesFromStart": 90.5,
+      "note": "buses; Berwick station ~2.5 miles",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Litlington",
+      "milesFromStart": 92.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Exceat / Seven Sisters Country Park",
+      "milesFromStart": 94.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Birling Gap",
+      "milesFromStart": 97.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Belle Tout Lighthouse",
+      "milesFromStart": 98.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Beachy Head",
+      "milesFromStart": 99.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Eastbourne",
+      "milesFromStart": 101.0,
+      "note": "finish",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Winchester (King Alfred statue / City Mill)",
+      "toLandmark": "Exton (River Meon)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Exton (River Meon)",
+      "toLandmark": "Buriton",
+      "note": null
+    },
+    {
+      "fromLandmark": "Buriton",
+      "toLandmark": "Cocking Hill (A286)",
+      "note": "Short but hilly: Butser, Harting Down, Devil's Jumps"
+    },
+    {
+      "fromLandmark": "Cocking Hill (A286)",
+      "toLandmark": "Amberley (River Arun)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Amberley (River Arun)",
+      "toLandmark": "River Adur (Upper Beeding)",
+      "note": null
+    },
+    {
+      "fromLandmark": "River Adur (Upper Beeding)",
+      "toLandmark": "Housedean Farm (A27)",
+      "note": "Longest; bail-out at Pyecombe (8.5 mi)"
+    },
+    {
+      "fromLandmark": "Housedean Farm (A27)",
+      "toLandmark": "Alfriston (River Cuckmere)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Alfriston (River Cuckmere)",
+      "toLandmark": "Eastbourne",
+      "note": "Seven Sisters: steep up-and-down all the way"
+    }
+  ],
+  "gpxAsset": null
+}

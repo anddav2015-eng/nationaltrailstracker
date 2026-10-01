@@ -1,0 +1,646 @@
+{
+  "id": "south-west-coast-path",
+  "name": "South West Coast Path",
+  "route": "Minehead to South Haven Point (Poole)",
+  "startLabel": "Minehead",
+  "endLabel": "Poole",
+  "colour": "#16606e",
+  "subtitle": "Minehead, Somerset round the coasts of Devon, Cornwall and Dorset to South Haven Point, Poole Harbour",
+  "footer": "Stage distances are the South West Coast Path Association's 52-day itinerary (southwestcoastpath.org.uk), rounded to the nearest mile, about 628 miles in total. Each row is an official stage end. Very hilly overall, with estuary ferries and tidal crossings that need planning.",
+  "landmarks": [
+    {
+      "name": "Minehead",
+      "milesFromStart": 0.0,
+      "note": "start; buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Porlock Weir",
+      "milesFromStart": 9.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lynmouth",
+      "milesFromStart": 21.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Combe Martin",
+      "milesFromStart": 34.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Woolacombe",
+      "milesFromStart": 47.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Braunton",
+      "milesFromStart": 62.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Instow",
+      "milesFromStart": 75.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Westward Ho!",
+      "milesFromStart": 86.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clovelly",
+      "milesFromStart": 97.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hartland Quay",
+      "milesFromStart": 107.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bude",
+      "milesFromStart": 122.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Crackington Haven",
+      "milesFromStart": 132.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tintagel",
+      "milesFromStart": 143.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Port Isaac",
+      "milesFromStart": 152.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Padstow",
+      "milesFromStart": 164.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Porthcothan",
+      "milesFromStart": 177.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newquay",
+      "milesFromStart": 188.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Perranporth",
+      "milesFromStart": 199.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Portreath",
+      "milesFromStart": 211.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hayle",
+      "milesFromStart": 223.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Ives",
+      "milesFromStart": 229.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pendeen",
+      "milesFromStart": 243.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sennen Cove",
+      "milesFromStart": 252.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lamorna",
+      "milesFromStart": 264.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Marazion",
+      "milesFromStart": 273.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Porthleven",
+      "milesFromStart": 284.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "The Lizard",
+      "milesFromStart": 297.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Coverack",
+      "milesFromStart": 308.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Helford",
+      "milesFromStart": 321.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Falmouth",
+      "milesFromStart": 331.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Portloe",
+      "milesFromStart": 345.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Mevagissey",
+      "milesFromStart": 357.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Par",
+      "milesFromStart": 369.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Polperro",
+      "milesFromStart": 382.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Portwrinkle",
+      "milesFromStart": 394.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Plymouth",
+      "milesFromStart": 407.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "River Yealm (Wembury)",
+      "milesFromStart": 422.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bigbury-on-Sea",
+      "milesFromStart": 436.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Salcombe",
+      "milesFromStart": 450.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Torcross",
+      "milesFromStart": 463.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dartmouth",
+      "milesFromStart": 473.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Brixham",
+      "milesFromStart": 484.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Babbacombe",
+      "milesFromStart": 495.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Exmouth",
+      "milesFromStart": 511.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sidmouth",
+      "milesFromStart": 524.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Seaton",
+      "milesFromStart": 535.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Seatown",
+      "milesFromStart": 549.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abbotsbury",
+      "milesFromStart": 561.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ferry Bridge (Wyke Regis)",
+      "milesFromStart": 572.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ferry Bridge (after Portland loop)",
+      "milesFromStart": 585.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lulworth Cove",
+      "milesFromStart": 599.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Worth Matravers",
+      "milesFromStart": 613.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "South Haven Point (Poole Harbour)",
+      "milesFromStart": 627.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Minehead",
+      "toLandmark": "Porlock Weir",
+      "note": null
+    },
+    {
+      "fromLandmark": "Porlock Weir",
+      "toLandmark": "Lynmouth",
+      "note": "Steep Exmoor coast"
+    },
+    {
+      "fromLandmark": "Lynmouth",
+      "toLandmark": "Combe Martin",
+      "note": null
+    },
+    {
+      "fromLandmark": "Combe Martin",
+      "toLandmark": "Woolacombe",
+      "note": null
+    },
+    {
+      "fromLandmark": "Woolacombe",
+      "toLandmark": "Braunton",
+      "note": null
+    },
+    {
+      "fromLandmark": "Braunton",
+      "toLandmark": "Instow",
+      "note": null
+    },
+    {
+      "fromLandmark": "Instow",
+      "toLandmark": "Westward Ho!",
+      "note": null
+    },
+    {
+      "fromLandmark": "Westward Ho!",
+      "toLandmark": "Clovelly",
+      "note": null
+    },
+    {
+      "fromLandmark": "Clovelly",
+      "toLandmark": "Hartland Quay",
+      "note": null
+    },
+    {
+      "fromLandmark": "Hartland Quay",
+      "toLandmark": "Bude",
+      "note": "Among the toughest on the path"
+    },
+    {
+      "fromLandmark": "Bude",
+      "toLandmark": "Crackington Haven",
+      "note": "Very steep"
+    },
+    {
+      "fromLandmark": "Crackington Haven",
+      "toLandmark": "Tintagel",
+      "note": "Very steep"
+    },
+    {
+      "fromLandmark": "Tintagel",
+      "toLandmark": "Port Isaac",
+      "note": null
+    },
+    {
+      "fromLandmark": "Port Isaac",
+      "toLandmark": "Padstow",
+      "note": null
+    },
+    {
+      "fromLandmark": "Padstow",
+      "toLandmark": "Porthcothan",
+      "note": "Padstow–Rock ferry at the start"
+    },
+    {
+      "fromLandmark": "Porthcothan",
+      "toLandmark": "Newquay",
+      "note": null
+    },
+    {
+      "fromLandmark": "Newquay",
+      "toLandmark": "Perranporth",
+      "note": null
+    },
+    {
+      "fromLandmark": "Perranporth",
+      "toLandmark": "Portreath",
+      "note": null
+    },
+    {
+      "fromLandmark": "Portreath",
+      "toLandmark": "Hayle",
+      "note": null
+    },
+    {
+      "fromLandmark": "Hayle",
+      "toLandmark": "St Ives",
+      "note": null
+    },
+    {
+      "fromLandmark": "St Ives",
+      "toLandmark": "Pendeen",
+      "note": null
+    },
+    {
+      "fromLandmark": "Pendeen",
+      "toLandmark": "Sennen Cove",
+      "note": null
+    },
+    {
+      "fromLandmark": "Sennen Cove",
+      "toLandmark": "Lamorna",
+      "note": null
+    },
+    {
+      "fromLandmark": "Lamorna",
+      "toLandmark": "Marazion",
+      "note": null
+    },
+    {
+      "fromLandmark": "Marazion",
+      "toLandmark": "Porthleven",
+      "note": null
+    },
+    {
+      "fromLandmark": "Porthleven",
+      "toLandmark": "The Lizard",
+      "note": null
+    },
+    {
+      "fromLandmark": "The Lizard",
+      "toLandmark": "Coverack",
+      "note": null
+    },
+    {
+      "fromLandmark": "Coverack",
+      "toLandmark": "Helford",
+      "note": null
+    },
+    {
+      "fromLandmark": "Helford",
+      "toLandmark": "Falmouth",
+      "note": "Helford ferry (seasonal)"
+    },
+    {
+      "fromLandmark": "Falmouth",
+      "toLandmark": "Portloe",
+      "note": null
+    },
+    {
+      "fromLandmark": "Portloe",
+      "toLandmark": "Mevagissey",
+      "note": null
+    },
+    {
+      "fromLandmark": "Mevagissey",
+      "toLandmark": "Par",
+      "note": null
+    },
+    {
+      "fromLandmark": "Par",
+      "toLandmark": "Polperro",
+      "note": "Fowey ferry"
+    },
+    {
+      "fromLandmark": "Polperro",
+      "toLandmark": "Portwrinkle",
+      "note": null
+    },
+    {
+      "fromLandmark": "Portwrinkle",
+      "toLandmark": "Plymouth",
+      "note": "Cremyll ferry into Plymouth"
+    },
+    {
+      "fromLandmark": "Plymouth",
+      "toLandmark": "River Yealm (Wembury)",
+      "note": "River Yealm ferry (seasonal)"
+    },
+    {
+      "fromLandmark": "River Yealm (Wembury)",
+      "toLandmark": "Bigbury-on-Sea",
+      "note": "Erme wading/tide crossing"
+    },
+    {
+      "fromLandmark": "Bigbury-on-Sea",
+      "toLandmark": "Salcombe",
+      "note": null
+    },
+    {
+      "fromLandmark": "Salcombe",
+      "toLandmark": "Torcross",
+      "note": null
+    },
+    {
+      "fromLandmark": "Torcross",
+      "toLandmark": "Dartmouth",
+      "note": "Dartmouth ferry"
+    },
+    {
+      "fromLandmark": "Dartmouth",
+      "toLandmark": "Brixham",
+      "note": null
+    },
+    {
+      "fromLandmark": "Brixham",
+      "toLandmark": "Babbacombe",
+      "note": null
+    },
+    {
+      "fromLandmark": "Babbacombe",
+      "toLandmark": "Exmouth",
+      "note": "Exe ferry (Starcross–Exmouth)"
+    },
+    {
+      "fromLandmark": "Exmouth",
+      "toLandmark": "Sidmouth",
+      "note": null
+    },
+    {
+      "fromLandmark": "Sidmouth",
+      "toLandmark": "Seaton",
+      "note": null
+    },
+    {
+      "fromLandmark": "Seaton",
+      "toLandmark": "Seatown",
+      "note": "Very hilly Jurassic Coast; Golden Cap"
+    },
+    {
+      "fromLandmark": "Seatown",
+      "toLandmark": "Abbotsbury",
+      "note": null
+    },
+    {
+      "fromLandmark": "Abbotsbury",
+      "toLandmark": "Ferry Bridge (Wyke Regis)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Ferry Bridge (Wyke Regis)",
+      "toLandmark": "Ferry Bridge (after Portland loop)",
+      "note": "Optional Isle of Portland loop"
+    },
+    {
+      "fromLandmark": "Ferry Bridge (after Portland loop)",
+      "toLandmark": "Lulworth Cove",
+      "note": null
+    },
+    {
+      "fromLandmark": "Lulworth Cove",
+      "toLandmark": "Worth Matravers",
+      "note": "Lulworth firing ranges: check they're open"
+    },
+    {
+      "fromLandmark": "Worth Matravers",
+      "toLandmark": "South Haven Point (Poole Harbour)",
+      "note": null
+    }
+  ],
+  "gpxAsset": null
+}

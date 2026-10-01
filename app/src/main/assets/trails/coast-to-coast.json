@@ -1,0 +1,384 @@
+{
+  "id": "coast-to-coast",
+  "name": "Coast to Coast Path",
+  "route": "St Bees to Robin Hood's Bay",
+  "startLabel": "St Bees",
+  "endLabel": "Robin Hood's Bay",
+  "colour": "#7a4a1c",
+  "subtitle": "St Bees, Cumbria through the Lake District, Yorkshire Dales and North York Moors to Robin Hood's Bay",
+  "footer": "Stage distances from walkcoasttocoast.co.uk; the new National Trail alignment is quoted at 190–197 miles depending on variants. Public transport is sparse in the Lakes and Moors, so several stops rely on taxis. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "St Bees",
+      "milesFromStart": 0.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Bees Head",
+      "milesFromStart": 3.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sandwith",
+      "milesFromStart": 5.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cleator",
+      "milesFromStart": 11.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dent Fell",
+      "milesFromStart": 13.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ennerdale Bridge",
+      "milesFromStart": 17.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ennerdale Water (foot)",
+      "milesFromStart": 19.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Black Sail Hut",
+      "milesFromStart": 26.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Honister Pass",
+      "milesFromStart": 28.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Seatoller",
+      "milesFromStart": 29.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rosthwaite",
+      "milesFromStart": 30.3,
+      "note": "buses to Keswick",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Greenup Edge",
+      "milesFromStart": 34.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Grasmere",
+      "milesFromStart": 37.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Grisedale Tarn",
+      "milesFromStart": 40.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Patterdale",
+      "milesFromStart": 44.2,
+      "note": "buses to Penrith (seasonal)",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Angle Tarn",
+      "milesFromStart": 46.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kidsty Pike",
+      "milesFromStart": 50.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Burnbanks (Haweswater)",
+      "milesFromStart": 55.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shap Abbey",
+      "milesFromStart": 58.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shap",
+      "milesFromStart": 59.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Orton",
+      "milesFromStart": 64.9,
+      "note": "pub; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sunbiggin Tarn",
+      "milesFromStart": 68.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Smardale Bridge",
+      "milesFromStart": 73.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kirkby Stephen",
+      "milesFromStart": 78.9,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Nine Standards Rigg",
+      "milesFromStart": 83.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ravenseat",
+      "milesFromStart": 87.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Keld",
+      "milesFromStart": 89.8,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gunnerside",
+      "milesFromStart": 95.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Reeth",
+      "milesFromStart": 101.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Marrick Priory",
+      "milesFromStart": 102.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Richmond",
+      "milesFromStart": 111.3,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bolton-on-Swale",
+      "milesFromStart": 116.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Danby Wiske",
+      "milesFromStart": 126.8,
+      "note": "pub; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ingleby Cross",
+      "milesFromStart": 135.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Osmotherley",
+      "milesFromStart": 140.8,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clay Bank Top",
+      "milesFromStart": 151.7,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Blakey Ridge (Lion Inn)",
+      "milesFromStart": 161.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Glaisdale",
+      "milesFromStart": 168.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Grosmont",
+      "milesFromStart": 171.9,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Littlebeck",
+      "milesFromStart": 176.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hawsker",
+      "milesFromStart": 182.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Robin Hood's Bay",
+      "milesFromStart": 186.9,
+      "note": "finish",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "St Bees",
+      "toLandmark": "Ennerdale Bridge",
+      "note": "Long first day; bail-out at Cleator (11 mi)"
+    },
+    {
+      "fromLandmark": "Ennerdale Bridge",
+      "toLandmark": "Rosthwaite",
+      "note": "Lakeside then Black Sail and Honister"
+    },
+    {
+      "fromLandmark": "Rosthwaite",
+      "toLandmark": "Patterdale",
+      "note": "Two mountain passes; can split at Grasmere (6.7 mi)"
+    },
+    {
+      "fromLandmark": "Patterdale",
+      "toLandmark": "Burnbanks (Haweswater)",
+      "note": "Kidsty Pike: highest point"
+    },
+    {
+      "fromLandmark": "Burnbanks (Haweswater)",
+      "toLandmark": "Orton",
+      "note": "Easier limestone country"
+    },
+    {
+      "fromLandmark": "Orton",
+      "toLandmark": "Kirkby Stephen",
+      "note": null
+    },
+    {
+      "fromLandmark": "Kirkby Stephen",
+      "toLandmark": "Keld",
+      "note": "Nine Standards: boggy, navigation care"
+    },
+    {
+      "fromLandmark": "Keld",
+      "toLandmark": "Reeth",
+      "note": "Swaledale"
+    },
+    {
+      "fromLandmark": "Reeth",
+      "toLandmark": "Richmond",
+      "note": null
+    },
+    {
+      "fromLandmark": "Richmond",
+      "toLandmark": "Danby Wiske",
+      "note": "Flat Vale of Mowbray"
+    },
+    {
+      "fromLandmark": "Danby Wiske",
+      "toLandmark": "Osmotherley",
+      "note": "Flat, then climb at the end"
+    },
+    {
+      "fromLandmark": "Osmotherley",
+      "toLandmark": "Clay Bank Top",
+      "note": "Very hilly moor edge"
+    },
+    {
+      "fromLandmark": "Clay Bank Top",
+      "toLandmark": "Blakey Ridge (Lion Inn)",
+      "note": "High moorland; no transport at the Lion Inn"
+    },
+    {
+      "fromLandmark": "Blakey Ridge (Lion Inn)",
+      "toLandmark": "Grosmont",
+      "note": null
+    },
+    {
+      "fromLandmark": "Grosmont",
+      "toLandmark": "Robin Hood's Bay",
+      "note": "Last cliff-top miles"
+    }
+  ],
+  "gpxAsset": null
+}

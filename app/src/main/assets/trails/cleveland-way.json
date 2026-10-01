@@ -1,0 +1,326 @@
+{
+  "id": "cleveland-way",
+  "name": "Cleveland Way",
+  "route": "Helmsley to Filey Brigg",
+  "startLabel": "Helmsley",
+  "endLabel": "Filey Brigg",
+  "colour": "#5b3a6b",
+  "subtitle": "Helmsley, North Yorkshire, over the moors then down the coast to Filey Brigg",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). The official 109-mile figure includes short detours; the sections add up to 106.6 miles. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Helmsley",
+      "milesFromStart": 0.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rievaulx Abbey",
+      "milesFromStart": 2.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cold Kirby",
+      "milesFromStart": 7.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sutton Bank",
+      "milesFromStart": 10.0,
+      "note": "visitor centre; Moorsbus / taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Whitestone Cliff",
+      "milesFromStart": 11.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sneck Yate",
+      "milesFromStart": 14.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "High Paradise",
+      "milesFromStart": 16.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Square Corner (Oakdale)",
+      "milesFromStart": 19.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Osmotherley",
+      "milesFromStart": 21.5,
+      "note": "buses to Northallerton",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Scarth Nick",
+      "milesFromStart": 23.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lord Stones",
+      "milesFromStart": 28.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wainstones",
+      "milesFromStart": 31.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clay Bank",
+      "milesFromStart": 32.5,
+      "note": "B1257; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Urra Moor (Round Hill)",
+      "milesFromStart": 35.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bloworth Crossing",
+      "milesFromStart": 37.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kildale",
+      "milesFromStart": 41.8,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Captain Cook's Monument",
+      "milesFromStart": 43.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Roseberry Topping",
+      "milesFromStart": 46.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Highcliffe Nab",
+      "milesFromStart": 49.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Slapewath",
+      "milesFromStart": 51.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Skelton",
+      "milesFromStart": 53.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Saltburn",
+      "milesFromStart": 56.6,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Skinningrove",
+      "milesFromStart": 60.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Boulby Cliff",
+      "milesFromStart": 63.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Staithes",
+      "milesFromStart": 65.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Runswick Bay",
+      "milesFromStart": 69.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kettleness",
+      "milesFromStart": 71.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sandsend",
+      "milesFromStart": 74.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Whitby",
+      "milesFromStart": 77.1,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Saltwick Bay",
+      "milesFromStart": 78.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Robin Hood's Bay",
+      "milesFromStart": 84.1,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ravenscar",
+      "milesFromStart": 87.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hayburn Wyke",
+      "milesFromStart": 90.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cloughton Wyke",
+      "milesFromStart": 92.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Scarborough",
+      "milesFromStart": 96.1,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cayton Bay",
+      "milesFromStart": 100.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Filey",
+      "milesFromStart": 105.1,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Filey Brigg",
+      "milesFromStart": 106.6,
+      "note": "finish",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Helmsley",
+      "toLandmark": "Sutton Bank",
+      "note": "Steady climb past Rievaulx"
+    },
+    {
+      "fromLandmark": "Sutton Bank",
+      "toLandmark": "Osmotherley",
+      "note": null
+    },
+    {
+      "fromLandmark": "Osmotherley",
+      "toLandmark": "Clay Bank",
+      "note": "Very hilly: five moor-edge climbs"
+    },
+    {
+      "fromLandmark": "Clay Bank",
+      "toLandmark": "Kildale",
+      "note": "Short; highest point on Urra Moor"
+    },
+    {
+      "fromLandmark": "Kildale",
+      "toLandmark": "Saltburn",
+      "note": "Roseberry Topping is an optional extra"
+    },
+    {
+      "fromLandmark": "Saltburn",
+      "toLandmark": "Runswick Bay",
+      "note": "Cliff-top, some steep drops to Staithes"
+    },
+    {
+      "fromLandmark": "Runswick Bay",
+      "toLandmark": "Robin Hood's Bay",
+      "note": "Whitby at 7.6 mi (station)"
+    },
+    {
+      "fromLandmark": "Robin Hood's Bay",
+      "toLandmark": "Scarborough",
+      "note": null
+    },
+    {
+      "fromLandmark": "Scarborough",
+      "toLandmark": "Filey Brigg",
+      "note": "Gentle finish"
+    }
+  ],
+  "gpxAsset": null
+}

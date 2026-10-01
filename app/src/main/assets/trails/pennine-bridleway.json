@@ -1,0 +1,313 @@
+{
+  "id": "pennine-bridleway",
+  "name": "Pennine Bridleway",
+  "route": "Middleton Top to The Street (Ravenstonedale)",
+  "startLabel": "Middleton Top",
+  "endLabel": "The Street",
+  "colour": "#5a4a2a",
+  "subtitle": "Middleton Top, Derbyshire through the South Pennines and Yorkshire Dales to The Street near Ravenstonedale, Cumbria",
+  "footer": "Official figures (LDWA / National Trails): 73.6 miles to the Mary Towneley Loop, 33.2 miles from the Loop to the Settle Loop, and 40.8 miles from the Settle Loop to The Street. This table walks the eastern side of each loop, about 168 miles in all. Positions within segments are rough estimates (±1 mile). There is an on-road gap of about 5 miles north of Hayfield. GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Middleton Top",
+      "milesFromStart": 0.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Minninglow",
+      "milesFromStart": 6.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Parsley Hay",
+      "milesFromStart": 12.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hurdlow",
+      "milesFromStart": 16.5,
+      "note": "pub; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chelmorton",
+      "milesFromStart": 21.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wormhill",
+      "milesFromStart": 25.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Peak Forest",
+      "milesFromStart": 29.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Roych Clough",
+      "milesFromStart": 34.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hayfield",
+      "milesFromStart": 38.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Charlesworth",
+      "milesFromStart": 43.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tintwistle",
+      "milesFromStart": 48.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Carrbrook",
+      "milesFromStart": 52.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Uppermill",
+      "milesFromStart": 57.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Diggle",
+      "milesFromStart": 59.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hollingworth Lake",
+      "milesFromStart": 66.5,
+      "note": "Smithy Bridge station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Summit (Mary Towneley Loop)",
+      "milesFromStart": 73.6,
+      "note": "Littleborough station ~1.5 mi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Mankinholes",
+      "milesFromStart": 78.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hebden Bridge (Heptonstall)",
+      "milesFromStart": 83.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Widdop",
+      "milesFromStart": 87.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hurstwood",
+      "milesFromStart": 90.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wycoller",
+      "milesFromStart": 96.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Barnoldswick",
+      "milesFromStart": 104.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gisburn",
+      "milesFromStart": 110.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Long Preston",
+      "milesFromStart": 117.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Settle",
+      "milesFromStart": 123.8,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stainforth",
+      "milesFromStart": 127.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Austwick",
+      "milesFromStart": 131.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clapham",
+      "milesFromStart": 133.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Selside",
+      "milesFromStart": 139.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newby Head",
+      "milesFromStart": 145.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Garsdale Head",
+      "milesFromStart": 153.0,
+      "note": "Garsdale station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hell Gill",
+      "milesFromStart": 159.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pendragon Castle",
+      "milesFromStart": 163.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "The Street (Ravenstonedale)",
+      "milesFromStart": 168.0,
+      "note": "finish; taxi",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Middleton Top",
+      "toLandmark": "Hurdlow",
+      "note": "Flat rail trail"
+    },
+    {
+      "fromLandmark": "Hurdlow",
+      "toLandmark": "Peak Forest",
+      "note": null
+    },
+    {
+      "fromLandmark": "Peak Forest",
+      "toLandmark": "Charlesworth",
+      "note": "On-road gap north of Hayfield"
+    },
+    {
+      "fromLandmark": "Charlesworth",
+      "toLandmark": "Uppermill",
+      "note": null
+    },
+    {
+      "fromLandmark": "Uppermill",
+      "toLandmark": "Summit (Mary Towneley Loop)",
+      "note": "Longish; bail-out at Hollingworth Lake (9.5 mi)"
+    },
+    {
+      "fromLandmark": "Summit (Mary Towneley Loop)",
+      "toLandmark": "Hebden Bridge (Heptonstall)",
+      "note": "Short; steep Calderdale valleys"
+    },
+    {
+      "fromLandmark": "Hebden Bridge (Heptonstall)",
+      "toLandmark": "Wycoller",
+      "note": null
+    },
+    {
+      "fromLandmark": "Wycoller",
+      "toLandmark": "Gisburn",
+      "note": "Gentler farmland"
+    },
+    {
+      "fromLandmark": "Gisburn",
+      "toLandmark": "Settle",
+      "note": null
+    },
+    {
+      "fromLandmark": "Settle",
+      "toLandmark": "Selside",
+      "note": "Limestone country"
+    },
+    {
+      "fromLandmark": "Selside",
+      "toLandmark": "Garsdale Head",
+      "note": "High, remote tracks"
+    },
+    {
+      "fromLandmark": "Garsdale Head",
+      "toLandmark": "The Street (Ravenstonedale)",
+      "note": "Lady Anne's Way, high but good track"
+    }
+  ],
+  "gpxAsset": null
+}

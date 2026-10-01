@@ -1,0 +1,391 @@
+{
+  "id": "pembrokeshire-coast-path",
+  "name": "Pembrokeshire Coast Path",
+  "route": "St Dogmaels to Amroth",
+  "startLabel": "St Dogmaels",
+  "endLabel": "Amroth",
+  "colour": "#1d6a8a",
+  "subtitle": "St Dogmaels near Cardigan, round the Pembrokeshire coast to Amroth",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). The sections add up to 181.5 miles; the official 186-mile figure includes detours. Coastal shuttle buses (Poppit Rocket, Strumble Shuttle, Celtic Coaster, Puffin Shuttle, Coastal Cruiser) serve most stage ends. Check tide times for the Sandy Haven and Gann crossings. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "St Dogmaels",
+      "milesFromStart": 0.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Poppit Sands",
+      "milesFromStart": 1.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cemaes Head",
+      "milesFromStart": 4.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ceibwr Bay (Moylegrove)",
+      "milesFromStart": 8.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newport",
+      "milesFromStart": 15.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dinas Island",
+      "milesFromStart": 21.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Fishguard (Lower Town)",
+      "milesFromStart": 27.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Goodwick",
+      "milesFromStart": 29.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Strumble Head",
+      "milesFromStart": 34.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pwll Deri",
+      "milesFromStart": 36.5,
+      "note": "Strumble Shuttle",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abercastle",
+      "milesFromStart": 43.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Trefin",
+      "milesFromStart": 46.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Porthgain",
+      "milesFromStart": 48.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abereiddi",
+      "milesFromStart": 50.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Whitesands Bay",
+      "milesFromStart": 58.5,
+      "note": "Celtic Coaster to St Davids",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Justinian's",
+      "milesFromStart": 61.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Porthclais",
+      "milesFromStart": 65.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Solva",
+      "milesFromStart": 71.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newgale",
+      "milesFromStart": 76.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Nolton Haven",
+      "milesFromStart": 79.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Broad Haven",
+      "milesFromStart": 83.5,
+      "note": "Puffin Shuttle",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Brides",
+      "milesFromStart": 88.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Martin's Haven",
+      "milesFromStart": 94.5,
+      "note": "Puffin Shuttle",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Marloes Sands",
+      "milesFromStart": 97.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Ann's Head",
+      "milesFromStart": 101.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dale",
+      "milesFromStart": 104.5,
+      "note": "Puffin Shuttle",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sandy Haven (tidal)",
+      "milesFromStart": 111.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Milford Haven",
+      "milesFromStart": 115.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Neyland",
+      "milesFromStart": 120.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pembroke Dock",
+      "milesFromStart": 123.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pembroke",
+      "milesFromStart": 126.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Angle",
+      "milesFromStart": 136.5,
+      "note": "Coastal Cruiser",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Freshwater West",
+      "milesFromStart": 146.5,
+      "note": "Coastal Cruiser",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stack Rocks",
+      "milesFromStart": 150.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Govan's Chapel",
+      "milesFromStart": 154.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Broad Haven South",
+      "milesFromStart": 156.5,
+      "note": "Coastal Cruiser",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stackpole Quay",
+      "milesFromStart": 159.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Freshwater East",
+      "milesFromStart": 161.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Manorbier",
+      "milesFromStart": 164.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Skrinkle Haven",
+      "milesFromStart": 167.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tenby",
+      "milesFromStart": 172.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Saundersfoot",
+      "milesFromStart": 177.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Amroth",
+      "milesFromStart": 181.5,
+      "note": "finish; buses",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "St Dogmaels",
+      "toLandmark": "Newport",
+      "note": "Hardest section: no services, many steep climbs"
+    },
+    {
+      "fromLandmark": "Newport",
+      "toLandmark": "Fishguard (Lower Town)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Fishguard (Lower Town)",
+      "toLandmark": "Pwll Deri",
+      "note": "Short but rugged"
+    },
+    {
+      "fromLandmark": "Pwll Deri",
+      "toLandmark": "Porthgain",
+      "note": "Sheer cliffs"
+    },
+    {
+      "fromLandmark": "Porthgain",
+      "toLandmark": "Whitesands Bay",
+      "note": null
+    },
+    {
+      "fromLandmark": "Whitesands Bay",
+      "toLandmark": "Solva",
+      "note": "Round St Davids Head"
+    },
+    {
+      "fromLandmark": "Solva",
+      "toLandmark": "Broad Haven",
+      "note": "Very steep near Newgale"
+    },
+    {
+      "fromLandmark": "Broad Haven",
+      "toLandmark": "Martin's Haven",
+      "note": null
+    },
+    {
+      "fromLandmark": "Martin's Haven",
+      "toLandmark": "Dale",
+      "note": "Level plateau"
+    },
+    {
+      "fromLandmark": "Dale",
+      "toLandmark": "Neyland",
+      "note": "Tidal crossing at Sandy Haven"
+    },
+    {
+      "fromLandmark": "Neyland",
+      "toLandmark": "Angle",
+      "note": "Mostly outside the National Park"
+    },
+    {
+      "fromLandmark": "Angle",
+      "toLandmark": "Freshwater West",
+      "note": "Remote; no amenities"
+    },
+    {
+      "fromLandmark": "Freshwater West",
+      "toLandmark": "Broad Haven South",
+      "note": "Firing range: check it's open"
+    },
+    {
+      "fromLandmark": "Broad Haven South",
+      "toLandmark": "Skrinkle Haven",
+      "note": "Barafundle"
+    },
+    {
+      "fromLandmark": "Skrinkle Haven",
+      "toLandmark": "Amroth",
+      "note": "Tenby at 5 mi"
+    }
+  ],
+  "gpxAsset": null
+}

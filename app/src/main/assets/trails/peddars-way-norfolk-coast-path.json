@@ -1,0 +1,303 @@
+{
+  "id": "peddars-way-norfolk-coast-path",
+  "name": "Peddars Way & Norfolk Coast Path",
+  "route": "Knettishall Heath to Hopton-on-Sea",
+  "startLabel": "Knettishall",
+  "endLabel": "Hopton",
+  "colour": "#2b5f8a",
+  "subtitle": "Knettishall Heath, Suffolk along the Roman road to the Norfolk coast, then round to Hopton-on-Sea",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk); the Happisburgh–Sea Palling section is estimated. The sections add up to about 134 miles against the official 129.5, so treat totals as approximate. Mostly flat, like the Thames. The Coasthopper bus serves most of the north Norfolk coast. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Knettishall Heath",
+      "milesFromStart": 0.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stonebridge (East Wretham)",
+      "milesFromStart": 9.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thompson Water",
+      "milesFromStart": 11.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Little Cressingham",
+      "milesFromStart": 14.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "North Pickenham",
+      "milesFromStart": 19.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Castle Acre",
+      "milesFromStart": 26.2,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Great Massingham",
+      "milesFromStart": 31.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sedgeford",
+      "milesFromStart": 40.1,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ringstead",
+      "milesFromStart": 44.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Holme-next-the-Sea",
+      "milesFromStart": 49.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thornham",
+      "milesFromStart": 52.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Brancaster Staithe",
+      "milesFromStart": 55.5,
+      "note": "Coasthopper bus",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Burnham Overy Staithe",
+      "milesFromStart": 65.1,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Holkham Gap",
+      "milesFromStart": 68.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wells-next-the-Sea",
+      "milesFromStart": 70.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stiffkey",
+      "milesFromStart": 74.9,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Blakeney",
+      "milesFromStart": 79.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cley next the Sea",
+      "milesFromStart": 81.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Salthouse",
+      "milesFromStart": 83.5,
+      "note": "Coasthopper bus",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Weybourne",
+      "milesFromStart": 87.4,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sheringham",
+      "milesFromStart": 90.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "West Runton",
+      "milesFromStart": 92.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cromer",
+      "milesFromStart": 96.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Overstrand",
+      "milesFromStart": 98.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Mundesley",
+      "milesFromStart": 103.75,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bacton",
+      "milesFromStart": 106.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Happisburgh",
+      "milesFromStart": 109.75,
+      "note": "buses; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sea Palling",
+      "milesFromStart": 113.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Horsey Gap",
+      "milesFromStart": 116.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Winterton-on-Sea",
+      "milesFromStart": 118.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Caister-on-Sea",
+      "milesFromStart": 124.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Great Yarmouth",
+      "milesFromStart": 127.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gorleston-on-Sea",
+      "milesFromStart": 130.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hopton-on-Sea",
+      "milesFromStart": 134.0,
+      "note": "finish; buses",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Knettishall Heath",
+      "toLandmark": "Little Cressingham",
+      "note": "Brecks heath and forest"
+    },
+    {
+      "fromLandmark": "Little Cressingham",
+      "toLandmark": "Castle Acre",
+      "note": null
+    },
+    {
+      "fromLandmark": "Castle Acre",
+      "toLandmark": "Sedgeford",
+      "note": "Remote, open farmland"
+    },
+    {
+      "fromLandmark": "Sedgeford",
+      "toLandmark": "Brancaster Staithe",
+      "note": "First sea views at Holme"
+    },
+    {
+      "fromLandmark": "Brancaster Staithe",
+      "toLandmark": "Wells-next-the-Sea",
+      "note": "Holkham beach"
+    },
+    {
+      "fromLandmark": "Wells-next-the-Sea",
+      "toLandmark": "Salthouse",
+      "note": "Salt marsh"
+    },
+    {
+      "fromLandmark": "Salthouse",
+      "toLandmark": "Cromer",
+      "note": "Shingle, then low cliffs"
+    },
+    {
+      "fromLandmark": "Cromer",
+      "toLandmark": "Happisburgh",
+      "note": null
+    },
+    {
+      "fromLandmark": "Happisburgh",
+      "toLandmark": "Caister-on-Sea",
+      "note": "Dunes; seals at Horsey"
+    },
+    {
+      "fromLandmark": "Caister-on-Sea",
+      "toLandmark": "Hopton-on-Sea",
+      "note": "Through Great Yarmouth"
+    }
+  ],
+  "gpxAsset": null
+}

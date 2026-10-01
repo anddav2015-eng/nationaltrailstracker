@@ -1,0 +1,378 @@
+{
+  "id": "north-downs-way",
+  "name": "North Downs Way",
+  "route": "Farnham to Dover (via Canterbury)",
+  "startLabel": "Farnham",
+  "endLabel": "Dover",
+  "colour": "#1b3d2b",
+  "subtitle": "Farnham, Surrey to Dover, Kent via the Canterbury loop",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Farnham (start, A31 / Farnham station)",
+      "milesFromStart": 0.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Runfold Wood",
+      "milesFromStart": 3.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Seale",
+      "milesFromStart": 4.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Puttenham",
+      "milesFromStart": 6.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Watts Gallery, Compton",
+      "milesFromStart": 8.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Guildford (River Wey)",
+      "milesFromStart": 11.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Martha's Hill",
+      "milesFromStart": 13.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newlands Corner",
+      "milesFromStart": 14.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gomshall (Hackhurst Down)",
+      "milesFromStart": 19.0,
+      "note": "station below",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ranmore Common",
+      "milesFromStart": 22.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dorking (A24, Box Hill & Westhumble)",
+      "milesFromStart": 24.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Box Hill summit",
+      "milesFromStart": 25.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Colley Hill",
+      "milesFromStart": 30.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Reigate Hill",
+      "milesFromStart": 31.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Merstham",
+      "milesFromStart": 34.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Whitehill Tower, Caterham",
+      "milesFromStart": 37.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Woldingham",
+      "milesFromStart": 39.5,
+      "note": "station ~1 mile",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Oxted (Chalk Pit)",
+      "milesFromStart": 42.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Titsey Hill",
+      "milesFromStart": 44.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Greenwich Meridian marker",
+      "milesFromStart": 45.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Knockholt Pound",
+      "milesFromStart": 49.0,
+      "note": "pub; Knockholt station ~2.5 miles / taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Otford",
+      "milesFromStart": 53.8,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kemsing",
+      "milesFromStart": 56.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wrotham",
+      "milesFromStart": 60.5,
+      "note": "buses; Borough Green station ~1.5 miles",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Trosley Country Park",
+      "milesFromStart": 62.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cuxton",
+      "milesFromStart": 68.8,
+      "note": "station – bail-out point",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Medway Bridge",
+      "milesFromStart": 70.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kit's Coty / Blue Bell Hill",
+      "milesFromStart": 74.5,
+      "note": "buses on A229",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Detling",
+      "milesFromStart": 81.3,
+      "note": "buses – bail-out point",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thurnham",
+      "milesFromStart": 83.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hollingbourne",
+      "milesFromStart": 86.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Harrietsham",
+      "milesFromStart": 88.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lenham",
+      "milesFromStart": 90.6,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Charing",
+      "milesFromStart": 95.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Boughton Lees (Canterbury loop begins)",
+      "milesFromStart": 100.7,
+      "note": "Wye station ~1 mile",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Soakham Down / King's Wood",
+      "milesFromStart": 103.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chilham",
+      "milesFromStart": 106.7,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chartham Hatch",
+      "milesFromStart": 110.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Canterbury",
+      "milesFromStart": 113.9,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Patrixbourne",
+      "milesFromStart": 117.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Womenswold",
+      "milesFromStart": 121.2,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Shepherdswell",
+      "milesFromStart": 124.3,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Waldershare Park",
+      "milesFromStart": 126.8,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dover",
+      "milesFromStart": 132.8,
+      "note": "finish",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Farnham (start, A31 / Farnham station)",
+      "toLandmark": "Guildford (River Wey)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Guildford (River Wey)",
+      "toLandmark": "Dorking (A24, Box Hill & Westhumble)",
+      "note": null
+    },
+    {
+      "fromLandmark": "Dorking (A24, Box Hill & Westhumble)",
+      "toLandmark": "Merstham",
+      "note": "Hardest day: Box Hill, Colley Hill, Reigate Hill"
+    },
+    {
+      "fromLandmark": "Merstham",
+      "toLandmark": "Knockholt Pound",
+      "note": "Bail-out at Oxted (8 mi). Knockholt Pound: taxi/Uber"
+    },
+    {
+      "fromLandmark": "Knockholt Pound",
+      "toLandmark": "Wrotham",
+      "note": null
+    },
+    {
+      "fromLandmark": "Wrotham",
+      "toLandmark": "Kit's Coty / Blue Bell Hill",
+      "note": "Bail-out at Cuxton station (8.3 mi)"
+    },
+    {
+      "fromLandmark": "Kit's Coty / Blue Bell Hill",
+      "toLandmark": "Hollingbourne",
+      "note": "Bail-out at Detling (6.8 mi)"
+    },
+    {
+      "fromLandmark": "Hollingbourne",
+      "toLandmark": "Boughton Lees (Canterbury loop begins)",
+      "note": "One of the flattest sections"
+    },
+    {
+      "fromLandmark": "Boughton Lees (Canterbury loop begins)",
+      "toLandmark": "Canterbury",
+      "note": null
+    },
+    {
+      "fromLandmark": "Canterbury",
+      "toLandmark": "Shepherdswell",
+      "note": null
+    },
+    {
+      "fromLandmark": "Shepherdswell",
+      "toLandmark": "Dover",
+      "note": "Gentle finish"
+    }
+  ],
+  "gpxAsset": null
+}

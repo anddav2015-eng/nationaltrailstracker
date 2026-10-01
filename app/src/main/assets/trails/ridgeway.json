@@ -1,0 +1,239 @@
+{
+  "id": "ridgeway",
+  "name": "The Ridgeway",
+  "route": "Overton Hill to Ivinghoe Beacon",
+  "startLabel": "Overton Hill",
+  "endLabel": "Ivinghoe Beacon",
+  "colour": "#6a5a2a",
+  "subtitle": "Overton Hill near Avebury along the chalk downs and Chilterns to Ivinghoe Beacon",
+  "footer": "Section distances from the official National Trail route pages (nationaltrail.co.uk). The western half is remote and exposed, with few taps. The Chilterns stretch from Watlington to Wendover is the most up-and-down. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Overton Hill (near Avebury)",
+      "milesFromStart": 0.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hackpen Hill",
+      "milesFromStart": 4.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Barbury Castle",
+      "milesFromStart": 7.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ogbourne St George",
+      "milesFromStart": 9.3,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Liddington Hill",
+      "milesFromStart": 14.0,
+      "note": "buses from Chiseldon",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Foxhill (M4)",
+      "milesFromStart": 16.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wayland's Smithy",
+      "milesFromStart": 22.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Uffington White Horse",
+      "milesFromStart": 24.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sparsholt Firs",
+      "milesFromStart": 25.3,
+      "note": "taxi to Wantage",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Segsbury Camp",
+      "milesFromStart": 29.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "A34 underpass",
+      "milesFromStart": 35.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bury Down",
+      "milesFromStart": 37.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Streatley",
+      "milesFromStart": 42.7,
+      "note": "Goring station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "South Stoke",
+      "milesFromStart": 45.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "North Stoke",
+      "milesFromStart": 47.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Grim's Ditch",
+      "milesFromStart": 49.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Nuffield",
+      "milesFromStart": 52.0,
+      "note": "taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Swyncombe",
+      "milesFromStart": 54.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Watlington",
+      "milesFromStart": 58.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chinnor",
+      "milesFromStart": 64.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Princes Risborough",
+      "milesFromStart": 69.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Whiteleaf",
+      "milesFromStart": 70.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wendover",
+      "milesFromStart": 75.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hastoe",
+      "milesFromStart": 80.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tring station",
+      "milesFromStart": 82.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pitstone Hill",
+      "milesFromStart": 83.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ivinghoe Beacon",
+      "milesFromStart": 86.8,
+      "note": "finish; taxi",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Overton Hill (near Avebury)",
+      "toLandmark": "Liddington Hill",
+      "note": "Barbury Castle"
+    },
+    {
+      "fromLandmark": "Liddington Hill",
+      "toLandmark": "Sparsholt Firs",
+      "note": "Remote; Uffington White Horse"
+    },
+    {
+      "fromLandmark": "Sparsholt Firs",
+      "toLandmark": "Bury Down",
+      "note": "Open downland gallops"
+    },
+    {
+      "fromLandmark": "Bury Down",
+      "toLandmark": "Nuffield",
+      "note": "Thames at Streatley (5.7 mi)"
+    },
+    {
+      "fromLandmark": "Nuffield",
+      "toLandmark": "Chinnor",
+      "note": "Watlington at 6 mi"
+    },
+    {
+      "fromLandmark": "Chinnor",
+      "toLandmark": "Wendover",
+      "note": "Undulating Chiltern woods"
+    },
+    {
+      "fromLandmark": "Wendover",
+      "toLandmark": "Ivinghoe Beacon",
+      "note": "Final climb to the Beacon"
+    }
+  ],
+  "gpxAsset": null
+}

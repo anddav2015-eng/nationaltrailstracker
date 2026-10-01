@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- AGP 9.4.1 needs Gradle 9.6.0; the wrapper is on 9.4.1. Bump both together when ready. -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+</lint>

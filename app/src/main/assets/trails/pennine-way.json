@@ -1,0 +1,504 @@
+{
+  "id": "pennine-way",
+  "name": "Pennine Way",
+  "route": "Edale to Kirk Yetholm",
+  "startLabel": "Edale",
+  "endLabel": "Kirk Yetholm",
+  "colour": "#3d4f2a",
+  "subtitle": "Edale, Derbyshire along the Pennine spine to Kirk Yetholm in the Scottish Borders",
+  "footer": "Day-stage distances from the official National Trail route pages (nationaltrail.co.uk), which add up to 254.5 miles. The official 268-mile figure includes spurs such as The Cheviot. A serious upland walk: carry navigation and bad-weather kit, especially on Cross Fell and the Cheviots. Section-end towns use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Edale",
+      "milesFromStart": 0.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Jacob's Ladder",
+      "milesFromStart": 3.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kinder Downfall",
+      "milesFromStart": 6.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Mill Hill",
+      "milesFromStart": 8.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Snake Pass (A57)",
+      "milesFromStart": 10.0,
+      "note": "taxi/Uber",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bleaklow Head",
+      "milesFromStart": 12.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Crowden",
+      "milesFromStart": 16.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Black Hill",
+      "milesFromStart": 20.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wessenden Head (A635)",
+      "milesFromStart": 22.5,
+      "note": "taxi; Marsden 3 mi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Standedge",
+      "milesFromStart": 27.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Blackstone Edge",
+      "milesFromStart": 31.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stoodley Pike",
+      "milesFromStart": 35.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Calder Valley (Hebden Bridge)",
+      "milesFromStart": 38.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Walshaw Dean",
+      "milesFromStart": 42.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Top Withins",
+      "milesFromStart": 45.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ponden",
+      "milesFromStart": 47.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ickornshaw (Cowling)",
+      "milesFromStart": 54.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lothersdale",
+      "milesFromStart": 57.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thornton-in-Craven",
+      "milesFromStart": 61.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gargrave",
+      "milesFromStart": 65.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Airton",
+      "milesFromStart": 68.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Malham",
+      "milesFromStart": 71.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Malham Tarn",
+      "milesFromStart": 73.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Fountains Fell",
+      "milesFromStart": 77.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Pen-y-ghent",
+      "milesFromStart": 81.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Horton in Ribblesdale",
+      "milesFromStart": 85.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cam End",
+      "milesFromStart": 91.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dodd Fell",
+      "milesFromStart": 95.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Hawes",
+      "milesFromStart": 99.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Great Shunner Fell",
+      "milesFromStart": 105.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Thwaite",
+      "milesFromStart": 108.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Keld",
+      "milesFromStart": 111.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tan Hill Inn",
+      "milesFromStart": 116.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "God's Bridge",
+      "milesFromStart": 122.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Baldersdale",
+      "milesFromStart": 126.5,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Middleton-in-Teesdale",
+      "milesFromStart": 133.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "High Force",
+      "milesFromStart": 138.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Langdon Beck",
+      "milesFromStart": 141.5,
+      "note": "hotel/YHA; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cauldron Snout",
+      "milesFromStart": 145.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "High Cup Nick",
+      "milesFromStart": 150.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Dufton",
+      "milesFromStart": 154.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Great Dun Fell",
+      "milesFromStart": 159.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cross Fell",
+      "milesFromStart": 162.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Garrigill",
+      "milesFromStart": 169.0,
+      "note": "taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Alston",
+      "milesFromStart": 174.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Slaggyford",
+      "milesFromStart": 179.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Knarsdale",
+      "milesFromStart": 182.0,
+      "note": "pub; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Greenhead",
+      "milesFromStart": 190.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Steel Rigg (Once Brewed)",
+      "milesFromStart": 196.5,
+      "note": "AD122 bus",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Warks Burn",
+      "milesFromStart": 205.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bellingham",
+      "milesFromStart": 212.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Padon Hill",
+      "milesFromStart": 218.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Byrness",
+      "milesFromStart": 227.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Chew Green",
+      "milesFromStart": 233.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Windy Gyle",
+      "milesFromStart": 241.5,
+      "note": "descend to Barrowburn; taxi",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Auchope Cairn",
+      "milesFromStart": 247.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kirk Yetholm",
+      "milesFromStart": 254.5,
+      "note": "finish; buses",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Edale",
+      "toLandmark": "Snake Pass (A57)",
+      "note": "Kinder plateau; short but tough"
+    },
+    {
+      "fromLandmark": "Snake Pass (A57)",
+      "toLandmark": "Wessenden Head (A635)",
+      "note": "Bleaklow and Black Hill: peat, navigation"
+    },
+    {
+      "fromLandmark": "Wessenden Head (A635)",
+      "toLandmark": "Calder Valley (Hebden Bridge)",
+      "note": "Moorland edges"
+    },
+    {
+      "fromLandmark": "Calder Valley (Hebden Bridge)",
+      "toLandmark": "Ickornshaw (Cowling)",
+      "note": "Bail-out at Ponden (9 mi)"
+    },
+    {
+      "fromLandmark": "Ickornshaw (Cowling)",
+      "toLandmark": "Malham",
+      "note": "Longest but gentle lowland; Gargrave station at 11 mi"
+    },
+    {
+      "fromLandmark": "Malham",
+      "toLandmark": "Horton in Ribblesdale",
+      "note": "Fountains Fell and Pen-y-ghent"
+    },
+    {
+      "fromLandmark": "Horton in Ribblesdale",
+      "toLandmark": "Hawes",
+      "note": "Long, steady moor tracks"
+    },
+    {
+      "fromLandmark": "Hawes",
+      "toLandmark": "Keld",
+      "note": "Great Shunner Fell"
+    },
+    {
+      "fromLandmark": "Keld",
+      "toLandmark": "Baldersdale",
+      "note": "Tan Hill, boggy Sleightholme Moor"
+    },
+    {
+      "fromLandmark": "Baldersdale",
+      "toLandmark": "Langdon Beck",
+      "note": "Middleton at 6.5 mi; riverside Tees"
+    },
+    {
+      "fromLandmark": "Langdon Beck",
+      "toLandmark": "Dufton",
+      "note": "Cauldron Snout scramble, High Cup"
+    },
+    {
+      "fromLandmark": "Dufton",
+      "toLandmark": "Garrigill",
+      "note": "Toughest: Cross Fell, highest point"
+    },
+    {
+      "fromLandmark": "Garrigill",
+      "toLandmark": "Knarsdale",
+      "note": "South Tyne valley"
+    },
+    {
+      "fromLandmark": "Knarsdale",
+      "toLandmark": "Steel Rigg (Once Brewed)",
+      "note": "Onto Hadrian's Wall crags"
+    },
+    {
+      "fromLandmark": "Steel Rigg (Once Brewed)",
+      "toLandmark": "Bellingham",
+      "note": "Wark Forest"
+    },
+    {
+      "fromLandmark": "Bellingham",
+      "toLandmark": "Byrness",
+      "note": "Moor and forest"
+    },
+    {
+      "fromLandmark": "Byrness",
+      "toLandmark": "Windy Gyle",
+      "note": "Cheviot ridge; +1.5 mi descent"
+    },
+    {
+      "fromLandmark": "Windy Gyle",
+      "toLandmark": "Kirk Yetholm",
+      "note": "Cheviot ridge to the finish"
+    }
+  ],
+  "gpxAsset": null
+}
