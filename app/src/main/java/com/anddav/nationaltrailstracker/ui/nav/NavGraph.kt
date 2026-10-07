@@ -13,12 +13,15 @@ import androidx.navigation.navArgument
 import com.anddav.nationaltrailstracker.di.LocalAppContainer
 import com.anddav.nationaltrailstracker.ui.detail.TrailDetailScreen
 import com.anddav.nationaltrailstracker.ui.detail.TrailDetailViewModel
+import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsScreen
+import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsViewModel
 import com.anddav.nationaltrailstracker.ui.trails.TrailsListScreen
 import com.anddav.nationaltrailstracker.ui.trails.TrailsListViewModel
 
 private const val TRAILS_LIST_ROUTE = "trails"
 private const val TRAIL_DETAIL_ROUTE = "trails/{trailId}"
 private const val TRAIL_ID_ARG = "trailId"
+private const val SUMMARY_ROUTE = "summary"
 
 @Composable
 fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
@@ -35,7 +38,16 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
             TrailsListScreen(
                 viewModel = viewModel,
                 onTrailClick = { trailId -> navController.navigate("trails/$trailId") },
+                onSummaryClick = { navController.navigate(SUMMARY_ROUTE) },
             )
+        }
+        composable(SUMMARY_ROUTE) {
+            val viewModel: SummaryStatsViewModel = viewModel(
+                factory = viewModelFactory {
+                    initializer { SummaryStatsViewModel(container.trailRepository, container.progressRepository) }
+                },
+            )
+            SummaryStatsScreen(viewModel = viewModel)
         }
         composable(
             route = TRAIL_DETAIL_ROUTE,

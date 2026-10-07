@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.size
@@ -41,6 +42,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontFamily
@@ -56,6 +58,7 @@ import java.util.Locale
 fun TrailsListScreen(
     viewModel: TrailsListViewModel,
     onTrailClick: (String) -> Unit,
+    onSummaryClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -94,6 +97,7 @@ fun TrailsListScreen(
         TrailsListContent(
             uiState = uiState,
             onTrailClick = onTrailClick,
+            onSummaryClick = onSummaryClick,
             onExportClick = { exportLauncher.launch("national-trails-backup.json") },
             onImportClick = { importLauncher.launch(arrayOf("application/json")) },
         )
@@ -105,6 +109,7 @@ fun TrailsListScreen(
 private fun TrailsListContent(
     uiState: TrailsListUiState,
     onTrailClick: (String) -> Unit,
+    onSummaryClick: () -> Unit,
     onExportClick: () -> Unit,
     onImportClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -148,15 +153,23 @@ private fun TrailsListContent(
             }
         }
 
-        Text(
-            text = "${uiState.trailsComplete} of ${uiState.trailsTotal} complete · " +
-                "${formatMiles(uiState.totalMilesWalked)} miles walked",
-            color = TrailTrackerCream,
-            fontFamily = FontFamily.Serif,
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
+                .clickable(onClickLabel = "Open summary", role = Role.Button, onClick = onSummaryClick)
+                .heightIn(min = 48.dp)
                 .padding(horizontal = 20.dp, vertical = 16.dp),
-        )
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = "${uiState.trailsComplete} of ${uiState.trailsTotal} complete · " +
+                    "${formatMiles(uiState.totalMilesWalked)} miles walked",
+                color = TrailTrackerCream,
+                fontFamily = FontFamily.Serif,
+                modifier = Modifier.weight(1f),
+            )
+            Text(text = "›", color = TrailTrackerCream, fontSize = MaterialTheme.typography.titleLarge.fontSize)
+        }
     }
 }
 
