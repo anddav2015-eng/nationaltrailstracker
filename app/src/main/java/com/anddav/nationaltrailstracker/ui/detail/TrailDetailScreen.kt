@@ -7,13 +7,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -35,6 +35,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -46,6 +47,7 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontFamily
@@ -99,6 +101,8 @@ private fun TrailDetailContent(
     var selectedTab by remember { mutableIntStateOf(0) }
     var selectedStageIndex by remember { mutableStateOf<Int?>(null) }
     var showFooter by remember { mutableStateOf(false) }
+    // Hoisted here (not inside the table) so collapsed stages survive switching tabs.
+    var collapsedStages by rememberSaveable { mutableStateOf(emptyList<Int>()) }
 
     Column(modifier = modifier.fillMaxSize()) {
         Column(
@@ -141,7 +145,19 @@ private fun TrailDetailContent(
                 onStageClick = { stageIndex -> selectedStageIndex = stageIndex },
                 modifier = Modifier.weight(1f),
             )
-            1 -> LandmarksTable(trail = trail, groups = uiState.landmarkGroups, modifier = Modifier.weight(1f))
+            1 -> LandmarksTable(
+                trail = trail,
+                groups = uiState.landmarkGroups,
+                stageRows = uiState.stageRows,
+                collapsedStages = collapsedStages.toSet(),
+                onToggleStage = { index ->
+                    collapsedStages = if (index in collapsedStages) collapsedStages - index else collapsedStages + index
+                },
+                onSetAllCollapsed = { collapse ->
+                    collapsedStages = if (collapse) uiState.stageRows.map { it.stage.index } else emptyList()
+                },
+                modifier = Modifier.weight(1f),
+            )
             else -> ProgressChart(
                 points = uiState.chartPoints,
                 totalMiles = StageMaths.totalMiles(trail),
@@ -261,6 +277,7 @@ private fun StageRowItem(trail: Trail, row: StageRow, totalStages: Int, onClick:
 
 private val WalkedGreen = Color(0xFF1E6B34)
 private val WalkedRowBackground = Color(0xFFE3F1E5)
+private val WalkedHeaderBackground = Color(0xFFCDE6D2)
 
 /** White or near-black, whichever reads better on [background]. */
 private fun readableTextOn(background: Color): Color =
@@ -326,39 +343,77 @@ private fun TrailPositionStrip(startPercent: Double, endPercent: Double, colour:
     }
 }
 
-private val StageColumnWidth = 40.dp
-
 @Composable
-private fun LandmarksTable(trail: Trail, groups: List<LandmarkGroup>, modifier: Modifier = Modifier) {
+private fun LandmarksTable(
+    trail: Trail,
+    groups: List<LandmarkGroup>,
+    stageRows: List<StageRow>,
+    collapsedStages: Set<Int>,
+    onToggleStage: (Int) -> Unit,
+    onSetAllCollapsed: (Boolean) -> Unit,
+    modifier: Modifier = Modifier,
+) {
     val totalStages = trail.defaultStages.size
+    val stageRowsByIndex = stageRows.associateBy { it.stage.index }
+    val allCollapsed = stageRows.isNotEmpty() && stageRows.all { it.stage.index in collapsedStages }
     LazyColumn(modifier = modifier.fillMaxWidth()) {
-        stickyHeader { LandmarkHeaderRow() }
-        items(groups, key = { group -> group.stageIndex?.let { "stage-$it" } ?: "unstaged-${group.rows.first().landmark.name}" }) { group ->
-            LandmarkStageGroup(
-                group = group,
-                colour = group.stageIndex?.let { stageChipColour(trail.colour, it, totalStages) },
+        stickyHeader {
+            LandmarkHeaderRow(
+                showCollapseToggle = stageRows.isNotEmpty(),
+                allCollapsed = allCollapsed,
+                onSetAllCollapsed = onSetAllCollapsed,
             )
-            HorizontalDivider(thickness = 1.5.dp, color = MaterialTheme.colorScheme.outline)
+        }
+        groups.forEach { group ->
+            val stageIndex = group.stageIndex
+            val stageRow = stageIndex?.let { stageRowsByIndex[it] }
+            val collapsed = stageIndex != null && stageIndex in collapsedStages
+            if (stageIndex != null && stageRow != null) {
+                item(key = "stage-$stageIndex") {
+                    StageGroupHeader(
+                        row = stageRow,
+                        colour = stageChipColour(trail.colour, stageIndex, totalStages),
+                        walked = group.walked,
+                        collapsed = collapsed,
+                        onClick = { onToggleStage(stageIndex) },
+                    )
+                }
+            }
+            if (!collapsed) {
+                items(group.rows, key = { "landmark-${it.landmark.name}" }) { row ->
+                    LandmarkTableRow(
+                        row = row,
+                        modifier = Modifier.background(if (group.walked) WalkedRowBackground else Color.Transparent),
+                    )
+                }
+            }
         }
     }
 }
 
 @Composable
-private fun LandmarkHeaderRow() {
+private fun LandmarkHeaderRow(showCollapseToggle: Boolean, allCollapsed: Boolean, onSetAllCollapsed: (Boolean) -> Unit) {
     Column(modifier = Modifier.background(MaterialTheme.colorScheme.surface)) {
+        if (showCollapseToggle) {
+            TextButton(
+                onClick = { onSetAllCollapsed(!allCollapsed) },
+                modifier = Modifier.align(Alignment.End),
+            ) {
+                Text(if (allCollapsed) "Expand all" else "Collapse all")
+            }
+        }
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 8.dp)
+                .padding(start = 16.dp, end = 12.dp, bottom = 8.dp)
                 .semantics { heading() },
             verticalAlignment = Alignment.Bottom,
         ) {
-            HeaderCell("Stage", Modifier.width(StageColumnWidth), TextAlign.Center)
-            HeaderCell("Landmark", Modifier.weight(2.2f).padding(start = 8.dp), TextAlign.Start)
+            HeaderCell("Landmark", Modifier.weight(2.4f), TextAlign.Start)
             HeaderCell("Miles", Modifier.weight(1f), TextAlign.End)
             HeaderCell("Cumul.", Modifier.weight(1.1f), TextAlign.End)
             HeaderCell("%", Modifier.weight(0.8f), TextAlign.End)
-            HeaderCell("To go", Modifier.weight(1.1f).padding(end = 12.dp), TextAlign.End)
+            HeaderCell("To go", Modifier.weight(1.1f), TextAlign.End)
         }
         HorizontalDivider(thickness = 1.5.dp, color = MaterialTheme.colorScheme.outline)
     }
@@ -375,57 +430,75 @@ private fun HeaderCell(text: String, modifier: Modifier, align: TextAlign) {
     )
 }
 
-/** One stage's landmarks, with a stage-number cell on the left spanning all of its rows. */
+/** A full-width, tappable row introducing one stage; tapping collapses or expands its landmarks. */
 @Composable
-private fun LandmarkStageGroup(group: LandmarkGroup, colour: Color?) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(IntrinsicSize.Min)
-            .background(if (group.walked) WalkedRowBackground else Color.Transparent),
-    ) {
-        Box(
+private fun StageGroupHeader(row: StageRow, colour: Color, walked: Boolean, collapsed: Boolean, onClick: () -> Unit) {
+    Column {
+        HorizontalDivider(thickness = 1.5.dp, color = MaterialTheme.colorScheme.outline)
+        Row(
             modifier = Modifier
-                .width(StageColumnWidth)
-                .fillMaxHeight()
-                .background(colour?.copy(alpha = 0.16f) ?: Color.Transparent)
-                .padding(top = 8.dp),
-            contentAlignment = Alignment.TopCenter,
+                .fillMaxWidth()
+                .background(if (walked) WalkedHeaderBackground else colour.copy(alpha = 0.16f))
+                .clickable(
+                    onClickLabel = if (collapsed) "Expand stage" else "Collapse stage",
+                    role = Role.Button,
+                    onClick = onClick,
+                )
+                .semantics { stateDescription = if (collapsed) "Collapsed" else "Expanded" }
+                .heightIn(min = 48.dp)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            if (group.stageIndex != null && colour != null) {
-                Box(
-                    modifier = Modifier
-                        .size(26.dp)
-                        .clip(CircleShape)
-                        .background(colour)
-                        .semantics { contentDescription = "Stage ${group.stageIndex + 1}" },
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(
-                        text = (group.stageIndex + 1).toString(),
-                        color = readableTextOn(colour),
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.clearAndSetSemantics { },
-                    )
-                }
+            Box(
+                modifier = Modifier
+                    .size(28.dp)
+                    .clip(CircleShape)
+                    .background(colour),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(
+                    text = (row.stage.index + 1).toString(),
+                    color = readableTextOn(colour),
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.clearAndSetSemantics { },
+                )
             }
-        }
-        Column(modifier = Modifier.weight(1f)) {
-            group.rows.forEach { row -> LandmarkTableRow(row) }
+            Text(
+                text = buildAnnotatedString {
+                    withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) {
+                        append("Stage ${row.stage.index + 1}: ${row.stage.fromLandmark.name} → ${row.stage.toLandmark.name}")
+                    }
+                    withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant)) {
+                        append("  ·  %.1f mi".format(Locale.UK, row.stage.miles))
+                    }
+                    if (walked) {
+                        withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = WalkedGreen)) { append("  ✓") }
+                    }
+                },
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 10.dp),
+            )
+            Text(
+                text = if (collapsed) "▸" else "▾",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.clearAndSetSemantics { },
+            )
         }
     }
 }
 
 @Composable
-private fun LandmarkTableRow(row: LandmarkRow) {
+private fun LandmarkTableRow(row: LandmarkRow, modifier: Modifier = Modifier) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp),
+            .padding(start = 16.dp, end = 12.dp, top = 8.dp, bottom = 8.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        Column(modifier = Modifier.weight(2.2f).padding(start = 8.dp)) {
+        Column(modifier = Modifier.weight(2.4f)) {
             Text(row.landmark.name, style = MaterialTheme.typography.bodyMedium)
             row.landmark.note?.let {
                 Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -434,7 +507,7 @@ private fun LandmarkTableRow(row: LandmarkRow) {
         NumberCell(row.milesFromPrevious?.let { "%.1f".format(Locale.UK, it) } ?: "–", Modifier.weight(1f))
         NumberCell("%.1f".format(Locale.UK, row.cumulativeMiles), Modifier.weight(1.1f))
         NumberCell("%.0f".format(Locale.UK, row.percent), Modifier.weight(0.8f))
-        NumberCell("%.1f".format(Locale.UK, row.milesToEnd), Modifier.weight(1.1f).padding(end = 12.dp))
+        NumberCell("%.1f".format(Locale.UK, row.milesToEnd), Modifier.weight(1.1f))
     }
 }
 
