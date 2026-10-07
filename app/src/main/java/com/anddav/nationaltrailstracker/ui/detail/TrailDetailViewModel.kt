@@ -20,6 +20,11 @@ import java.time.LocalDate
 data class StageRow(
     val stage: Stage,
     val cumulativeMiles: Double,
+    /** How far through the whole trail the end of this stage is, 0-100. */
+    val percentAtEnd: Double,
+    /** How far through the whole trail the start of this stage is, 0-100. */
+    val percentAtStart: Double,
+    val milesToEnd: Double,
     val log: StageLogEntity?,
 )
 
@@ -85,14 +90,19 @@ class TrailDetailViewModel(
 
     private fun buildUiState(trail: Trail, logs: List<StageLogEntity>): TrailDetailUiState {
         val logsByIndex = logs.associateBy { it.stageIndex }
+        val totalMiles = StageMaths.totalMiles(trail)
+        val percentOf = { miles: Double -> if (totalMiles > 0.0) miles / totalMiles * 100 else 0.0 }
         val stageRows = StageMaths.stages(trail).map { stage ->
+            val cumulativeMiles = StageMaths.cumulativeMilesAt(trail, stage.index)
             StageRow(
                 stage = stage,
-                cumulativeMiles = StageMaths.cumulativeMilesAt(trail, stage.index),
+                cumulativeMiles = cumulativeMiles,
+                percentAtEnd = percentOf(cumulativeMiles),
+                percentAtStart = percentOf(cumulativeMiles - stage.miles),
+                milesToEnd = totalMiles - cumulativeMiles,
                 log = logsByIndex[stage.index],
             )
         }
-        val totalMiles = StageMaths.totalMiles(trail)
         val landmarkRows = trail.landmarks.mapIndexed { i, landmark ->
             val next = trail.landmarks.getOrNull(i + 1)
             LandmarkRow(

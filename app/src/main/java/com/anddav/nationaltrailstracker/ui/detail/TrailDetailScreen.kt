@@ -3,11 +3,16 @@ package com.anddav.nationaltrailstracker.ui.detail
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -33,12 +38,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.anddav.nationaltrailstracker.data.local.StageLogEntity
@@ -180,40 +190,135 @@ private fun StagesList(
 
 @Composable
 private fun StageRowItem(trail: Trail, row: StageRow, totalStages: Int, onClick: () -> Unit) {
+    val stageColour = stageChipColour(trail.colour, row.stage.index, totalStages)
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically,
+            .background(if (row.log != null) WalkedRowBackground else Color.Transparent)
+            .clickable(onClickLabel = "Log or edit this stage", onClick = onClick)
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.Top,
     ) {
-        Box(
+        StageNumberBadge(number = row.stage.index + 1, colour = stageColour)
+        Column(
             modifier = Modifier
-                .width(6.dp)
-                .padding(end = 10.dp)
-                .clip(RoundedCornerShape(3.dp))
-                .background(stageChipColour(trail.colour, row.stage.index, totalStages))
-                .fillMaxWidth(),
-        )
-        Column(modifier = Modifier.weight(1f)) {
+                .weight(1f)
+                .padding(start = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
             Text(
-                text = "Stage ${row.stage.index + 1}: ${row.stage.fromLandmark.name} → ${row.stage.toLandmark.name}",
-                fontWeight = FontWeight.SemiBold,
+                text = buildAnnotatedString {
+                    withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) {
+                        append("${row.stage.fromLandmark.name} → ${row.stage.toLandmark.name}")
+                    }
+                    withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant)) {
+                        append("  ·  %.1f mi".format(Locale.UK, row.stage.miles))
+                    }
+                },
             )
-            Text(
-                text = "%.1f mi · %.1f mi cumulative".format(Locale.UK, row.stage.miles, row.cumulativeMiles),
-                style = MaterialTheme.typography.bodySmall,
+            FlowRow(
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                Lozenge(
+                    text = "%.1f mi cumulative".format(Locale.UK, row.cumulativeMiles),
+                    background = stageColour.copy(alpha = 0.16f),
+                    content = MaterialTheme.colorScheme.onSurface,
+                )
+                Lozenge(
+                    text = "%.1f%% complete".format(Locale.UK, row.percentAtEnd),
+                    background = stageColour.copy(alpha = 0.16f),
+                    content = MaterialTheme.colorScheme.onSurface,
+                )
+                Lozenge(
+                    text = "%.1f mi to go".format(Locale.UK, row.milesToEnd),
+                    background = MaterialTheme.colorScheme.surfaceVariant,
+                    content = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            TrailPositionStrip(
+                startPercent = row.percentAtStart,
+                endPercent = row.percentAtEnd,
+                colour = stageColour,
             )
             row.stage.note?.let { Text(text = it, style = MaterialTheme.typography.bodySmall) }
             row.log?.let { log ->
-                val stepsText = log.steps?.let { " · $it steps" } ?: ""
+                val stepsText = log.steps?.let { " · %,d steps".format(Locale.UK, it) } ?: ""
                 val actualMilesText = log.actualMiles?.let { " · %.1f mi actual".format(Locale.UK, it) } ?: ""
-                Text(
-                    text = "Walked ${UK_DATE_FORMAT.format(log.dateWalked)}$stepsText$actualMilesText",
-                    style = MaterialTheme.typography.bodySmall,
-                    fontWeight = FontWeight.Medium,
+                Lozenge(
+                    text = "✓ Walked ${UK_DATE_FORMAT.format(log.dateWalked)}$stepsText$actualMilesText",
+                    background = WalkedGreen.copy(alpha = 0.15f),
+                    content = WalkedGreen,
+                    bold = true,
                 )
             }
+        }
+    }
+}
+
+private val WalkedGreen = Color(0xFF1E6B34)
+private val WalkedRowBackground = Color(0xFFE3F1E5)
+
+/** White or near-black, whichever reads better on [background]. */
+private fun readableTextOn(background: Color): Color =
+    if (background.luminance() > 0.45f) Color(0xFF1C1B1F) else Color.White
+
+@Composable
+private fun StageNumberBadge(number: Int, colour: Color) {
+    Box(
+        modifier = Modifier
+            .size(36.dp)
+            .clip(CircleShape)
+            .background(colour)
+            .semantics(mergeDescendants = true) { contentDescription = "Stage $number" },
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = number.toString(),
+            color = readableTextOn(colour),
+            fontFamily = FontFamily.Serif,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.clearAndSetSemantics { },
+        )
+    }
+}
+
+@Composable
+private fun Lozenge(text: String, background: Color, content: Color, bold: Boolean = false) {
+    Text(
+        text = text,
+        color = content,
+        style = MaterialTheme.typography.labelMedium,
+        fontWeight = if (bold) FontWeight.Bold else FontWeight.Medium,
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(background)
+            .padding(horizontal = 10.dp, vertical = 4.dp),
+    )
+}
+
+/** A thin bar for the whole trail: earlier stages faded, this stage solid, the rest as track. */
+@Composable
+private fun TrailPositionStrip(startPercent: Double, endPercent: Double, colour: Color) {
+    val before = (startPercent / 100).toFloat().coerceIn(0f, 1f)
+    val stage = ((endPercent - startPercent) / 100).toFloat().coerceIn(0f, 1f)
+    val after = (1f - before - stage).coerceAtLeast(0f)
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(5.dp)
+            .clip(RoundedCornerShape(50))
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .clearAndSetSemantics { },
+    ) {
+        if (before > 0f) {
+            Box(Modifier.weight(before).fillMaxHeight().background(colour.copy(alpha = 0.35f)))
+        }
+        if (stage > 0f) {
+            Box(Modifier.weight(stage).fillMaxHeight().background(colour))
+        }
+        if (after > 0f) {
+            Spacer(Modifier.weight(after))
         }
     }
 }
