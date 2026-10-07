@@ -1,0 +1,239 @@
+{
+  "id": "southern-upland-way",
+  "name": "Southern Upland Way",
+  "route": "Portpatrick to Cockburnspath",
+  "startLabel": "Portpatrick",
+  "endLabel": "Cockburnspath",
+  "colour": "#4a5a6a",
+  "subtitle": "Scotland's coast to coast, from Portpatrick on the Irish Sea to Cockburnspath on the North Sea",
+  "footer": "214 miles in total (dgtrails.org). Section-end places are taken from published section distances (undiscoveredscotland.co.uk, which sum to 212 miles) and scaled to the official total, so treat them as estimates (±1 mile). Intermediate landmarks, including the stage splits at Clatteringshaws and Stroanpatrick, are estimated positions (±0.5 mile). Several days are long and remote, with no services; arrange pick-ups in advance. GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Portpatrick (start)",
+      "milesFromStart": 0.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Castle Kennedy",
+      "milesFromStart": 13.0,
+      "note": "buses to Stranraer",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "New Luce",
+      "milesFromStart": 23.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bargrennan",
+      "milesFromStart": 41.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Glentrool (Loch Trool)",
+      "milesFromStart": 45.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clatteringshaws Loch",
+      "milesFromStart": 58.5,
+      "note": "A712; pick-up point",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St John's Town of Dalry",
+      "milesFromStart": 65.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Stroanpatrick",
+      "milesFromStart": 75.5,
+      "note": "road end; pick-up point",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Sanquhar",
+      "milesFromStart": 93.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Wanlockhead",
+      "milesFromStart": 100.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Daer Reservoir",
+      "milesFromStart": 110.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Beattock",
+      "milesFromStart": 121.0,
+      "note": "Moffat 1.5 miles; buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ettrick Head",
+      "milesFromStart": 131.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "St Mary's Loch",
+      "milesFromStart": 142.5,
+      "note": "Tibbie Shiels Inn",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Traquair",
+      "milesFromStart": 154.5,
+      "note": "Innerleithen 1.5 miles; buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Galashiels",
+      "milesFromStart": 167.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Melrose",
+      "milesFromStart": 171.5,
+      "note": "buses; Tweedbank station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lauder",
+      "milesFromStart": 181.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Twin Law",
+      "milesFromStart": 189.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Longformacus",
+      "milesFromStart": 197.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abbey St Bathans",
+      "milesFromStart": 204.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cockburnspath",
+      "milesFromStart": 214.0,
+      "note": "finish; buses",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Portpatrick (start)",
+      "toLandmark": "Castle Kennedy",
+      "note": "Cliff-top start, then farmland"
+    },
+    {
+      "fromLandmark": "Castle Kennedy",
+      "toLandmark": "New Luce",
+      "note": "Short; moorland and forest"
+    },
+    {
+      "fromLandmark": "New Luce",
+      "toLandmark": "Bargrennan",
+      "note": "Long and remote; no services"
+    },
+    {
+      "fromLandmark": "Bargrennan",
+      "toLandmark": "Clatteringshaws Loch",
+      "note": "Long; Loch Trool and forest roads"
+    },
+    {
+      "fromLandmark": "Clatteringshaws Loch",
+      "toLandmark": "Stroanpatrick",
+      "note": "Via Dalry; hill section beyond"
+    },
+    {
+      "fromLandmark": "Stroanpatrick",
+      "toLandmark": "Sanquhar",
+      "note": "Long and remote; open hill"
+    },
+    {
+      "fromLandmark": "Sanquhar",
+      "toLandmark": "Wanlockhead",
+      "note": "Short but hilly; Scotland's highest village"
+    },
+    {
+      "fromLandmark": "Wanlockhead",
+      "toLandmark": "Beattock",
+      "note": "Long; the Way's highest ground (Lowther Hills)"
+    },
+    {
+      "fromLandmark": "Beattock",
+      "toLandmark": "St Mary's Loch",
+      "note": "Long; remote forest and hill"
+    },
+    {
+      "fromLandmark": "St Mary's Loch",
+      "toLandmark": "Traquair",
+      "note": "Hill tracks"
+    },
+    {
+      "fromLandmark": "Traquair",
+      "toLandmark": "Melrose",
+      "note": "Minchmoor and the Three Brethren"
+    },
+    {
+      "fromLandmark": "Melrose",
+      "toLandmark": "Lauder",
+      "note": "Gentle"
+    },
+    {
+      "fromLandmark": "Lauder",
+      "toLandmark": "Longformacus",
+      "note": "Lammermuir Hills, over Twin Law"
+    },
+    {
+      "fromLandmark": "Longformacus",
+      "toLandmark": "Cockburnspath",
+      "note": "Finishes at the North Sea coast"
+    }
+  ],
+  "gpxAsset": null
+}

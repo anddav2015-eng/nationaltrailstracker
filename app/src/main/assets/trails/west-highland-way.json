@@ -1,0 +1,202 @@
+{
+  "id": "west-highland-way",
+  "name": "West Highland Way",
+  "route": "Milngavie to Fort William",
+  "startLabel": "Milngavie",
+  "endLabel": "Fort William",
+  "colour": "#5a2d4a",
+  "subtitle": "Milngavie, on the edge of Glasgow, along Loch Lomond and across Rannoch Moor to Fort William",
+  "footer": "Route and section structure from the official West Highland Way route pages (westhighlandway.org); 96 miles in total. Section-end places use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Milngavie (start, Douglas Street obelisk)",
+      "milesFromStart": 0.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Glengoyne Distillery",
+      "milesFromStart": 6.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gartness",
+      "milesFromStart": 10.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Drymen",
+      "milesFromStart": 12.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Conic Hill",
+      "milesFromStart": 17.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Balmaha",
+      "milesFromStart": 19.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Rowardennan",
+      "milesFromStart": 27.0,
+      "note": "road end; seasonal ferry",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Inversnaid",
+      "milesFromStart": 34.0,
+      "note": "hotel; seasonal ferry",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Inverarnan",
+      "milesFromStart": 41.0,
+      "note": "Citylink buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Crianlarich turn-off",
+      "milesFromStart": 47.5,
+      "note": "station 0.75 mile off-route",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Tyndrum",
+      "milesFromStart": 53.0,
+      "note": "stations",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Bridge of Orchy",
+      "milesFromStart": 60.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Inveroran",
+      "milesFromStart": 62.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ba Bridge",
+      "milesFromStart": 67.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kingshouse",
+      "milesFromStart": 72.0,
+      "note": "Citylink buses on A82",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Devil's Staircase (top)",
+      "milesFromStart": 75.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kinlochleven",
+      "milesFromStart": 81.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Lairigmor",
+      "milesFromStart": 85.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Blar a' Chaorainn",
+      "milesFromStart": 89.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Glen Nevis",
+      "milesFromStart": 93.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Fort William (Gordon Square)",
+      "milesFromStart": 96.0,
+      "note": "finish; station",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Milngavie (start, Douglas Street obelisk)",
+      "toLandmark": "Drymen",
+      "note": "Gentle; old railway line and farm tracks"
+    },
+    {
+      "fromLandmark": "Drymen",
+      "toLandmark": "Rowardennan",
+      "note": "Climb over Conic Hill, then the loch shore"
+    },
+    {
+      "fromLandmark": "Rowardennan",
+      "toLandmark": "Inverarnan",
+      "note": "Rough, rocky loch-side path; slow going"
+    },
+    {
+      "fromLandmark": "Inverarnan",
+      "toLandmark": "Tyndrum",
+      "note": "Glen Falloch; steady climb"
+    },
+    {
+      "fromLandmark": "Tyndrum",
+      "toLandmark": "Inveroran",
+      "note": "Old military road; easy"
+    },
+    {
+      "fromLandmark": "Inveroran",
+      "toLandmark": "Kingshouse",
+      "note": "Rannoch Moor; exposed, no shelter"
+    },
+    {
+      "fromLandmark": "Kingshouse",
+      "toLandmark": "Kinlochleven",
+      "note": "Devil's Staircase, the highest point on the Way"
+    },
+    {
+      "fromLandmark": "Kinlochleven",
+      "toLandmark": "Fort William (Gordon Square)",
+      "note": "Long; remote Lairigmor glen"
+    }
+  ],
+  "gpxAsset": null
+}

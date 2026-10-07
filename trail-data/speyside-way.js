@@ -1,0 +1,41 @@
+// Speyside Way – landmarks are [name, miles from start, optional note].
+// To record a finished stage, add  date: "d Mon yyyy", steps: 12345  to it in the stages list.
+window.TRAILS = window.TRAILS || {};
+window.TRAILS["speyside-way"] = {
+  name: "Speyside Way",
+  route: "Buckie to Newtonmore",
+  startLabel: "Buckie",
+  endLabel: "Newtonmore",
+  colour: "#a0522d",
+  subtitle: "Buckie on the Moray coast, up Strathspey through whisky country to Newtonmore",
+  footer: "Route and section distances from the official Speyside Way route pages (speysideway.co.uk); 85 miles from Buckie to Newtonmore. Some sources still quote 65 miles, the length before the route was extended from Aviemore to Newtonmore. The 15-mile Tomintoul spur from Ballindalloch is not included. Section-end places use the official figures; intermediate landmarks are estimated positions between them (&plusmn;0.5 mile). GPS distances on the ground will read a little longer.",
+  landmarks: [
+    ["Buckie (start)", 0, "buses"],
+    ["Portgordon", 2.5],
+    ["Spey Bay (Scottish Dolphin Centre)", 6],
+    ["Fochabers", 10.7, "buses"],
+    ["Boat o' Brig", 14],
+    ["Craigellachie", 23.4, "buses"],
+    ["Aberlour", 25.5, "buses"],
+    ["Carron", 29],
+    ["Blacksboat", 32.5],
+    ["Ballindalloch (old station)", 35.6],
+    ["Cromdale", 45.5],
+    ["Grantown-on-Spey", 49.3, "buses"],
+    ["Nethy Bridge", 55],
+    ["Boat of Garten", 60, "steam railway"],
+    ["Aviemore", 65.5, "station"],
+    ["Kincraig", 72],
+    ["Kingussie", 80, "station"],
+    ["Newtonmore", 85, "finish; station"],
+  ],
+  stages: [
+    { from: "Buckie (start)", to: "Fochabers", note: "Flat; coast path, then old railway" },
+    { from: "Fochabers", to: "Craigellachie", note: "Climb through Ben Aigan forest" },
+    { from: "Craigellachie", to: "Ballindalloch (old station)", note: "Almost flat; old railway past the distilleries" },
+    { from: "Ballindalloch (old station)", to: "Grantown-on-Spey", note: "Undulating forest and farmland; wet underfoot" },
+    { from: "Grantown-on-Spey", to: "Boat of Garten", note: "Mainly flat; via Nethy Bridge" },
+    { from: "Boat of Garten", to: "Kincraig", note: "Through Aviemore" },
+    { from: "Kincraig", to: "Newtonmore", note: "Via Kingussie" },
+  ],
+};

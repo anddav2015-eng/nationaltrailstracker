@@ -1,0 +1,176 @@
+{
+  "id": "speyside-way",
+  "name": "Speyside Way",
+  "route": "Buckie to Newtonmore",
+  "startLabel": "Buckie",
+  "endLabel": "Newtonmore",
+  "colour": "#a0522d",
+  "subtitle": "Buckie on the Moray coast, up Strathspey through whisky country to Newtonmore",
+  "footer": "Route and section distances from the official Speyside Way route pages (speysideway.co.uk); 85 miles from Buckie to Newtonmore. Some sources still quote 65 miles, the length before the route was extended from Aviemore to Newtonmore. The 15-mile Tomintoul spur from Ballindalloch is not included. Section-end places use the official figures; intermediate landmarks are estimated positions between them (±0.5 mile). GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Buckie (start)",
+      "milesFromStart": 0.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Portgordon",
+      "milesFromStart": 2.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Spey Bay (Scottish Dolphin Centre)",
+      "milesFromStart": 6.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Fochabers",
+      "milesFromStart": 10.7,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Boat o' Brig",
+      "milesFromStart": 14.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Craigellachie",
+      "milesFromStart": 23.4,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Aberlour",
+      "milesFromStart": 25.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Carron",
+      "milesFromStart": 29.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Blacksboat",
+      "milesFromStart": 32.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Ballindalloch (old station)",
+      "milesFromStart": 35.6,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cromdale",
+      "milesFromStart": 45.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Grantown-on-Spey",
+      "milesFromStart": 49.3,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Nethy Bridge",
+      "milesFromStart": 55.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Boat of Garten",
+      "milesFromStart": 60.0,
+      "note": "steam railway",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Aviemore",
+      "milesFromStart": 65.5,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kincraig",
+      "milesFromStart": 72.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kingussie",
+      "milesFromStart": 80.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Newtonmore",
+      "milesFromStart": 85.0,
+      "note": "finish; station",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Buckie (start)",
+      "toLandmark": "Fochabers",
+      "note": "Flat; coast path, then old railway"
+    },
+    {
+      "fromLandmark": "Fochabers",
+      "toLandmark": "Craigellachie",
+      "note": "Climb through Ben Aigan forest"
+    },
+    {
+      "fromLandmark": "Craigellachie",
+      "toLandmark": "Ballindalloch (old station)",
+      "note": "Almost flat; old railway past the distilleries"
+    },
+    {
+      "fromLandmark": "Ballindalloch (old station)",
+      "toLandmark": "Grantown-on-Spey",
+      "note": "Undulating forest and farmland; wet underfoot"
+    },
+    {
+      "fromLandmark": "Grantown-on-Spey",
+      "toLandmark": "Boat of Garten",
+      "note": "Mainly flat; via Nethy Bridge"
+    },
+    {
+      "fromLandmark": "Boat of Garten",
+      "toLandmark": "Kincraig",
+      "note": "Through Aviemore"
+    },
+    {
+      "fromLandmark": "Kincraig",
+      "toLandmark": "Newtonmore",
+      "note": "Via Kingussie"
+    }
+  ],
+  "gpxAsset": null
+}

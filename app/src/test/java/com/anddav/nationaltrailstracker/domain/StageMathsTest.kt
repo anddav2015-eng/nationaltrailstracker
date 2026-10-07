@@ -178,4 +178,36 @@ class StageMathsTest {
         assertEquals(11, stages.size)
         assertEquals(132.8, StageMaths.totalMiles(trail), DELTA)
     }
+
+    @Test
+    fun `every trail in the index loads and its stages resolve to landmarks`() {
+        val json = Json { ignoreUnknownKeys = true }
+        val slugs = json.decodeFromString<List<String>>(File("src/main/assets/trails/index.json").readText())
+        assertEquals(21, slugs.size)
+        for (slug in slugs) {
+            val trail = json.decodeFromString(Trail.serializer(), File("src/main/assets/trails/$slug.json").readText())
+            assertEquals(slug, trail.id)
+            // stages() throws if a stage names a landmark that doesn't exist.
+            StageMaths.stages(trail).forEach { assertTrue("$slug stage ${it.index} has no length", it.miles > 0.0) }
+        }
+    }
+
+    @Test
+    fun `West Highland Way is 8 stages and 96 miles`() {
+        val json = Json { ignoreUnknownKeys = true }
+        val trail = json.decodeFromString(
+            Trail.serializer(),
+            File("src/main/assets/trails/west-highland-way.json").readText(),
+        )
+        assertEquals(8, StageMaths.stages(trail).size)
+        assertEquals(96.0, StageMaths.totalMiles(trail), DELTA)
+    }
+
+    @Test
+    fun `a placeholder trail with no stages has zero miles and is never complete`() {
+        val placeholder = fixtureTrail().copy(landmarks = emptyList(), defaultStages = emptyList())
+        assertEquals(0.0, StageMaths.totalMiles(placeholder), DELTA)
+        assertEquals(0.0, StageMaths.percentComplete(placeholder, emptyList()), DELTA)
+        assertFalse(StageMaths.isComplete(placeholder, emptyList()))
+    }
 }

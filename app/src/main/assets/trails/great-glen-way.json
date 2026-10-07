@@ -1,0 +1,141 @@
+{
+  "id": "great-glen-way",
+  "name": "Great Glen Way",
+  "route": "Fort William to Inverness",
+  "startLabel": "Fort William",
+  "endLabel": "Inverness",
+  "colour": "#355c7d",
+  "subtitle": "Fort William to Inverness along the Caledonian Canal and Loch Ness",
+  "footer": "79 miles in total (nationaltrails.uk). Section-end places are taken from published section distances and rounded to fit that total, so treat them as estimates (±1 mile). Intermediate landmarks are estimated positions between them (±0.5 mile). Mileages assume the high routes between Fort Augustus and Drumnadrochit. GPS distances on the ground will read a little longer.",
+  "landmarks": [
+    {
+      "name": "Fort William (Old Inverlochy Fort)",
+      "milesFromStart": 0.0,
+      "note": "start; station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Banavie (Neptune's Staircase)",
+      "milesFromStart": 3.0,
+      "note": "station",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Gairlochy",
+      "milesFromStart": 10.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Clunes",
+      "milesFromStart": 13.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Kilfinnan",
+      "milesFromStart": 21.0,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Laggan Locks",
+      "milesFromStart": 23.5,
+      "note": "buses on A82",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Aberchalder (Bridge of Oich)",
+      "milesFromStart": 30.0,
+      "note": "buses on A82",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Fort Augustus",
+      "milesFromStart": 35.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Invermoriston",
+      "milesFromStart": 43.0,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Grotaig",
+      "milesFromStart": 51.5,
+      "note": null,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Drumnadrochit",
+      "milesFromStart": 58.5,
+      "note": "buses",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Abriachan",
+      "milesFromStart": 67.5,
+      "note": "campsite and cafe",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Inverness Castle",
+      "milesFromStart": 79.0,
+      "note": "finish; station",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "defaultStages": [
+    {
+      "fromLandmark": "Fort William (Old Inverlochy Fort)",
+      "toLandmark": "Gairlochy",
+      "note": "Flat; canal towpath"
+    },
+    {
+      "fromLandmark": "Gairlochy",
+      "toLandmark": "Laggan Locks",
+      "note": "Forest tracks along Loch Lochy"
+    },
+    {
+      "fromLandmark": "Laggan Locks",
+      "toLandmark": "Fort Augustus",
+      "note": "Old railway and towpath beside Loch Oich"
+    },
+    {
+      "fromLandmark": "Fort Augustus",
+      "toLandmark": "Invermoriston",
+      "note": "High route above Loch Ness"
+    },
+    {
+      "fromLandmark": "Invermoriston",
+      "toLandmark": "Drumnadrochit",
+      "note": "High route; the hilliest day"
+    },
+    {
+      "fromLandmark": "Drumnadrochit",
+      "toLandmark": "Abriachan",
+      "note": "Climbs out of Glen Urquhart"
+    },
+    {
+      "fromLandmark": "Abriachan",
+      "toLandmark": "Inverness Castle",
+      "note": "Moorland, then forest down to Inverness"
+    }
+  ],
+  "gpxAsset": null
+}

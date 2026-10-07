@@ -193,8 +193,12 @@ private fun TrailRow(trail: TrailListItem, onClick: () -> Unit) {
                     fontSize = MaterialTheme.typography.titleMedium.fontSize,
                 )
                 Text(
-                    text = "${trail.stagesDone} of ${trail.stagesTotal} stages · " +
-                        "${formatMiles(trail.milesWalked)} / ${formatMiles(trail.totalMiles)} miles",
+                    text = if (trail.stagesTotal == 0) {
+                        "Stages not planned yet"
+                    } else {
+                        "${trail.stagesDone} of ${trail.stagesTotal} stages · " +
+                            "${formatMiles(trail.milesWalked)} / ${formatMiles(trail.totalMiles)} miles"
+                    },
                     style = MaterialTheme.typography.bodySmall,
                 )
                 LinearProgressIndicator(
