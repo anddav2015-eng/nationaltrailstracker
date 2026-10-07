@@ -1,12 +1,15 @@
 # National Trail Tracker – Project Brief
 
-An Android app for walkers doing the National Trails of England & Wales in day-long stages.
+An Android app for walkers doing the UK's 21 National Trails (14 in England, 3 in Wales and 4 in
+Scotland, as listed on nationaltrails.uk) in day-long stages.
 It shows each trail broken into stages of ~10–15 miles, lets the walker log completed stages
 (date, steps, notes), shows progress across all trails, and can use GPS to answer
 "where am I on this trail and how far to the end of today's stage?"
 
 The owner (Andrew) has already walked the Thames Path this way and has built HTML trackers for
-16 trails. Those trackers are the source data and the reference design for this app.
+16 trails. Those trackers are the source data and the reference design for this app. The four
+Scottish trails (West Highland Way, Great Glen Way, Speyside Way, Southern Upland Way) have no HTML
+tracker; their `trail-data/` files were written from published section distances.
 
 ## Tech stack (use these unless there is a strong reason not to; ask first)
 
@@ -47,8 +50,8 @@ Derived values (all computed, never stored):
 
 ## Source data
 
-The folder `trail-data/` holds one JS file per trail, copied from the HTML tracker project.
-Each file has this shape:
+The folder `trail-data/` holds one JS file per trail. The England and Wales files were copied from
+the HTML tracker project; the Scottish ones follow the same format. Each file has this shape:
 
 ```js
 window.TRAILS["north-downs-way"] = {
@@ -60,13 +63,15 @@ window.TRAILS["north-downs-way"] = {
 
 - Write a one-off converter (Kotlin script or Python in `tools/`) that turns these into
   `app/src/main/assets/trails/<slug>.json`, plus an `index.json` giving the display order.
-  The order is alphabetical, matching the HTML index; the King Charles III England Coast Path is a
-  placeholder entry with no stages.
+  The order is one alphabetical list of all 21 trails (England, Wales and Scotland mixed, not
+  grouped by country); the King Charles III England Coast Path is a placeholder entry with no stages.
 - `date` and `steps` in the source are **the owner's existing progress**. Don't bake them into the
   trail JSON. Instead, emit `seed-progress.json`, which is imported into Room on first launch
   (Thames Path: 11 of 12 stages logged).
 - Landmark positions between official section ends are **estimates (±0.5 mile)**. Keep each trail's
   `footer` text, and show it on the trail screen.
+- For the Great Glen Way and Southern Upland Way, the section ends themselves are estimates (±1 mile),
+  scaled to fit the official totals. The owner hasn't yet reviewed the Scottish stage cuts.
 
 ### GPS geometry (needed for milestone 3)
 
@@ -74,7 +79,9 @@ The landmarks have mileages but **no coordinates yet**. For "where am I":
 
 1. Get each trail's official route line as GPX. National Trails publishes GPX downloads per trail,
    and Natural England publishes National Trails open data. **Check the licence** (likely the Open
-   Government Licence) and record the attribution in `ATTRIBUTION.md`. Don't scrape; if a
+   Government Licence) and record the attribution in `ATTRIBUTION.md`. The Scottish trails aren't
+   covered by those sources: their route lines come from each trail's own website or Scotland's
+   Great Trails, and their licences must be checked separately. Don't scrape; if a
    download needs a manual step, stop and tell the owner which files to fetch.
 2. Simplify each polyline (Douglas–Peucker, ~10 m tolerance) and store it in `assets/geo/<slug>.json`
    as `[[lat, lon, cumulativeMiles], ...]`.
@@ -88,7 +95,7 @@ The landmarks have mileages but **no coordinates yet**. For "where am I":
 1. **Trails list**: styled like the owner's "Complete List" card (dark green `#1b3a2a` background,
    cream `#f4f0e8` card, serif headings). Show a checkbox per trail, then stages done out of total,
    miles walked, and a thin progress bar. Completed trails get a highlighted row. The footer reads
-   "N of 17 complete · X miles walked".
+   "N of 21 complete · X miles walked".
 2. **Trail detail**: a header in the trail colour, then a stage summary list (stage n, from → to,
    miles, cumulative, date, steps, note). Each stage has its own colour chip, as in the HTML version.
    Tapping a stage opens the log sheet. A tab or expandable section shows the full landmark table
