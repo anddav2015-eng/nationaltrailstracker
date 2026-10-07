@@ -1,23 +1,28 @@
 package com.anddav.nationaltrailstracker.ui.detail
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -28,9 +33,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.anddav.nationaltrailstracker.data.local.StageLogEntity
 import com.anddav.nationaltrailstracker.domain.StageMaths
 import com.anddav.nationaltrailstracker.model.Trail
@@ -75,6 +85,7 @@ private fun TrailDetailContent(
     val trailColour = parseHexColor(trail.colour)
     var selectedTab by remember { mutableIntStateOf(0) }
     var selectedStageIndex by remember { mutableStateOf<Int?>(null) }
+    var showFooter by remember { mutableStateOf(false) }
 
     Column(modifier = modifier.fillMaxSize()) {
         Column(
@@ -90,7 +101,10 @@ private fun TrailDetailContent(
                 fontSize = MaterialTheme.typography.headlineSmall.fontSize,
                 color = TrailTrackerCream,
             )
-            Text(text = trail.subtitle, color = TrailTrackerCream)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(text = trail.subtitle, color = TrailTrackerCream, modifier = Modifier.weight(1f, fill = false))
+                InfoButton(onClick = { showFooter = true })
+            }
         }
 
         val showProgressTab = uiState.chartPoints.isNotEmpty()
@@ -121,11 +135,16 @@ private fun TrailDetailContent(
                 modifier = Modifier.weight(1f).padding(16.dp),
             )
         }
+    }
 
-        Text(
-            text = trail.footer,
-            style = MaterialTheme.typography.bodySmall,
-            modifier = Modifier.padding(16.dp),
+    if (showFooter) {
+        AlertDialog(
+            onDismissRequest = { showFooter = false },
+            title = { Text("About this route") },
+            text = { Text(trail.footer) },
+            confirmButton = {
+                TextButton(onClick = { showFooter = false }) { Text("Close") }
+            },
         )
     }
 
@@ -231,5 +250,34 @@ private fun LandmarkTableRow(row: LandmarkRow) {
         Text("%.1f".format(Locale.UK, row.landmark.milesFromStart), modifier = Modifier.weight(1f))
         Text("%.1f".format(Locale.UK, row.milesToEnd), modifier = Modifier.weight(1f))
         Text("%.0f".format(Locale.UK, row.percent), modifier = Modifier.weight(0.6f))
+    }
+}
+
+/** A circled "i" that opens the trail's small print. Drawn rather than taken from an icon
+ * library, to avoid adding the material-icons dependency for one glyph. */
+@Composable
+private fun InfoButton(onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(48.dp)
+            .clickable(onClickLabel = "Show route notes", role = Role.Button, onClick = onClick)
+            .semantics { contentDescription = "Route notes" },
+        contentAlignment = Alignment.Center,
+    ) {
+        Box(
+            modifier = Modifier
+                .size(22.dp)
+                .border(width = 1.5.dp, color = TrailTrackerCream, shape = CircleShape),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = "i",
+                color = TrailTrackerCream,
+                fontFamily = FontFamily.Serif,
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
+                modifier = Modifier.clearAndSetSemantics { },
+            )
+        }
     }
 }
