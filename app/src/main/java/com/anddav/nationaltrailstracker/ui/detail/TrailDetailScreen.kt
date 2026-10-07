@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -43,11 +44,13 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -138,7 +141,7 @@ private fun TrailDetailContent(
                 onStageClick = { stageIndex -> selectedStageIndex = stageIndex },
                 modifier = Modifier.weight(1f),
             )
-            1 -> LandmarksTable(uiState.landmarkRows, modifier = Modifier.weight(1f))
+            1 -> LandmarksTable(trail = trail, groups = uiState.landmarkGroups, modifier = Modifier.weight(1f))
             else -> ProgressChart(
                 points = uiState.chartPoints,
                 totalMiles = StageMaths.totalMiles(trail),
@@ -323,39 +326,121 @@ private fun TrailPositionStrip(startPercent: Double, endPercent: Double, colour:
     }
 }
 
+private val StageColumnWidth = 40.dp
+
 @Composable
-private fun LandmarksTable(rows: List<LandmarkRow>, modifier: Modifier = Modifier) {
+private fun LandmarksTable(trail: Trail, groups: List<LandmarkGroup>, modifier: Modifier = Modifier) {
+    val totalStages = trail.defaultStages.size
     LazyColumn(modifier = modifier.fillMaxWidth()) {
-        item { LandmarkHeaderRow() }
-        items(rows) { row -> LandmarkTableRow(row) }
+        stickyHeader { LandmarkHeaderRow() }
+        items(groups, key = { group -> group.stageIndex?.let { "stage-$it" } ?: "unstaged-${group.rows.first().landmark.name}" }) { group ->
+            LandmarkStageGroup(
+                group = group,
+                colour = group.stageIndex?.let { stageChipColour(trail.colour, it, totalStages) },
+            )
+            HorizontalDivider(thickness = 1.5.dp, color = MaterialTheme.colorScheme.outline)
+        }
     }
 }
 
 @Composable
 private fun LandmarkHeaderRow() {
-    Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp)) {
-        Text("Landmark", modifier = Modifier.weight(2f), fontWeight = FontWeight.Bold)
-        Text("Miles", modifier = Modifier.weight(1f), fontWeight = FontWeight.Bold)
-        Text("To end", modifier = Modifier.weight(1f), fontWeight = FontWeight.Bold)
-        Text("%", modifier = Modifier.weight(0.6f), fontWeight = FontWeight.Bold)
+    Column(modifier = Modifier.background(MaterialTheme.colorScheme.surface)) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp)
+                .semantics { heading() },
+            verticalAlignment = Alignment.Bottom,
+        ) {
+            HeaderCell("Stage", Modifier.width(StageColumnWidth), TextAlign.Center)
+            HeaderCell("Landmark", Modifier.weight(2.2f).padding(start = 8.dp), TextAlign.Start)
+            HeaderCell("Miles", Modifier.weight(1f), TextAlign.End)
+            HeaderCell("Cumul.", Modifier.weight(1.1f), TextAlign.End)
+            HeaderCell("%", Modifier.weight(0.8f), TextAlign.End)
+            HeaderCell("To go", Modifier.weight(1.1f).padding(end = 12.dp), TextAlign.End)
+        }
+        HorizontalDivider(thickness = 1.5.dp, color = MaterialTheme.colorScheme.outline)
     }
-    HorizontalDivider()
+}
+
+@Composable
+private fun HeaderCell(text: String, modifier: Modifier, align: TextAlign) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelMedium,
+        fontWeight = FontWeight.Bold,
+        textAlign = align,
+        modifier = modifier,
+    )
+}
+
+/** One stage's landmarks, with a stage-number cell on the left spanning all of its rows. */
+@Composable
+private fun LandmarkStageGroup(group: LandmarkGroup, colour: Color?) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Min)
+            .background(if (group.walked) WalkedRowBackground else Color.Transparent),
+    ) {
+        Box(
+            modifier = Modifier
+                .width(StageColumnWidth)
+                .fillMaxHeight()
+                .background(colour?.copy(alpha = 0.16f) ?: Color.Transparent)
+                .padding(top = 8.dp),
+            contentAlignment = Alignment.TopCenter,
+        ) {
+            if (group.stageIndex != null && colour != null) {
+                Box(
+                    modifier = Modifier
+                        .size(26.dp)
+                        .clip(CircleShape)
+                        .background(colour)
+                        .semantics { contentDescription = "Stage ${group.stageIndex + 1}" },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = (group.stageIndex + 1).toString(),
+                        color = readableTextOn(colour),
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.clearAndSetSemantics { },
+                    )
+                }
+            }
+        }
+        Column(modifier = Modifier.weight(1f)) {
+            group.rows.forEach { row -> LandmarkTableRow(row) }
+        }
+    }
 }
 
 @Composable
 private fun LandmarkTableRow(row: LandmarkRow) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        Column(modifier = Modifier.weight(2f)) {
+        Column(modifier = Modifier.weight(2.2f).padding(start = 8.dp)) {
             Text(row.landmark.name, style = MaterialTheme.typography.bodyMedium)
-            row.landmark.note?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+            row.landmark.note?.let {
+                Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
         }
-        Text("%.1f".format(Locale.UK, row.landmark.milesFromStart), modifier = Modifier.weight(1f))
-        Text("%.1f".format(Locale.UK, row.milesToEnd), modifier = Modifier.weight(1f))
-        Text("%.0f".format(Locale.UK, row.percent), modifier = Modifier.weight(0.6f))
+        NumberCell(row.milesFromPrevious?.let { "%.1f".format(Locale.UK, it) } ?: "–", Modifier.weight(1f))
+        NumberCell("%.1f".format(Locale.UK, row.cumulativeMiles), Modifier.weight(1.1f))
+        NumberCell("%.0f".format(Locale.UK, row.percent), Modifier.weight(0.8f))
+        NumberCell("%.1f".format(Locale.UK, row.milesToEnd), Modifier.weight(1.1f).padding(end = 12.dp))
     }
+}
+
+@Composable
+private fun NumberCell(text: String, modifier: Modifier) {
+    Text(text = text, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.End, modifier = modifier)
 }
 
 /** A circled "i" that opens the trail's small print. Drawn rather than taken from an icon

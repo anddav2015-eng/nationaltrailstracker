@@ -22,6 +22,22 @@ object StageMaths {
         return trailStages[stageIndex].toLandmark.milesFromStart - trailStages.first().fromLandmark.milesFromStart
     }
 
+    /** For each landmark (in [Trail.landmarks] order), the 0-based index of the stage it falls in,
+     * or null if no stage covers it. A stage owns the landmarks after its start up to and including
+     * its end, so a shared boundary landmark belongs to the stage that finishes there; the very
+     * first stage also owns its start landmark. */
+    fun stageIndexPerLandmark(trail: Trail): List<Int?> {
+        val positionOf = trail.landmarks.withIndex().associate { (i, landmark) -> landmark.name to i }
+        val owner = arrayOfNulls<Int>(trail.landmarks.size)
+        trail.defaultStages.forEachIndexed { stageIndex, def ->
+            val from = positionOf.getValue(def.fromLandmark)
+            val to = positionOf.getValue(def.toLandmark)
+            val first = if (stageIndex == 0) from else from + 1
+            for (i in first..to) owner[i] = stageIndex
+        }
+        return owner.toList()
+    }
+
     fun totalMiles(trail: Trail): Double {
         val trailStages = stages(trail)
         if (trailStages.isEmpty()) return 0.0

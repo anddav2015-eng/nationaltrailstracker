@@ -30,16 +30,25 @@ data class StageRow(
 
 data class LandmarkRow(
     val landmark: Landmark,
-    val legMiles: Double?,
+    /** Distance from the previous landmark; null for the first one. */
+    val milesFromPrevious: Double?,
+    val cumulativeMiles: Double,
     val milesToEnd: Double,
     val percent: Double,
+)
+
+/** The landmarks within one stage (or, with a null [stageIndex], ones no stage covers). */
+data class LandmarkGroup(
+    val stageIndex: Int?,
+    val walked: Boolean,
+    val rows: List<LandmarkRow>,
 )
 
 data class TrailDetailUiState(
     val isLoading: Boolean = true,
     val trail: Trail? = null,
     val stageRows: List<StageRow> = emptyList(),
-    val landmarkRows: List<LandmarkRow> = emptyList(),
+    val landmarkGroups: List<LandmarkGroup> = emptyList(),
     val chartPoints: List<ChartPoint> = emptyList(),
 )
 
@@ -104,20 +113,32 @@ class TrailDetailViewModel(
             )
         }
         val landmarkRows = trail.landmarks.mapIndexed { i, landmark ->
-            val next = trail.landmarks.getOrNull(i + 1)
+            val previous = trail.landmarks.getOrNull(i - 1)
             LandmarkRow(
                 landmark = landmark,
-                legMiles = next?.let { it.milesFromStart - landmark.milesFromStart },
+                milesFromPrevious = previous?.let { landmark.milesFromStart - it.milesFromStart },
+                cumulativeMiles = landmark.milesFromStart,
                 milesToEnd = totalMiles - landmark.milesFromStart,
-                percent = if (totalMiles > 0.0) landmark.milesFromStart / totalMiles * 100 else 0.0,
+                percent = percentOf(landmark.milesFromStart),
             )
+        }
+        // Consecutive landmarks with the same owning stage form one group.
+        val landmarkGroups = mutableListOf<LandmarkGroup>()
+        StageMaths.stageIndexPerLandmark(trail).zip(landmarkRows).forEach { (stageIndex, row) ->
+            val last = landmarkGroups.lastOrNull()
+            if (last != null && last.stageIndex == stageIndex) {
+                landmarkGroups[landmarkGroups.lastIndex] = last.copy(rows = last.rows + row)
+            } else {
+                val walked = stageIndex != null && logsByIndex.containsKey(stageIndex)
+                landmarkGroups += LandmarkGroup(stageIndex = stageIndex, walked = walked, rows = listOf(row))
+            }
         }
         val chartPoints = StageMaths.cumulativeMilesByDate(trail, logs.map(StageLogEntity::toLoggedStage))
         return TrailDetailUiState(
             isLoading = false,
             trail = trail,
             stageRows = stageRows,
-            landmarkRows = landmarkRows,
+            landmarkGroups = landmarkGroups,
             chartPoints = chartPoints,
         )
     }

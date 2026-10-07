@@ -204,6 +204,29 @@ class StageMathsTest {
     }
 
     @Test
+    fun `each landmark belongs to the stage that ends at or after it`() {
+        // Start, Midpoint A, Midpoint B, End with stages Start-A, A-B, B-End.
+        assertEquals(listOf(0, 0, 1, 2), StageMaths.stageIndexPerLandmark(fixtureTrail()))
+    }
+
+    @Test
+    fun `landmarks inside a multi-landmark stage share its index`() {
+        val trail = fixtureTrail().copy(
+            defaultStages = listOf(
+                StageDef(fromLandmark = "Start", toLandmark = "Midpoint B"),
+                StageDef(fromLandmark = "Midpoint B", toLandmark = "End"),
+            ),
+        )
+        assertEquals(listOf(0, 0, 0, 1), StageMaths.stageIndexPerLandmark(trail))
+    }
+
+    @Test
+    fun `landmarks with no stage get null`() {
+        val placeholder = fixtureTrail().copy(defaultStages = emptyList())
+        assertEquals(listOf(null, null, null, null), StageMaths.stageIndexPerLandmark(placeholder))
+    }
+
+    @Test
     fun `a placeholder trail with no stages has zero miles and is never complete`() {
         val placeholder = fixtureTrail().copy(landmarks = emptyList(), defaultStages = emptyList())
         assertEquals(0.0, StageMaths.totalMiles(placeholder), DELTA)
