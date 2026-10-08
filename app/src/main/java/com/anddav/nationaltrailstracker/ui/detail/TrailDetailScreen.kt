@@ -24,6 +24,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Tab
@@ -121,6 +122,9 @@ private fun TrailDetailContent(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(text = trail.subtitle, color = TrailTrackerCream, modifier = Modifier.weight(1f, fill = false))
                 InfoButton(onClick = { showFooter = true })
+            }
+            if (uiState.progress.stagesTotal > 0) {
+                TrailProgressPanel(uiState.progress, modifier = Modifier.padding(top = 12.dp))
             }
         }
 
@@ -514,6 +518,53 @@ private fun LandmarkTableRow(row: LandmarkRow, modifier: Modifier = Modifier) {
 @Composable
 private fun NumberCell(text: String, modifier: Modifier) {
     Text(text = text, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.End, modifier = modifier)
+}
+
+/** Miles, % complete, steps and stages walked on this trail, on the coloured header. */
+@Composable
+private fun TrailProgressPanel(progress: TrailProgress, modifier: Modifier = Modifier) {
+    Column(modifier = modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+            HeaderStat(
+                value = "%.1f".format(Locale.UK, progress.milesWalked),
+                label = "of %.1f mi".format(Locale.UK, progress.totalMiles),
+            )
+            HeaderStat(value = "%.0f%%".format(Locale.UK, progress.percentComplete), label = "complete")
+            HeaderStat(value = "%,d".format(Locale.UK, progress.stepsWalked), label = "steps")
+            HeaderStat(value = "${progress.stagesDone}/${progress.stagesTotal}", label = "stages")
+        }
+        LinearProgressIndicator(
+            progress = { (progress.percentComplete / 100.0).toFloat() },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 10.dp)
+                .height(6.dp)
+                .clip(RoundedCornerShape(50)),
+            color = TrailTrackerCream,
+            trackColor = TrailTrackerCream.copy(alpha = 0.25f),
+            drawStopIndicator = {},
+        )
+    }
+}
+
+@Composable
+private fun HeaderStat(value: String, label: String) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.semantics(mergeDescendants = true) {},
+    ) {
+        Text(
+            text = value,
+            color = TrailTrackerCream,
+            fontFamily = FontFamily.Serif,
+            fontWeight = FontWeight.Bold,
+            style = MaterialTheme.typography.titleMedium,
+        )
+        Text(text = label, color = TrailTrackerCream.copy(alpha = 0.85f), style = MaterialTheme.typography.labelSmall)
+    }
 }
 
 /** A circled "i" that opens the trail's small print. Drawn rather than taken from an icon

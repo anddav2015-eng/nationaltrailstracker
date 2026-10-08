@@ -50,6 +50,17 @@ data class TrailDetailUiState(
     val stageRows: List<StageRow> = emptyList(),
     val landmarkGroups: List<LandmarkGroup> = emptyList(),
     val chartPoints: List<ChartPoint> = emptyList(),
+    val progress: TrailProgress = TrailProgress(),
+)
+
+/** The walker's totals for this trail, shown in the header. */
+data class TrailProgress(
+    val stagesDone: Int = 0,
+    val stagesTotal: Int = 0,
+    val milesWalked: Double = 0.0,
+    val totalMiles: Double = 0.0,
+    val percentComplete: Double = 0.0,
+    val stepsWalked: Int = 0,
 )
 
 class TrailDetailViewModel(
@@ -133,13 +144,23 @@ class TrailDetailViewModel(
                 landmarkGroups += LandmarkGroup(stageIndex = stageIndex, walked = walked, rows = listOf(row))
             }
         }
-        val chartPoints = StageMaths.cumulativeMilesByDate(trail, logs.map(StageLogEntity::toLoggedStage))
+        val loggedStages = logs.map(StageLogEntity::toLoggedStage)
+        val chartPoints = StageMaths.cumulativeMilesByDate(trail, loggedStages)
+        val progress = TrailProgress(
+            stagesDone = logs.size,
+            stagesTotal = stageRows.size,
+            milesWalked = StageMaths.milesWalked(trail, loggedStages),
+            totalMiles = totalMiles,
+            percentComplete = StageMaths.percentComplete(trail, loggedStages),
+            stepsWalked = StageMaths.stepsWalked(loggedStages),
+        )
         return TrailDetailUiState(
             isLoading = false,
             trail = trail,
             stageRows = stageRows,
             landmarkGroups = landmarkGroups,
             chartPoints = chartPoints,
+            progress = progress,
         )
     }
 }
