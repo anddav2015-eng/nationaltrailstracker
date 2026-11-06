@@ -36,6 +36,12 @@ fetched from the OSM API. A few short gaps are filled from the official GPX.
 
 Trails using these sources so far: Thames Path (official GPX, and OSM relation 14519665).
 
+## Landmark coordinates
+
+Landmark positions (`lat`/`lon` in the trail JSON, and the leg ends in `*-legs.geojson`) were found
+with [Nominatim](https://nominatim.org) by `tools/build_legs.py`, then snapped onto the route line.
+Geocoding data © OpenStreetMap contributors, ODbL 1.0.
+
 ## Trail mileages
 
 Landmark mileages and stage cuts come from the owner's HTML trackers (England and Wales) and from

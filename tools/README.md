@@ -4,7 +4,10 @@
 |---|---|---|
 | `convert_trails.py` | `assets/trails/<slug>.json`, `index.json`, `seed-progress.json` from `trail-data/*.js` | the whole app |
 | `build_geo.py` | `assets/geo/<slug>.json` (10 m simplified, mileage-scaled) from Natural England open data | "Where am I" |
-| `build_map_geojson.py` | `assets/trails/<slug>-{full,2m,5m}.geojson` from the official GPX | trail map view |
+| `build_map_geojson.py` | `assets/trails/<slug>-{full,2m,5m,osm}.geojson` from the official GPX (and OSM) | trail map view |
+| `build_legs.py` | `trail-data/landmark-coords/<slug>.json` and `assets/trails/<slug>-<line>-legs.geojson` | trail map view; landmark lat/lon |
+
+Order for map data: `build_map_geojson.py` → `build_legs.py` → `convert_trails.py`.
 
 `convert_trails.py` and `build_geo.py` use only the standard library. `build_map_geojson.py`
 needs a few packages, so set up a virtual environment once:
@@ -65,6 +68,34 @@ For each trail it:
    "superroute", use its main child route.
 
 The Scottish trails aren't on nationaltrail.co.uk and need a different source.
+
+## build_legs.py: landmark coordinates and legs
+
+```sh
+tools/.venv/Scripts/python tools/build_legs.py      # then: python tools/convert_trails.py
+```
+
+Settings are in `tools/landmark_config.json`.
+
+1. **Positions.** Each landmark is looked up with Nominatim (OpenStreetMap's geocoder), with any
+   bracketed note stripped. Results are cached in `trail-data/geocode-cache/` (not committed) and
+   requests are limited to 1 per second. Of up to 10 matches, it keeps the one nearest the line at
+   about the right mileage. Matches over 1.5 km from the line are rejected.
+2. **Overrides,** per landmark:
+   - `{"query": "Henley Bridge"}`: search for something more exact than the town.
+   - `{"interpolate": true, "why": "..."}`: place it between its neighbours by table mileage (for
+     lakes, villages away from the river, or things OSM doesn't name).
+   - `{"point": [lat, lon], "why": "..."}`: a hand-set point on the path.
+3. **Checks.** It prints a table of every landmark: table miles, line miles, `step` (how far it's
+   out of step with its neighbours, in miles), metres off the line, how it was found, and flags.
+   Fix flagged landmarks with an override; never by editing the generated files.
+4. **Output.**
+   - `trail-data/landmark-coords/<slug>.json`: each landmark's point on the `referenceLine`, merged
+     into the trail JSON's `lat`/`lon` by `convert_trails.py`.
+   - `assets/trails/<slug>-<line>-legs.geojson` for each line in `lines`: one LineString per leg
+     (landmark *i* → *i*+1) in walking order, with `leg`, `stage`, `from`, `to`, `tableMiles` and
+     `lineMiles`. A stage is the run of legs with that `stage` index. Table mileages are never
+     changed.
 
 ### Attribution
 

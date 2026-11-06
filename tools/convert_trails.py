@@ -191,11 +191,25 @@ def parse_trail_file(path):
 # Conversion to the app's JSON schema
 # ---------------------------------------------------------------------------
 
-def convert_landmark(raw):
+def convert_landmark(raw, coords):
     name = raw[0]
     miles = float(raw[1])
     note = raw[2] if len(raw) > 2 else None
-    return {"name": name, "milesFromStart": miles, "note": note, "lat": None, "lon": None}
+    lat, lon = coords.get(name, (None, None))
+    return {"name": name, "milesFromStart": miles, "note": note, "lat": lat, "lon": lon}
+
+
+def load_landmark_coords(slug, landmark_names):
+    """Landmark lat/lon from trail-data/landmark-coords/<slug>.json (made by tools/build_legs.py)."""
+    path = TRAIL_DATA_DIR / "landmark-coords" / f"{slug}.json"
+    if not path.exists():
+        return {}
+    rows = json.loads(path.read_text(encoding="utf-8"))["landmarks"]
+    coords = {r["name"]: (r["lat"], r["lon"]) for r in rows}
+    stale = [n for n in coords if n not in landmark_names]
+    if stale:
+        raise ValueError(f"{slug}: {path.name} has landmarks not in trail-data: {stale}; re-run tools/build_legs.py")
+    return coords
 
 
 def convert_trail(slug, data, landmark_names):
@@ -214,6 +228,7 @@ def convert_trail(slug, data, landmark_names):
             "note": stage.get("note"),
         })
 
+    coords = load_landmark_coords(slug, landmark_names)
     return {
         "id": slug,
         "name": data["name"],
@@ -223,7 +238,7 @@ def convert_trail(slug, data, landmark_names):
         "colour": data["colour"],
         "subtitle": data["subtitle"],
         "footer": data["footer"],
-        "landmarks": [convert_landmark(l) for l in data["landmarks"]],
+        "landmarks": [convert_landmark(l, coords) for l in data["landmarks"]],
         "defaultStages": default_stages,
         "gpxAsset": f"geo/{slug}.json" if (ASSETS_DIR / "geo" / f"{slug}.json").exists() else None,
     }

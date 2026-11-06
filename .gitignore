@@ -16,3 +16,4 @@ __pycache__/
 # Source downloads for tools/build_map_geojson.py (official GPX, OSM relations)
 /trail-data/gpx-source/
 /trail-data/osm-source/
+/trail-data/geocode-cache/

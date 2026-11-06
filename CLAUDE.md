@@ -171,7 +171,7 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
    Do one step at a time and stop when each is done. Don't build UI before the data is checked.
 
 ### Status
-- [ ] Step 1 data prep
-- [ ] Step 2 landmarks and legs
+- [x] Step 1 data prep
+- [x] Step 2 landmarks and legs
 - [ ] Step 3 map screen
 - [ ] Step 4 polish
