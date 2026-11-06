@@ -12,309 +12,309 @@
       "name": "Farnham (start, A31 / Farnham station)",
       "milesFromStart": 0.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.212849,
+      "lon": -0.793774
     },
     {
       "name": "Runfold Wood",
       "milesFromStart": 3.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.215317,
+      "lon": -0.757648
     },
     {
       "name": "Seale",
       "milesFromStart": 4.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.220262,
+      "lon": -0.718156
     },
     {
       "name": "Puttenham",
       "milesFromStart": 6.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.22193,
+      "lon": -0.66971
     },
     {
       "name": "Watts Gallery, Compton",
       "milesFromStart": 8.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.221025,
+      "lon": -0.628818
     },
     {
       "name": "Guildford (River Wey)",
       "milesFromStart": 11.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.224648,
+      "lon": -0.57682
     },
     {
       "name": "St Martha's Hill",
       "milesFromStart": 13.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.224772,
+      "lon": -0.528095
     },
     {
       "name": "Newlands Corner",
       "milesFromStart": 14.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.232633,
+      "lon": -0.506098
     },
     {
       "name": "Gomshall (Hackhurst Down)",
       "milesFromStart": 19.0,
       "note": "station below",
-      "lat": null,
-      "lon": null
+      "lat": 51.22709,
+      "lon": -0.417879
     },
     {
       "name": "Ranmore Common",
       "milesFromStart": 22.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.242149,
+      "lon": -0.360331
     },
     {
       "name": "Dorking (A24, Box Hill & Westhumble)",
       "milesFromStart": 24.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.253245,
+      "lon": -0.323181
     },
     {
       "name": "Box Hill summit",
       "milesFromStart": 25.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.246484,
+      "lon": -0.296577
     },
     {
       "name": "Colley Hill",
       "milesFromStart": 30.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.256692,
+      "lon": -0.217845
     },
     {
       "name": "Reigate Hill",
       "milesFromStart": 31.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.254464,
+      "lon": -0.199756
     },
     {
       "name": "Merstham",
       "milesFromStart": 34.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.265038,
+      "lon": -0.15297
     },
     {
       "name": "Whitehill Tower, Caterham",
       "milesFromStart": 37.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.267129,
+      "lon": -0.10037
     },
     {
       "name": "Woldingham",
       "milesFromStart": 39.5,
       "note": "station ~1 mile",
-      "lat": null,
-      "lon": null
+      "lat": 51.266344,
+      "lon": -0.068486
     },
     {
       "name": "Oxted (Chalk Pit)",
       "milesFromStart": 42.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.269157,
+      "lon": -0.031529
     },
     {
       "name": "Titsey Hill",
       "milesFromStart": 44.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.281334,
+      "lon": 0.004181
     },
     {
       "name": "Greenwich Meridian marker",
       "milesFromStart": 45.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.28629,
+      "lon": 0.03604
     },
     {
       "name": "Knockholt Pound",
       "milesFromStart": 49.0,
       "note": "pub; Knockholt station ~2.5 miles / taxi",
-      "lat": null,
-      "lon": null
+      "lat": 51.3116,
+      "lon": 0.128374
     },
     {
       "name": "Otford",
       "milesFromStart": 53.8,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.312936,
+      "lon": 0.189687
     },
     {
       "name": "Kemsing",
       "milesFromStart": 56.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.312474,
+      "lon": 0.234047
     },
     {
       "name": "Wrotham",
       "milesFromStart": 60.5,
       "note": "buses; Borough Green station ~1.5 miles",
-      "lat": null,
-      "lon": null
+      "lat": 51.312293,
+      "lon": 0.307073
     },
     {
       "name": "Trosley Country Park",
       "milesFromStart": 62.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.324808,
+      "lon": 0.342206
     },
     {
       "name": "Cuxton",
       "milesFromStart": 68.8,
       "note": "station – bail-out point",
-      "lat": null,
-      "lon": null
+      "lat": 51.37974,
+      "lon": 0.448812
     },
     {
       "name": "Medway Bridge",
       "milesFromStart": 70.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.376638,
+      "lon": 0.475334
     },
     {
       "name": "Kit's Coty / Blue Bell Hill",
       "milesFromStart": 74.5,
       "note": "buses on A229",
-      "lat": null,
-      "lon": null
+      "lat": 51.319866,
+      "lon": 0.503278
     },
     {
       "name": "Detling",
       "milesFromStart": 81.3,
       "note": "buses – bail-out point",
-      "lat": null,
-      "lon": null
+      "lat": 51.296314,
+      "lon": 0.568464
     },
     {
       "name": "Thurnham",
       "milesFromStart": 83.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.293939,
+      "lon": 0.590301
     },
     {
       "name": "Hollingbourne",
       "milesFromStart": 86.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.269381,
+      "lon": 0.644891
     },
     {
       "name": "Harrietsham",
       "milesFromStart": 88.8,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.251576,
+      "lon": 0.679691
     },
     {
       "name": "Lenham",
       "milesFromStart": 90.6,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.241631,
+      "lon": 0.728624
     },
     {
       "name": "Charing",
       "milesFromStart": 95.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.215104,
+      "lon": 0.799434
     },
     {
       "name": "Boughton Lees (Canterbury loop begins)",
       "milesFromStart": 100.7,
       "note": "Wye station ~1 mile",
-      "lat": null,
-      "lon": null
+      "lat": 51.191195,
+      "lon": 0.901829
     },
     {
       "name": "Soakham Down / King's Wood",
       "milesFromStart": 103.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.218095,
+      "lon": 0.92973
     },
     {
       "name": "Chilham",
       "milesFromStart": 106.7,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.244139,
+      "lon": 0.962266
     },
     {
       "name": "Chartham Hatch",
       "milesFromStart": 110.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.270918,
+      "lon": 1.015362
     },
     {
       "name": "Canterbury",
       "milesFromStart": 113.9,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.279452,
+      "lon": 1.079285
     },
     {
       "name": "Patrixbourne",
       "milesFromStart": 117.2,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.255376,
+      "lon": 1.135663
     },
     {
       "name": "Womenswold",
       "milesFromStart": 121.2,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.211187,
+      "lon": 1.18843
     },
     {
       "name": "Shepherdswell",
       "milesFromStart": 124.3,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.185333,
+      "lon": 1.235857
     },
     {
       "name": "Waldershare Park",
       "milesFromStart": 126.8,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.18618,
+      "lon": 1.287094
     },
     {
       "name": "Dover",
       "milesFromStart": 132.8,
       "note": "finish",
-      "lat": null,
-      "lon": null
+      "lat": 51.123642,
+      "lon": 1.312702
     }
   ],
   "defaultStages": [

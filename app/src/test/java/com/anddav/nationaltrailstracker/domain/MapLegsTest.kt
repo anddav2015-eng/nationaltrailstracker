@@ -82,26 +82,31 @@ class MapLegsTest {
     }
 
     @Test
-    fun `the bundled Thames Path line puts each landmark at its table mileage`() {
-        val legsFile = java.io.File("src/main/assets/trails/thames-path-legs.geojson")
-        val trailFile = java.io.File("src/main/assets/trails/thames-path.json")
-        val legs = MapLegs.parse(legsFile.readText())
-        val landmarks = kotlinx.serialization.json.Json.parseToJsonElement(trailFile.readText())
-            .let { it as kotlinx.serialization.json.JsonObject }["landmarks"]!!
-            .let { it as kotlinx.serialization.json.JsonArray }
-            .associate { lm ->
-                val o = lm as kotlinx.serialization.json.JsonObject
-                o["name"]!!.toString().trim('"') to o["milesFromStart"]!!.toString().toDouble()
+    fun `every bundled map line puts each landmark at its table mileage`() {
+        val legsFiles = java.io.File("src/main/assets/trails").listFiles { f -> f.name.endsWith("-legs.geojson") }!!
+        assertTrue("expected at least one bundled map", legsFiles.isNotEmpty())
+        for (legsFile in legsFiles) {
+            val trailId = legsFile.name.removeSuffix("-legs.geojson")
+            val trailFile = java.io.File("src/main/assets/trails/$trailId.json")
+            val legs = MapLegs.parse(legsFile.readText())
+            val landmarks = (kotlinx.serialization.json.Json.parseToJsonElement(trailFile.readText())
+                as kotlinx.serialization.json.JsonObject)["landmarks"]!!
+                .let { it as kotlinx.serialization.json.JsonArray }
+                .associate { lm ->
+                    val o = lm as kotlinx.serialization.json.JsonObject
+                    o["name"]!!.toString().trim('"') to o["milesFromStart"]!!.toString().toDouble()
+                }
+            val points = MapLegs.toRoutePoints(legs, landmarks)!!
+            val locator = RouteLocator(points)
+            assertEquals(trailId, landmarks.size - 1, legs.size)
+            assertEquals(trailId, 0.0, points.first().miles, 1e-9)
+            assertEquals(trailId, landmarks.values.max(), points.last().miles, 1e-9)
+            assertTrue(trailId, points.zipWithNext().all { (a, b) -> b.miles >= a.miles })
+            // Standing exactly on a leg's start point gives that landmark's table mileage.
+            for (leg in legs) {
+                val start = leg.points.first()
+                assertEquals("$trailId ${leg.from}", landmarks.getValue(leg.from), locator.locate(start.lat, start.lon).milesAlong, 0.05)
             }
-        val points = MapLegs.toRoutePoints(legs, landmarks)!!
-        val locator = RouteLocator(points)
-        assertEquals(0.0, points.first().miles, 1e-9)
-        assertEquals(landmarks.values.max(), points.last().miles, 1e-9)
-        assertTrue(points.zipWithNext().all { (a, b) -> b.miles >= a.miles })
-        // Standing exactly on a leg's start point gives that landmark's table mileage.
-        for (leg in legs) {
-            val start = leg.points.first()
-            assertEquals(leg.from, landmarks.getValue(leg.from), locator.locate(start.lat, start.lon).milesAlong, 0.05)
         }
     }
 

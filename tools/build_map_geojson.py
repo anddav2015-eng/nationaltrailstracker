@@ -38,6 +38,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import gpxpy
+import shapely
 from pyproj import Geod, Transformer
 from shapely.geometry import LineString, Point
 
@@ -63,7 +64,10 @@ OSM_ATTRIBUTION = "© OpenStreetMap contributors"
 OSM_DEVIATION_WARN_M = 20.0  # OSM line further than this from the GPX line is reported
 OSM_RUN_MERGE_M = 100.0      # reported stretches closer together than this are listed as one
 OSM_GAP_SEARCH_M = 1000.0    # dead ends of separate OSM pieces closer than this may be joined by GPX
+OSM_JOIN_M = 25.0            # a dead end this close to another way is joined to it (mapping near-miss)
 OSM_GAP_PENALTY = 10.0       # a GPX-filled gap costs this many times its length, so OSM is preferred
+OSM_FOLLOW_M = 300.0         # OSM ways further than this from the official line are a different branch
+OSM_OFF_LINE_PENALTY = 5.0   # ... and cost this many times their length, so the official branch wins
 
 TO_BNG = Transformer.from_crs("EPSG:4326", "EPSG:27700", always_xy=True)
 TO_WGS = Transformer.from_crs("EPSG:27700", "EPSG:4326", always_xy=True)
@@ -98,16 +102,40 @@ def describe_tracks(gpx):
                   + (f", {no_ele} pts without elevation" if no_ele else ""))
 
 
-def merge_main(gpx, track_names):
-    """Concatenate the named tracks' segments in file order. Gaps are reported, not bridged."""
+def track_name(entry):
+    return entry if isinstance(entry, str) else entry["name"]
+
+
+def cut(points, entry, name):
+    """Apply a mainTracks entry's optional "from"/"until" [lat, lon] cut points (nearest vertex)."""
+    if isinstance(entry, str):
+        return points
+    for key in ("from", "until"):
+        if key not in entry:
+            continue
+        lat, lon = entry[key]
+        target = TO_BNG.transform(lon, lat)
+        i = min(range(len(points)), key=lambda k: math.dist(TO_BNG.transform(points[k][0], points[k][1]), target))
+        off = math.dist(TO_BNG.transform(points[i][0], points[i][1]), target)
+        print(f"  {name!r} cut {key} vertex {i} of {len(points)} ({off:.0f} m from {lat:.5f},{lon:.5f})")
+        points = points[i:] if key == "from" else points[:i + 1]
+    return points
+
+
+def merge_main(gpx, entries):
+    """Concatenate the main-route tracks in the order given, applying any cut points. Gaps are
+    reported, not bridged. Each entry is a track name, or {"name", "from"?, "until"?} where
+    from/until are [lat, lon] points: the track is cut at its nearest vertex (e.g. where a branch
+    leaves it)."""
     by_name = {t.name: t for t in gpx.tracks}
-    missing = [n for n in track_names if n not in by_name]
+    missing = [track_name(e) for e in entries if track_name(e) not in by_name]
     if missing:
         sys.exit(f"  ERROR: main track(s) not in GPX: {missing}. Names present: {list(by_name)}")
     points = []
-    for name in track_names:
+    for entry in entries:
+        name = track_name(entry)
         for si, seg in enumerate(by_name[name].segments):
-            seg_pts = [(p.longitude, p.latitude, p.elevation) for p in seg.points]
+            seg_pts = cut([(p.longitude, p.latitude, p.elevation) for p in seg.points], entry, name)
             if points:
                 gap = geodesic_miles([points[-1][:2], seg_pts[0][:2]]) * METRES_PER_MILE
                 if gap > SEGMENT_GAP_WARN_M:
@@ -115,7 +143,11 @@ def merge_main(gpx, track_names):
                 if gap == 0:
                     seg_pts = seg_pts[1:]
             points.extend(seg_pts)
-    return points
+    # Some GPX files repeat each point; drop exact consecutive repeats so the checks below work.
+    deduped = [p for i, p in enumerate(points) if i == 0 or p[:2] != points[i - 1][:2]]
+    if len(deduped) < len(points):
+        print(f"  removed {len(points) - len(deduped)} consecutive duplicate points")
+    return deduped
 
 
 def check_line(points):
@@ -226,9 +258,9 @@ class GpxRef:
         return inner if ma <= mb else inner[::-1]
 
 
-def build_osm(slug, relation_id, gpx_points):
-    """Route through the OSM relation's ways from the GPX start to the GPX end."""
-    print(f"  -- OpenStreetMap relation {relation_id} --")
+def fetch_relation_ways(relation_id, depth=0):
+    """A relation's ways and their nodes, including those of child relations (e.g. a trail split
+    into sections). Each relation is cached in trail-data/osm-source/."""
     path = http_get(f"{OSM_API}/relation/{relation_id}/full.json",
                     OSM_SOURCE_DIR / f"relation-{relation_id}-full.json")
     elements = json.loads(path.read_text(encoding="utf-8"))["elements"]
@@ -236,6 +268,21 @@ def build_osm(slug, relation_id, gpx_points):
     lonlat = {e["id"]: (e["lon"], e["lat"]) for e in elements if e["type"] == "node"}
     ways = {e["id"]: e for e in elements if e["type"] == "way"}
     member_ways = [ways[m["ref"]] for m in rel["members"] if m["type"] == "way" and m["ref"] in ways]
+    for m in rel["members"]:
+        if m["type"] == "relation" and depth < 3:
+            child, child_lonlat, child_ways = fetch_relation_ways(m["ref"], depth + 1)
+            print(f"  {'  ' * depth}child relation {child['id']} '{child['tags'].get('name')}' "
+                  f"v{child['version']} ({child['timestamp'][:10]}): {len(child_ways)} ways")
+            lonlat.update(child_lonlat)
+            member_ways += child_ways
+    unique = list({w["id"]: w for w in member_ways}.values())
+    return rel, lonlat, unique
+
+
+def build_osm(slug, relation_id, gpx_points):
+    """Route through the OSM relation's ways from the GPX start to the GPX end."""
+    print(f"  -- OpenStreetMap relation {relation_id} --")
+    rel, lonlat, member_ways = fetch_relation_ways(relation_id)
     print(f"  relation '{rel['tags'].get('name')}' v{rel['version']} ({rel['timestamp']}): "
           f"{len(member_ways)} ways")
 
@@ -269,7 +316,36 @@ def build_osm(slug, relation_id, gpx_points):
                 adj[a][b] = adj[b][a] = d * OSM_GAP_PENALTY
                 gap_edges |= {(a, b), (b, a)}
 
+    # Near misses: a way that stops just short of another (e.g. 7 m) instead of sharing a node.
+    node_ways = defaultdict(set)
+    for w in member_ways:
+        for n in w["nodes"]:
+            node_ways[n].add(w["id"])
+    for a in dead_ends:
+        candidates = [n for n in adj if n != a and not (node_ways[n] & node_ways[a])]
+        if not candidates:
+            continue
+        b = min(candidates, key=lambda n: math.dist(xy[a], xy[n]))
+        d = math.dist(xy[a], xy[b])
+        if d < OSM_JOIN_M and b not in adj[a]:
+            adj[a][b] = adj[b][a] = d
+            print(f"  joined a dead end at {lonlat[a][1]:.5f},{lonlat[a][0]:.5f} to another way {d:.0f} m away "
+                  f"(OSM ways almost touch)")
+
     gpx = GpxRef(gpx_points)
+    # Prefer ways near the official line, so where the relation holds alternative branches (e.g.
+    # the North Downs Way's Wye and Canterbury routes) the line follows the official main route.
+    # Local differences (under OSM_FOLLOW_M) aren't affected.
+    near = gpx.line.buffer(OSM_FOLLOW_M)
+    off_edges = 0
+    for a in list(adj):
+        for b in list(adj[a]):
+            if a < b and (a, b) not in gap_edges:
+                mx, my = (xy[a][0] + xy[b][0]) / 2, (xy[a][1] + xy[b][1]) / 2
+                if not shapely.contains_xy(near, mx, my):
+                    adj[a][b] = adj[b][a] = adj[a][b] * OSM_OFF_LINE_PENALTY
+                    off_edges += 1
+    print(f"  {off_edges} OSM way segments more than {OSM_FOLLOW_M:.0f} m from the official line are avoided where possible")
     src = min(adj, key=lambda n: math.dist(xy[n], gpx.xy[0]))
     dst = min(adj, key=lambda n: math.dist(xy[n], gpx.xy[-1]))
     print(f"  start node {math.dist(xy[src], gpx.xy[0]):.0f} m from the GPX start, "
@@ -342,8 +418,12 @@ def build(slug, cfg):
     with open(gpx_path, encoding="utf-8") as f:
         gpx = gpxpy.parse(f)
     describe_tracks(gpx)
-    others = [t.name for t in gpx.tracks if t.name not in cfg["mainTracks"]]
-    print(f"  main route: {cfg['mainTracks']}; left out: {others or 'none'}")
+    names = [track_name(e) for e in cfg["mainTracks"]]
+    others = [t.name for t in gpx.tracks if t.name not in names]
+    print(f"  main route: {names}; left out: {others or 'none'}")
+    if not names:
+        print("  mainTracks is empty: pick the main-route track(s) from the list above, then re-run.")
+        return
     points = merge_main(gpx, cfg["mainTracks"])
     check_line(points)
 

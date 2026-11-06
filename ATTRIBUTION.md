@@ -41,7 +41,8 @@ trail's OpenStreetMap route relation, fetched from the OSM API.
 - Licence: [Open Database Licence 1.0](https://opendatacommons.org/licenses/odbl/1-0/)
 - Attribution: © OpenStreetMap contributors.
 
-Trails using these sources so far: Thames Path (OSM relation 14519665, plus the official GPX).
+Trails using these sources so far: Thames Path (OSM relation 14519665) and North Downs Way via Canterbury
+(OSM relation 1957071 and its child relations), each with its official GPX.
 
 In the app, these credits are shown in each mapped trail's ⓘ dialog under "Map sources". The
 base-map credit is also on the map, behind MapLibre's ⓘ button.

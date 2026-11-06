@@ -2,8 +2,24 @@
   "_comment": "Per-trail settings for tools/build_map_geojson.py. gpxUrl is the official GPX from the trail's 'Trail information & map' page on nationaltrail.co.uk. mainTracks lists the GPX track names that make up the main route, in walking order of the source file; every other track is reported and left out. officialMiles is only used for the comparison in the report. osmRelation (optional) is the OpenStreetMap route relation for the main route; find it at https://hiking.waymarkedtrails.org (search the trail name). Use the child route, not a 'superroute'.",
   "thames-path": {
     "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Thames-Path-elevation-1Nov24.gpx",
-    "mainTracks": ["A Thames Path"],
+    "mainTracks": [
+      "A Thames Path"
+    ],
     "officialMiles": 185.2,
     "osmRelation": 14519665
+  },
+  "north-downs-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/2025/04/North_Downs_Way_Elev.gpx",
+    "mainTracks": [
+      {
+        "name": "A - North Downs Way",
+        "until": [
+          51.19115,
+          0.90189
+        ]
+      },
+      "B - North Downs Way Loop 1"
+    ],
+    "osmRelation": 1957071
   }
 }

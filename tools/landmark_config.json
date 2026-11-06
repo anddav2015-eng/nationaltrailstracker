@@ -95,5 +95,92 @@
         "why": "start of the official GPX line, at the Thames Head stone"
       }
     }
+  },
+  "north-downs-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Farnham (start, A31 / Farnham station)": {
+        "point": [
+          51.212852,
+          -0.793788
+        ],
+        "why": "start of the official GPX line"
+      },
+      "Guildford (River Wey)": {
+        "point": [
+          51.22465,
+          -0.57682
+        ],
+        "why": "the trail's footbridge over the River Wey (OSM)"
+      },
+      "Gomshall (Hackhurst Down)": {
+        "query": "Hackhurst Down"
+      },
+      "Ranmore Common": {
+        "query": "St Barnabas Church, Ranmore"
+      },
+      "Dorking (A24, Box Hill & Westhumble)": {
+        "point": [
+          51.25325,
+          -0.32318
+        ],
+        "why": "the trail's underpass beneath the A24 by Box Hill & Westhumble (OSM)"
+      },
+      "Box Hill summit": {
+        "query": "Salomons Memorial"
+      },
+      "Woldingham": {
+        "interpolate": true,
+        "why": "the village is over 1.5 km from the trail"
+      },
+      "Oxted (Chalk Pit)": {
+        "interpolate": true,
+        "why": "the chalk pit isn't named in OpenStreetMap"
+      },
+      "Greenwich Meridian marker": {
+        "interpolate": true,
+        "why": "the marker isn't named in OpenStreetMap"
+      },
+      "Medway Bridge": {
+        "point": [
+          51.37667,
+          0.47542
+        ],
+        "why": "middle of the footpath/cycleway on the M2 Medway bridge (OSM way 31139938)"
+      },
+      "Kit's Coty / Blue Bell Hill": {
+        "query": "Kit's Coty House"
+      },
+      "Thurnham": {
+        "query": "Thurnham Castle"
+      },
+      "Lenham": {
+        "query": "Lenham Cross"
+      },
+      "Boughton Lees (Canterbury loop begins)": {
+        "point": [
+          51.19115,
+          0.90189
+        ],
+        "why": "where the official Canterbury loop leaves the main route"
+      },
+      "Soakham Down / King's Wood": {
+        "query": "Soakham Down"
+      },
+      "Dover": {
+        "point": [
+          51.123571,
+          1.312688
+        ],
+        "why": "end of the official GPX line"
+      },
+      "Knockholt Pound": {
+        "point": [
+          51.3116,
+          0.12837
+        ],
+        "why": "where the trail crosses Chevening Lane, the lane north to Knockholt Pound (owner's choice)"
+      }
+    }
   }
 }

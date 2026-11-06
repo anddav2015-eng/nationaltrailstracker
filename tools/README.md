@@ -30,8 +30,11 @@ For each trail it:
 1. Downloads the official GPX to `trail-data/gpx-source/` (skipped if it's already there; the
    folder isn't committed).
 2. Lists every track and segment in the file, with point count, length, start and end.
-3. Joins the tracks named in `mainTracks` into one line, in file order. Gaps between segments are
-   reported but not bridged. Long straight steps (over 400 m) and sharp reversals (over 150°) are
+3. Joins the tracks named in `mainTracks` into one line, in the order given. An entry can also be
+   `{"name": "...", "until": [lat, lon]}` (or `"from"`) to cut a track at its nearest vertex, e.g. where
+   a branch leaves it. The North Downs Way uses this: track A up to Boughton Lees, then the Canterbury
+   loop. Exact repeated points are dropped (reported). Gaps between segments are reported but not
+   bridged. Long straight steps (over 400 m) and sharp reversals (over 150°) are
    listed so they can be checked by eye. Nothing is repaired automatically.
 4. Writes `trail-data/map-lines/<slug>-full.geojson`: every GPX point, as one `LineString` with
    `[lon, lat, elevation]`. Optionally, a `"simplifyM": [2, 5]` config entry adds Douglas-Peucker
@@ -43,8 +46,12 @@ For each trail it:
    OpenStreetMap, so it sits exactly on the paths drawn by the OSM-based base map.
    - The relation is fetched once from the OSM API into `trail-data/osm-source/` (delete the file to
      refresh it).
+   - Child relations (a trail split into sections) are included.
    - The line follows the relation's ways from the node nearest the GPX start to the node nearest
-     the GPX end, so it covers the same span as the official line.
+     the GPX end, so it covers the same span as the official line. Ways more than 300 m from the
+     official line cost 5 times their length, so where the relation holds alternative branches (e.g.
+     the North Downs Way via Wye or Canterbury) it follows the official one.
+   - A dead end less than 25 m from another way (a mapping near-miss) is joined to it, and reported.
    - Where the OSM ways don't connect, the gap is filled with the official GPX line. It's reported,
      and listed in the file's `gpxFilledGaps` property.
    - OSM has no elevation, so each vertex borrows it from the nearest point on the GPX line
