@@ -2,7 +2,9 @@ package com.anddav.nationaltrailstracker.di
 
 import android.content.Context
 import androidx.room.Room
+import com.anddav.nationaltrailstracker.data.geo.RouteAssetLoader
 import com.anddav.nationaltrailstracker.data.local.AppDatabase
+import com.anddav.nationaltrailstracker.data.location.LocationClient
 import com.anddav.nationaltrailstracker.data.seed.SeedProgressLoader
 import com.anddav.nationaltrailstracker.data.trail.TrailAssetLoader
 import com.anddav.nationaltrailstracker.repo.ProgressRepository
@@ -21,7 +23,12 @@ class AppContainer(context: Context) {
         "national-trails-tracker.db",
     ).build()
 
-    val trailRepository = TrailRepository(TrailAssetLoader(applicationContext, json))
+    val trailRepository = TrailRepository(
+        assetLoader = TrailAssetLoader(applicationContext, json),
+        routeLoader = RouteAssetLoader(applicationContext, json),
+    )
+
+    val locationClient = LocationClient(applicationContext)
 
     val progressRepository = ProgressRepository(
         dao = database.stageLogDao(),

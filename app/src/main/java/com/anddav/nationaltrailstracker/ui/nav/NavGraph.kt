@@ -17,11 +17,14 @@ import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsScreen
 import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsViewModel
 import com.anddav.nationaltrailstracker.ui.trails.TrailsListScreen
 import com.anddav.nationaltrailstracker.ui.trails.TrailsListViewModel
+import com.anddav.nationaltrailstracker.ui.whereami.WhereAmIScreen
+import com.anddav.nationaltrailstracker.ui.whereami.WhereAmIViewModel
 
 private const val TRAILS_LIST_ROUTE = "trails"
 private const val TRAIL_DETAIL_ROUTE = "trails/{trailId}"
 private const val TRAIL_ID_ARG = "trailId"
 private const val SUMMARY_ROUTE = "summary"
+private const val WHERE_AM_I_ROUTE = "trails/{trailId}/where"
 
 @Composable
 fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
@@ -63,7 +66,24 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
                     }
                 },
             )
-            TrailDetailScreen(viewModel = viewModel)
+            TrailDetailScreen(
+                viewModel = viewModel,
+                onWhereAmIClick = { navController.navigate("trails/$trailId/where") },
+            )
+        }
+        composable(
+            route = WHERE_AM_I_ROUTE,
+            arguments = listOf(navArgument(TRAIL_ID_ARG) { type = NavType.StringType }),
+        ) { backStackEntry ->
+            val trailId = backStackEntry.arguments?.getString(TRAIL_ID_ARG)
+                ?: error("Missing required nav arg: $TRAIL_ID_ARG")
+            val viewModel: WhereAmIViewModel = viewModel(
+                key = "where-$trailId",
+                factory = viewModelFactory {
+                    initializer { WhereAmIViewModel(trailId, container.trailRepository, container.locationClient) }
+                },
+            )
+            WhereAmIScreen(viewModel = viewModel)
         }
     }
 }

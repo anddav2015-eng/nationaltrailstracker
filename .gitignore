@@ -8,3 +8,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Raw open-data downloads for tools/build_geo.py (large; fetched by hand)
+/trail-data/geo-source/
+# Python tooling
+tools/.venv/
+__pycache__/

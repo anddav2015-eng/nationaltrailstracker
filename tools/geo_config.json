@@ -1,0 +1,22 @@
+{
+  "_comment": "Per-trail settings for tools/build_geo.py. Points are [lat, lon] (WGS84). 'via' points pull the route onto the bank/variant the trail-data mileages follow; each is snapped to the nearest edge of the source network, so put them on the path itself, well away from the other bank. 'startLandmark'/'endLandmark' name the trail-data landmarks the route line begins and ends at, when the source line doesn't cover the whole trail (defaults: first and last landmark).",
+  "thames-path": {
+    "source": "natural-england",
+    "nameMatch": "Thames Path",
+    "start": [51.4937, 0.0367],
+    "end": [51.6943, -2.0297],
+    "startLandmark": "Thames Barrier",
+    "via": [
+      { "label": "Greenwich, south bank by the Cutty Sark", "point": [51.4831, -0.0099] },
+      { "label": "Rotherhithe, south bank", "point": [51.5011, -0.0521] },
+      { "label": "Bankside, south bank by Tate Modern", "point": [51.5086, -0.0991] },
+      { "label": "South Bank by the London Eye", "point": [51.5032, -0.1197] },
+      { "label": "Battersea Park, south bank", "point": [51.4826, -0.1581] },
+      { "label": "Wandsworth Park, south bank", "point": [51.4657, -0.2076] },
+      { "label": "Bishop's Park, Fulham, north bank (Putney to Hammersmith)", "point": [51.4706, -0.2196] },
+      { "label": "Barnes, south bank", "point": [51.4812, -0.2341] },
+      { "label": "Kew Gardens towpath, south bank", "point": [51.4801, -0.2972] },
+      { "label": "Ham House riverside, Ham bank", "point": [51.4446, -0.3106] }
+    ]
+  }
+}

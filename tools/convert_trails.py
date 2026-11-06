@@ -225,7 +225,7 @@ def convert_trail(slug, data, landmark_names):
         "footer": data["footer"],
         "landmarks": [convert_landmark(l) for l in data["landmarks"]],
         "defaultStages": default_stages,
-        "gpxAsset": None,
+        "gpxAsset": f"geo/{slug}.json" if (ASSETS_DIR / "geo" / f"{slug}.json").exists() else None,
     }
 
 

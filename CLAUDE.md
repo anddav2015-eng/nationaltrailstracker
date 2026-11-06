@@ -140,3 +140,38 @@ The landmarks have mileages but **no coordinates yet**. For "where am I":
 - Only ever request location while the app is in use, and only when the user taps "Where am I".
 - Don't change the trail data values by hand. Fix them in `trail-data/` and re-run the converter.
 - When unsure about a product decision, ask. Don't guess.
+
+
+
+## Feature: Trail map view (in progress)
+
+### Goal
+Tapping a leg of a trail opens a map showing the trail line, the selected leg highlighted, and my live position. Personal app for one user (me), not for publication.
+
+### Decisions already made
+- **Map library:** MapLibre Native for Android. Avoid Google Maps (needs a billing account).
+- **Base map tiles:** OpenFreeMap (`https://tiles.openfreemap.org/styles/liberty`), no API key. The service is provided as-is, so keep the style URL in one config place so it's easy to swap. Don't use tile.openstreetmap.org (usage policy).
+- **Trail data source:** the official GPX file for each trail from nationaltrail.co.uk (found on each trail's "Trail information & map" page). Only this source. No cross-checking against other datasets.
+    - Known example: https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Thames-Path-elevation-1Nov24.gpx
+    - The site warns the full GPX can contain multiple tracks. Always inspect and merge only the main route, and report anything odd (gaps, diversions, link routes).
+    - Scottish trails are not on this site, so they need a separate source later.
+- **Close-up accuracy matters.** I want to zoom right in and see exactly where the trail goes. Default to full-detail geometry. Only simplify if performance demands it, and then use a small tolerance (2 m or less preferred, 5 m at most). Do metre-based simplification in a projected CRS (EPSG:27700), not in degrees. Round coordinates to 6 decimal places. I choose the final version after comparing on my phone.
+- **Attribution:** "National Trails / Natural England and Natural Resources Wales" plus the map credit "© OpenStreetMap contributors" where the map is shown.
+
+### Data notes
+- Trails are processed with a re-runnable script (not one-off commands) so other trails can use the same pipeline. Outputs go in `assets/trails/`.
+- Thames Path: the official length is 185.2 miles, but my existing leg distances come from walkthethames.co.uk (183.1 miles total). Distances measured along the GPX line will differ slightly. Don't silently overwrite my existing leg mileages. Ask before changing any displayed distance.
+- Landmark names in the Thames Path data may include notes in brackets, e.g. "Putney Bridge (cross to north)". Strip the bracketed text when geocoding or matching.
+
+### Planned sequence
+1. Data prep: GPX to clean GeoJSON, Thames Path only, three simplification levels for comparison.
+2. Landmark coordinates, then slice the trail line into legs between landmarks.
+3. Map screen: MapLibre view, trail layer, highlighted leg, live location marker.
+4. Polish: attribution line, optional offline tiles, "X miles along this leg" display.
+   Do one step at a time and stop when each is done. Don't build UI before the data is checked.
+
+### Status
+- [ ] Step 1 data prep
+- [ ] Step 2 landmarks and legs
+- [ ] Step 3 map screen
+- [ ] Step 4 polish

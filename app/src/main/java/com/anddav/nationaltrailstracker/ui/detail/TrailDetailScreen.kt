@@ -1,5 +1,6 @@
 package com.anddav.nationaltrailstracker.ui.detail
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -22,10 +23,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
@@ -72,6 +75,7 @@ private val UK_DATE_FORMAT: DateTimeFormatter = DateTimeFormatter.ofPattern("d M
 @Composable
 fun TrailDetailScreen(
     viewModel: TrailDetailViewModel,
+    onWhereAmIClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -86,6 +90,7 @@ fun TrailDetailScreen(
         uiState = uiState,
         onSaveLog = viewModel::saveLog,
         onDeleteLog = viewModel::deleteLog,
+        onWhereAmIClick = onWhereAmIClick,
         modifier = modifier,
     )
 }
@@ -96,6 +101,7 @@ private fun TrailDetailContent(
     uiState: TrailDetailUiState,
     onSaveLog: (stageIndex: Int, dateWalked: LocalDate, steps: Int?, notes: String?, actualMiles: Double?) -> Unit,
     onDeleteLog: (StageLogEntity) -> Unit,
+    onWhereAmIClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val trailColour = parseHexColor(trail.colour)
@@ -125,6 +131,17 @@ private fun TrailDetailContent(
             }
             if (uiState.progress.stagesTotal > 0) {
                 TrailProgressPanel(uiState.progress, modifier = Modifier.padding(top = 12.dp))
+            }
+            // Only trails whose route line has been built (tools/build_geo.py) can answer this.
+            if (trail.gpxAsset != null) {
+                OutlinedButton(
+                    onClick = onWhereAmIClick,
+                    border = BorderStroke(1.dp, TrailTrackerCream),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = TrailTrackerCream),
+                    modifier = Modifier.padding(top = 12.dp),
+                ) {
+                    Text("Where am I?")
+                }
             }
         }
 
