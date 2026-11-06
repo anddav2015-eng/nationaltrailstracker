@@ -164,9 +164,11 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
 - **Close-up accuracy matters.** I want to zoom right in and see exactly where the trail goes. Default to full-detail geometry. Only simplify if performance demands it, and then use a small tolerance (2 m or less preferred, 5 m at most). Do metre-based simplification in a projected CRS (EPSG:27700), not in degrees. Round coordinates to 6 decimal places. I choose the final version after comparing on my phone.
 - **Attribution:** "National Trails / Natural England and Natural Resources Wales" and "© OpenStreetMap contributors" go in each mapped trail's ⓘ dialog ("Map sources"). On the map itself, the base-map credit is behind MapLibre's ⓘ button; there's no separate credit line under the map.
 - **Shipped map data:** only `assets/trails/<slug>-legs.geojson` (the OSM line cut into legs). Source lines live in `trail-data/map-lines/`. The app builds for arm64 only, to keep MapLibre's native library small.
+- **Where am I** uses the same OSM legs line when a trail has a map. Its mileages stay in my table miles: within each leg, mileage is spread in proportion to distance along the line, so each landmark sits at its table mileage. Older `assets/geo` lines from `tools/build_geo.py` are only a fallback.
 - **"Miles along" panel:** distances are measured along the map (OSM) line, not scaled to my table. All tables, totals and progress keep my table mileages.
 - **Offline maps:** a "Save map for offline use" button saves the base map around the stage (MapLibre offline region, up to zoom 14).
 - **Opening the map:** tap any landmark row in the Landmarks table. The map opens with that landmark's whole stage highlighted. (Tapping a stage on the Stages tab still opens the log sheet.)
+- **From Where am I:** a "Show on map" button opens the map on the stage you're in, with live location already on (you've just asked for it).
 - **Live location:** off when the map opens. A "Show my location" button asks for foreground permission if needed, then shows a live dot until the walker leaves the screen.
 
 ### Data notes

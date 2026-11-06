@@ -66,6 +66,46 @@ class MapLegsTest {
     }
 
     @Test
+    fun `route points carry table mileage, exact at every landmark`() {
+        val table = mapOf("A" to 0.0, "B" to 2.0, "C" to 5.0, "D" to 6.5)
+        val points = MapLegs.toRoutePoints(MapLegs.parse(sample), table)!!
+        // 3 + 2 + 2 points, less the 2 shared junctions.
+        assertEquals(5, points.size)
+        assertEquals(listOf(0.0, 2.0, 5.0, 6.5), listOf(points[0], points[2], points[3], points[4]).map { it.miles })
+        // The middle of leg 0 is at its halfway mark along the line (equal steps here).
+        assertEquals(1.0, points[1].miles, 0.01)
+    }
+
+    @Test
+    fun `route points need every leg's landmarks`() {
+        assertNull(MapLegs.toRoutePoints(MapLegs.parse(sample), mapOf("A" to 0.0, "B" to 2.0)))
+    }
+
+    @Test
+    fun `the bundled Thames Path line puts each landmark at its table mileage`() {
+        val legsFile = java.io.File("src/main/assets/trails/thames-path-legs.geojson")
+        val trailFile = java.io.File("src/main/assets/trails/thames-path.json")
+        val legs = MapLegs.parse(legsFile.readText())
+        val landmarks = kotlinx.serialization.json.Json.parseToJsonElement(trailFile.readText())
+            .let { it as kotlinx.serialization.json.JsonObject }["landmarks"]!!
+            .let { it as kotlinx.serialization.json.JsonArray }
+            .associate { lm ->
+                val o = lm as kotlinx.serialization.json.JsonObject
+                o["name"]!!.toString().trim('"') to o["milesFromStart"]!!.toString().toDouble()
+            }
+        val points = MapLegs.toRoutePoints(legs, landmarks)!!
+        val locator = RouteLocator(points)
+        assertEquals(0.0, points.first().miles, 1e-9)
+        assertEquals(landmarks.values.max(), points.last().miles, 1e-9)
+        assertTrue(points.zipWithNext().all { (a, b) -> b.miles >= a.miles })
+        // Standing exactly on a leg's start point gives that landmark's table mileage.
+        for (leg in legs) {
+            val start = leg.points.first()
+            assertEquals(leg.from, landmarks.getValue(leg.from), locator.locate(start.lat, start.lon).milesAlong, 0.05)
+        }
+    }
+
+    @Test
     fun `bounds cover every point`() {
         val all = MapLegs.join(MapLegs.parse(sample))
         assertEquals(GeoBounds(south = 51.0, west = 0.0, north = 51.3, east = 0.3), MapLegs.bounds(all))

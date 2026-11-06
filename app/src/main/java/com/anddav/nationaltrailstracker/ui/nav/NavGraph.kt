@@ -27,8 +27,9 @@ private const val TRAIL_DETAIL_ROUTE = "trails/{trailId}"
 private const val TRAIL_ID_ARG = "trailId"
 private const val SUMMARY_ROUTE = "summary"
 private const val WHERE_AM_I_ROUTE = "trails/{trailId}/where"
-private const val MAP_ROUTE = "trails/{trailId}/map?stage={stage}"
+private const val MAP_ROUTE = "trails/{trailId}/map?stage={stage}&locate={locate}"
 private const val STAGE_ARG = "stage"
+private const val LOCATE_ARG = "locate"
 
 @Composable
 fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
@@ -88,7 +89,12 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
                     initializer { WhereAmIViewModel(trailId, container.trailRepository, container.locationClient) }
                 },
             )
-            WhereAmIScreen(viewModel = viewModel)
+            WhereAmIScreen(
+                viewModel = viewModel,
+                onShowOnMap = { stageIndex ->
+                    navController.navigate("trails/$trailId/map?stage=${stageIndex ?: -1}&locate=true")
+                },
+            )
         }
         composable(
             route = MAP_ROUTE,
@@ -98,15 +104,29 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
                     type = NavType.IntType
                     defaultValue = -1
                 },
+                navArgument(LOCATE_ARG) {
+                    type = NavType.BoolType
+                    defaultValue = false
+                },
             ),
         ) { backStackEntry ->
             val trailId = backStackEntry.arguments?.getString(TRAIL_ID_ARG)
                 ?: error("Missing required nav arg: $TRAIL_ID_ARG")
             val stageIndex = backStackEntry.arguments?.getInt(STAGE_ARG)?.takeIf { it >= 0 }
+            val locate = backStackEntry.arguments?.getBoolean(LOCATE_ARG) ?: false
             val viewModel: TrailMapViewModel = viewModel(
-                key = "map-$trailId-$stageIndex",
+                key = "map-$trailId-$stageIndex-$locate",
                 factory = viewModelFactory {
-                    initializer { TrailMapViewModel(trailId, stageIndex, container.trailRepository, container.locationClient, container.offlineMapStore) }
+                    initializer {
+                        TrailMapViewModel(
+                            trailId,
+                            stageIndex,
+                            container.trailRepository,
+                            container.locationClient,
+                            container.offlineMapStore,
+                            startWithLocation = locate,
+                        )
+                    }
                 },
             )
             TrailMapScreen(viewModel = viewModel)

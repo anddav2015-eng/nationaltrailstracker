@@ -21,7 +21,7 @@ import kotlinx.coroutines.withContext
 sealed interface WhereAmIStatus {
     data object Loading : WhereAmIStatus
 
-    /** This trail's route line hasn't been built yet (tools/build_geo.py). */
+    /** This trail has no route line yet (no map legs from tools/build_legs.py, nor tools/build_geo.py). */
     data object NoRouteData : WhereAmIStatus
 
     /** Show the explanation and the "Allow location" button. */
@@ -42,6 +42,8 @@ data class WhereAmIUiState(
     val trail: Trail? = null,
     val totalMiles: Double = 0.0,
     val status: WhereAmIStatus = WhereAmIStatus.Loading,
+    /** True when the trail has a map to jump to. */
+    val hasMap: Boolean = false,
 )
 
 class WhereAmIViewModel(
@@ -64,6 +66,7 @@ class WhereAmIViewModel(
             _uiState.value = WhereAmIUiState(
                 trail = trail,
                 totalMiles = trail.landmarks.lastOrNull()?.milesFromStart ?: 0.0,
+                hasMap = trailRepository.hasMap(trailId),
                 status = when {
                     route == null -> WhereAmIStatus.NoRouteData
                     !locationClient.hasPermission() -> WhereAmIStatus.NeedsPermission

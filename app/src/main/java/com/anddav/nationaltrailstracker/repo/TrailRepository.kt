@@ -5,6 +5,7 @@ import com.anddav.nationaltrailstracker.data.geo.RouteAssetLoader
 import com.anddav.nationaltrailstracker.data.trail.TrailAssetLoader
 import com.anddav.nationaltrailstracker.domain.RoutePoint
 import com.anddav.nationaltrailstracker.domain.map.MapLeg
+import com.anddav.nationaltrailstracker.domain.map.MapLegs
 import com.anddav.nationaltrailstracker.model.Trail
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -24,9 +25,16 @@ class TrailRepository(
         assetLoader.loadTrail(id)
     }
 
-    /** The trail's route line for "Where am I", or null if it hasn't been built yet. */
+    /**
+     * The trail's route line for "Where am I", in table mileage, or null if it hasn't been built yet.
+     * Uses the map's (OpenStreetMap) line when the trail has one, otherwise the older assets/geo line.
+     */
     suspend fun routeLine(trail: Trail): List<RoutePoint>? = withContext(Dispatchers.IO) {
-        trail.gpxAsset?.let(routeLoader::load)
+        if (legsLoader.hasMap(trail.id)) {
+            MapLegs.toRoutePoints(legsLoader.load(trail.id), trail.landmarks.associate { it.name to it.milesFromStart })
+        } else {
+            trail.gpxAsset?.let(routeLoader::load)
+        }
     }
 
     /** True when a map route line is bundled for this trail. */

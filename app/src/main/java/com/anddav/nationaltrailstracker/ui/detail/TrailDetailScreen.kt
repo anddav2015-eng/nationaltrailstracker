@@ -138,8 +138,8 @@ private fun TrailDetailContent(
             if (uiState.progress.stagesTotal > 0) {
                 TrailProgressPanel(uiState.progress, modifier = Modifier.padding(top = 12.dp))
             }
-            // Only trails whose route line has been built (tools/build_geo.py) can answer this.
-            if (trail.gpxAsset != null) {
+            // Only trails with a route line (the map's legs, or tools/build_geo.py) can answer this.
+            if (trail.gpxAsset != null || onShowOnMap != null) {
                 OutlinedButton(
                     onClick = onWhereAmIClick,
                     border = BorderStroke(1.dp, TrailTrackerCream),

@@ -1,5 +1,6 @@
 package com.anddav.nationaltrailstracker.domain.map
 
+import com.anddav.nationaltrailstracker.domain.RoutePoint
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.double
@@ -71,6 +72,35 @@ object MapLegs {
         val first = stageLegs.firstOrNull { it.points.isNotEmpty() } ?: return null
         val last = stageLegs.lastOrNull { it.points.isNotEmpty() } ?: return null
         return MapMarker(first.from, first.points.first()) to MapMarker(last.to, last.points.last())
+    }
+
+    /**
+     * The map line as route points carrying *table* mileage, for "Where am I" (which reports stages and
+     * landmarks in the owner's table miles). Within each leg, mileage runs in proportion to distance
+     * along the line from the leg's start landmark to its end landmark, so every landmark sits exactly
+     * at its table mileage. Returns null if a leg's landmark isn't in [landmarkMiles].
+     */
+    fun toRoutePoints(legs: List<MapLeg>, landmarkMiles: Map<String, Double>): List<RoutePoint>? {
+        val out = ArrayList<RoutePoint>()
+        for (leg in legs) {
+            val fromMiles = landmarkMiles[leg.from] ?: return null
+            val toMiles = landmarkMiles[leg.to] ?: return null
+            if (leg.points.isEmpty()) continue
+            val cumulative = DoubleArray(leg.points.size)
+            for (i in 1 until leg.points.size) {
+                val a = leg.points[i - 1]
+                val b = leg.points[i]
+                cumulative[i] = cumulative[i - 1] + StageLocator.haversineMiles(a.lat, a.lon, b.lat, b.lon)
+            }
+            val length = cumulative.last()
+            for ((i, p) in leg.points.withIndex()) {
+                // The first point repeats the previous leg's last point.
+                if (i == 0 && out.isNotEmpty() && out.last().lat == p.lat && out.last().lon == p.lon) continue
+                val fraction = if (length > 0) cumulative[i] / length else 0.0
+                out.add(RoutePoint(p.lat, p.lon, fromMiles + fraction * (toMiles - fromMiles)))
+            }
+        }
+        return out.takeIf { it.size >= 2 }
     }
 
     fun bounds(points: List<GeoPoint>): GeoBounds? {

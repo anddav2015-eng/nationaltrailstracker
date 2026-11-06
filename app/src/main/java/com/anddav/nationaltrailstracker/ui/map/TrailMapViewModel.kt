@@ -45,9 +45,13 @@ class TrailMapViewModel(
     private val trailRepository: TrailRepository,
     private val locationClient: LocationClient,
     private val offlineMapStore: OfflineMapStore,
+    /** True when opened from "Where am I": the walker has already asked for their location. */
+    startWithLocation: Boolean = false,
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(TrailMapUiState(stageIndex = stageIndex))
+    private val _uiState = MutableStateFlow(
+        TrailMapUiState(stageIndex = stageIndex, showLocation = startWithLocation && locationClient.hasPermission()),
+    )
     val uiState: StateFlow<TrailMapUiState> = _uiState.asStateFlow()
 
     private var stageLocator: StageLocator? = null

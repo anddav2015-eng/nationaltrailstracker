@@ -2,6 +2,10 @@
 
 ## Route lines ("Where am I")
 
+Where a trail has a map, "Where am I" uses the map's OpenStreetMap line (see "Route lines (trail
+map)" below), with mileage spread between landmarks by table mileage. The Natural England source
+below is only a fallback for trails without a map, and no lines have been built from it yet.
+
 ### England – Natural England, National Trails (England)
 
 The route lines in `app/src/main/assets/geo/` for trails in England are derived from the

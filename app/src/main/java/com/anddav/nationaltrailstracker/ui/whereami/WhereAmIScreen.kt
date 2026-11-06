@@ -50,7 +50,12 @@ private val WarningBackground = Color(0xFFFCE8D5)
 private val WarningText = Color(0xFF7A3B00)
 
 @Composable
-fun WhereAmIScreen(viewModel: WhereAmIViewModel, modifier: Modifier = Modifier) {
+fun WhereAmIScreen(
+    viewModel: WhereAmIViewModel,
+    /** Opens the map on the given stage with location on. */
+    onShowOnMap: (stageIndex: Int?) -> Unit,
+    modifier: Modifier = Modifier,
+) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val permissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { grants ->
@@ -141,7 +146,12 @@ fun WhereAmIScreen(viewModel: WhereAmIViewModel, modifier: Modifier = Modifier) 
                             status = status,
                         )
                     }
-                    OutlinedButton(onClick = viewModel::locate) { Text("Check again") }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        if (uiState.hasMap) {
+                            Button(onClick = { onShowOnMap(status.position.stage?.index) }) { Text("Show on map") }
+                        }
+                        OutlinedButton(onClick = viewModel::locate) { Text("Check again") }
+                    }
                 }
             }
         }
