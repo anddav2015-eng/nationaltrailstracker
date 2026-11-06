@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Foreground only, requested when the walker taps "Where am I?". No background location. -->
+    <!-- Base-map tiles (OpenFreeMap) on the trail map. Nothing else uses the network. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Foreground only, requested when the walker taps "Where am I?" or "Show my location" on the
+         map. No background location. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 

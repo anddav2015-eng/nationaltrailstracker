@@ -136,8 +136,12 @@ The landmarks have mileages but **no coordinates yet**. For "where am I":
   bullets and wait for a go-ahead.
 - Run `./gradlew test lint` before saying a step is done. Keep the build warning-free.
 - Keep distance and mileage maths in plain Kotlin (no Android types) so it can be unit tested.
-- No analytics, ads, accounts or network calls in v1. The app works fully offline.
-- Only ever request location while the app is in use, and only when the user taps "Where am I".
+- No analytics, ads or accounts. The only network use is fetching base-map tiles (OpenFreeMap) on
+  the map screen. Everything else works fully offline, and the map still shows the trail line
+  without a connection.
+- Only ever request location while the app is in use, and only when the user taps "Where am I" or
+  "Show my location" on the map. On the map, location updates are live but stop when the walker
+  leaves the screen or the app goes to the background. No background location.
 - Don't change the trail data values by hand. Fix them in `trail-data/` and re-run the converter.
 - When unsure about a product decision, ask. Don't guess.
 
@@ -151,12 +155,15 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
 ### Decisions already made
 - **Map library:** MapLibre Native for Android. Avoid Google Maps (needs a billing account).
 - **Base map tiles:** OpenFreeMap (`https://tiles.openfreemap.org/styles/liberty`), no API key. The service is provided as-is, so keep the style URL in one config place so it's easy to swap. Don't use tile.openstreetmap.org (usage policy).
-- **Trail data source:** the official GPX file for each trail from nationaltrail.co.uk (found on each trail's "Trail information & map" page). Only this source. No cross-checking against other datasets.
+- **Trail data source:** the official GPX file for each trail from nationaltrail.co.uk (found on each trail's "Trail information & map" page). An OpenStreetMap version of the line (from the trail's OSM route relation) is also built for comparison, because it lines up with the paths on the base map.
+    - Follow the official main route by default, even where I walked a different bank or diversion. Report differences, don't reshape the line.
     - Known example: https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Thames-Path-elevation-1Nov24.gpx
     - The site warns the full GPX can contain multiple tracks. Always inspect and merge only the main route, and report anything odd (gaps, diversions, link routes).
     - Scottish trails are not on this site, so they need a separate source later.
 - **Close-up accuracy matters.** I want to zoom right in and see exactly where the trail goes. Default to full-detail geometry. Only simplify if performance demands it, and then use a small tolerance (2 m or less preferred, 5 m at most). Do metre-based simplification in a projected CRS (EPSG:27700), not in degrees. Round coordinates to 6 decimal places. I choose the final version after comparing on my phone.
 - **Attribution:** "National Trails / Natural England and Natural Resources Wales" plus the map credit "© OpenStreetMap contributors" where the map is shown.
+- **Opening the map:** tap any landmark row in the Landmarks table. The map opens with that landmark's whole stage highlighted. (Tapping a stage on the Stages tab still opens the log sheet.)
+- **Live location:** off when the map opens. A "Show my location" button asks for foreground permission if needed, then shows a live dot until the walker leaves the screen.
 
 ### Data notes
 - Trails are processed with a re-runnable script (not one-off commands) so other trails can use the same pipeline. Outputs go in `assets/trails/`.

@@ -13,6 +13,8 @@ import androidx.navigation.navArgument
 import com.anddav.nationaltrailstracker.di.LocalAppContainer
 import com.anddav.nationaltrailstracker.ui.detail.TrailDetailScreen
 import com.anddav.nationaltrailstracker.ui.detail.TrailDetailViewModel
+import com.anddav.nationaltrailstracker.ui.map.TrailMapScreen
+import com.anddav.nationaltrailstracker.ui.map.TrailMapViewModel
 import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsScreen
 import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsViewModel
 import com.anddav.nationaltrailstracker.ui.trails.TrailsListScreen
@@ -25,6 +27,8 @@ private const val TRAIL_DETAIL_ROUTE = "trails/{trailId}"
 private const val TRAIL_ID_ARG = "trailId"
 private const val SUMMARY_ROUTE = "summary"
 private const val WHERE_AM_I_ROUTE = "trails/{trailId}/where"
+private const val MAP_ROUTE = "trails/{trailId}/map?stage={stage}"
+private const val STAGE_ARG = "stage"
 
 @Composable
 fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
@@ -69,6 +73,7 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
             TrailDetailScreen(
                 viewModel = viewModel,
                 onWhereAmIClick = { navController.navigate("trails/$trailId/where") },
+                onShowOnMap = { stageIndex -> navController.navigate("trails/$trailId/map?stage=${stageIndex ?: -1}") },
             )
         }
         composable(
@@ -84,6 +89,27 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
                 },
             )
             WhereAmIScreen(viewModel = viewModel)
+        }
+        composable(
+            route = MAP_ROUTE,
+            arguments = listOf(
+                navArgument(TRAIL_ID_ARG) { type = NavType.StringType },
+                navArgument(STAGE_ARG) {
+                    type = NavType.IntType
+                    defaultValue = -1
+                },
+            ),
+        ) { backStackEntry ->
+            val trailId = backStackEntry.arguments?.getString(TRAIL_ID_ARG)
+                ?: error("Missing required nav arg: $TRAIL_ID_ARG")
+            val stageIndex = backStackEntry.arguments?.getInt(STAGE_ARG)?.takeIf { it >= 0 }
+            val viewModel: TrailMapViewModel = viewModel(
+                key = "map-$trailId-$stageIndex",
+                factory = viewModelFactory {
+                    initializer { TrailMapViewModel(trailId, stageIndex, container.trailRepository, container.locationClient) }
+                },
+            )
+            TrailMapScreen(viewModel = viewModel)
         }
     }
 }

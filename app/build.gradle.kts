@@ -58,6 +58,8 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.vico.compose.m3)
     implementation(libs.play.services.location)
+    implementation(libs.maplibre.android.sdk)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(platform(libs.androidx.compose.bom))

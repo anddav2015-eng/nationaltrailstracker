@@ -2,6 +2,7 @@ package com.anddav.nationaltrailstracker.di
 
 import android.content.Context
 import androidx.room.Room
+import com.anddav.nationaltrailstracker.data.geo.LegsAssetLoader
 import com.anddav.nationaltrailstracker.data.geo.RouteAssetLoader
 import com.anddav.nationaltrailstracker.data.local.AppDatabase
 import com.anddav.nationaltrailstracker.data.location.LocationClient
@@ -26,6 +27,7 @@ class AppContainer(context: Context) {
     val trailRepository = TrailRepository(
         assetLoader = TrailAssetLoader(applicationContext, json),
         routeLoader = RouteAssetLoader(applicationContext, json),
+        legsLoader = LegsAssetLoader(applicationContext),
     )
 
     val locationClient = LocationClient(applicationContext)

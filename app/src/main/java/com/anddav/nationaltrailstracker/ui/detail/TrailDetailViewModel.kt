@@ -51,6 +51,8 @@ data class TrailDetailUiState(
     val landmarkGroups: List<LandmarkGroup> = emptyList(),
     val chartPoints: List<ChartPoint> = emptyList(),
     val progress: TrailProgress = TrailProgress(),
+    /** True when a map route line is bundled for this trail (tools/build_legs.py). */
+    val hasMap: Boolean = false,
 )
 
 /** The walker's totals for this trail, shown in the header. */
@@ -75,8 +77,9 @@ class TrailDetailViewModel(
     init {
         viewModelScope.launch {
             val trail = trailRepository.trail(trailId)
+            val hasMap = trailRepository.mapLineVersions(trailId).isNotEmpty()
             progressRepository.observeForTrail(trailId).collect { logs ->
-                _uiState.value = buildUiState(trail, logs)
+                _uiState.value = buildUiState(trail, logs).copy(hasMap = hasMap)
             }
         }
     }

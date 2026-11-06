@@ -76,6 +76,7 @@ private val UK_DATE_FORMAT: DateTimeFormatter = DateTimeFormatter.ofPattern("d M
 fun TrailDetailScreen(
     viewModel: TrailDetailViewModel,
     onWhereAmIClick: () -> Unit,
+    onShowOnMap: (stageIndex: Int?) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -91,6 +92,7 @@ fun TrailDetailScreen(
         onSaveLog = viewModel::saveLog,
         onDeleteLog = viewModel::deleteLog,
         onWhereAmIClick = onWhereAmIClick,
+        onShowOnMap = onShowOnMap.takeIf { uiState.hasMap },
         modifier = modifier,
     )
 }
@@ -102,6 +104,7 @@ private fun TrailDetailContent(
     onSaveLog: (stageIndex: Int, dateWalked: LocalDate, steps: Int?, notes: String?, actualMiles: Double?) -> Unit,
     onDeleteLog: (StageLogEntity) -> Unit,
     onWhereAmIClick: () -> Unit,
+    onShowOnMap: ((stageIndex: Int?) -> Unit)?,
     modifier: Modifier = Modifier,
 ) {
     val trailColour = parseHexColor(trail.colour)
@@ -177,6 +180,7 @@ private fun TrailDetailContent(
                 onSetAllCollapsed = { collapse ->
                     collapsedStages = if (collapse) uiState.stageRows.map { it.stage.index } else emptyList()
                 },
+                onLandmarkClick = onShowOnMap,
                 modifier = Modifier.weight(1f),
             )
             else -> ProgressChart(
@@ -372,6 +376,8 @@ private fun LandmarksTable(
     collapsedStages: Set<Int>,
     onToggleStage: (Int) -> Unit,
     onSetAllCollapsed: (Boolean) -> Unit,
+    /** Opens the map with the tapped landmark's stage highlighted; null when the trail has no map. */
+    onLandmarkClick: ((stageIndex: Int?) -> Unit)?,
     modifier: Modifier = Modifier,
 ) {
     val totalStages = trail.defaultStages.size
@@ -404,6 +410,7 @@ private fun LandmarksTable(
                 items(group.rows, key = { "landmark-${it.landmark.name}" }) { row ->
                     LandmarkTableRow(
                         row = row,
+                        onClick = onLandmarkClick?.let { open -> { open(stageIndex) } },
                         modifier = Modifier.background(if (group.walked) WalkedRowBackground else Color.Transparent),
                     )
                 }
@@ -512,10 +519,18 @@ private fun StageGroupHeader(row: StageRow, colour: Color, walked: Boolean, coll
 }
 
 @Composable
-private fun LandmarkTableRow(row: LandmarkRow, modifier: Modifier = Modifier) {
+private fun LandmarkTableRow(row: LandmarkRow, onClick: (() -> Unit)?, modifier: Modifier = Modifier) {
     Row(
         modifier = modifier
             .fillMaxWidth()
+            .then(
+                if (onClick != null) {
+                    Modifier.clickable(onClickLabel = "Show this stage on the map", onClick = onClick)
+                } else {
+                    Modifier
+                },
+            )
+            .heightIn(min = 48.dp)
             .padding(start = 16.dp, end = 12.dp, top = 8.dp, bottom = 8.dp),
         verticalAlignment = Alignment.Top,
     ) {
