@@ -106,7 +106,7 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
             val viewModel: TrailMapViewModel = viewModel(
                 key = "map-$trailId-$stageIndex",
                 factory = viewModelFactory {
-                    initializer { TrailMapViewModel(trailId, stageIndex, container.trailRepository, container.locationClient) }
+                    initializer { TrailMapViewModel(trailId, stageIndex, container.trailRepository, container.locationClient, container.offlineMapStore) }
                 },
             )
             TrailMapScreen(viewModel = viewModel)

@@ -8,17 +8,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -29,13 +27,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -45,13 +46,17 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.repeatOnLifecycle
+import com.anddav.nationaltrailstracker.data.map.OfflineMapState
 import com.anddav.nationaltrailstracker.domain.map.GeoBounds
 import com.anddav.nationaltrailstracker.domain.map.GeoPoint
-import com.anddav.nationaltrailstracker.domain.map.MapLineVersion
 import com.anddav.nationaltrailstracker.domain.map.MapMarker
+import com.anddav.nationaltrailstracker.domain.map.StageLocator
+import com.anddav.nationaltrailstracker.domain.map.StagePosition
 import com.anddav.nationaltrailstracker.ui.parseHexColor
 import com.anddav.nationaltrailstracker.ui.stageChipColour
 import com.anddav.nationaltrailstracker.ui.theme.TrailTrackerCream
+import kotlinx.coroutines.delay
 import org.maplibre.android.MapLibre
 import org.maplibre.android.camera.CameraPosition
 import org.maplibre.android.camera.CameraUpdateFactory
@@ -74,6 +79,7 @@ import org.maplibre.geojson.Feature
 import org.maplibre.geojson.FeatureCollection
 import org.maplibre.geojson.LineString
 import org.maplibre.geojson.Point
+import java.util.Locale
 
 private val LOCATION_PERMISSIONS = arrayOf(
     Manifest.permission.ACCESS_FINE_LOCATION,
@@ -85,6 +91,8 @@ private const val SOURCE_STAGE = "trail-stage"
 private const val SOURCE_ENDS = "trail-stage-ends"
 private const val CAMERA_PADDING_PX = 120
 private const val CENTRE_ON_ME_MIN_ZOOM = 15.0
+private const val POSITION_POLL_MILLIS = 3_000L
+private const val SHOW_ACCURACY_ABOVE_METRES = 100f
 
 @Composable
 fun TrailMapScreen(viewModel: TrailMapViewModel, modifier: Modifier = Modifier) {
@@ -112,16 +120,17 @@ fun TrailMapScreen(viewModel: TrailMapViewModel, modifier: Modifier = Modifier) 
     } else {
         trailColour
     }
+    val title = if (stageIndex != null && stageDef != null) "Stage ${stageIndex + 1}" else (trail?.name ?: "Map")
 
     Column(modifier = modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(trailColour)
-                .padding(horizontal = 20.dp, vertical = 12.dp),
+                .padding(start = 20.dp, end = 8.dp, top = 12.dp, bottom = 4.dp),
         ) {
             Text(
-                text = if (stageIndex != null && stageDef != null) "Stage ${stageIndex + 1}" else (trail?.name ?: "Map"),
+                text = title,
                 fontFamily = FontFamily.Serif,
                 fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.titleLarge,
@@ -131,21 +140,27 @@ fun TrailMapScreen(viewModel: TrailMapViewModel, modifier: Modifier = Modifier) 
             if (stageDef != null) {
                 Text("${stageDef.fromLandmark} → ${stageDef.toLandmark}", color = TrailTrackerCream)
             }
-            if (uiState.versions.size > 1) {
-                VersionPicker(uiState, onSelect = viewModel::selectVersion)
-            }
+            OfflineButton(uiState.offline, onSave = viewModel::saveOffline)
         }
 
         Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
-            if (uiState.version != null) {
+            if (uiState.wholeLine.isNotEmpty()) {
                 TrailMap(
                     uiState = uiState,
+                    contentDescription = buildString {
+                        append("Map of ")
+                        append(if (stageDef != null) "$title, ${stageDef.fromLandmark} to ${stageDef.toLandmark}" else title)
+                    },
                     wholeColour = trailColour.toArgb(),
                     stageColour = stageColour.toArgb(),
                     centreRequests = centreRequests,
+                    onLocation = viewModel::onLocation,
                     onBaseMapOffline = viewModel::onBaseMapOffline,
                     modifier = Modifier.fillMaxSize(),
                 )
+                if (uiState.showLocation && stageIndex != null) {
+                    PositionPanel(uiState, modifier = Modifier.align(Alignment.TopCenter).padding(12.dp))
+                }
                 ExtendedFloatingActionButton(
                     onClick = {
                         when {
@@ -165,64 +180,95 @@ fun TrailMapScreen(viewModel: TrailMapViewModel, modifier: Modifier = Modifier) 
             }
             SnackbarHost(snackbarHostState, modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 72.dp))
         }
-
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.surfaceVariant)
-                .padding(horizontal = 12.dp, vertical = 6.dp),
-        ) {
-            val routeCredit = if (uiState.version?.fromOpenStreetMap == true) {
-                MapConfig.OSM_ROUTE_CREDIT
-            } else {
-                MapConfig.OFFICIAL_ROUTE_CREDIT
-            }
-            Text(routeCredit, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Text(MapConfig.BASE_MAP_CREDIT, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
     }
 }
 
-/** Temporary: lets the owner compare the bundled route lines at full zoom. */
 @Composable
-private fun VersionPicker(uiState: TrailMapUiState, onSelect: (MapLineVersion) -> Unit) {
-    var expanded by remember { mutableStateOf(false) }
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        TextButton(onClick = { expanded = true }) {
-            Text("Line: ${uiState.version?.label ?: "…"} ▾", color = TrailTrackerCream)
-        }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            uiState.versions.forEach { version ->
-                DropdownMenuItem(
-                    text = { Text(version.label) },
-                    onClick = {
-                        expanded = false
-                        onSelect(version)
-                    },
+private fun OfflineButton(state: OfflineMapState, onSave: () -> Unit) {
+    val (label, enabled) = when (state) {
+        OfflineMapState.Unknown -> return
+        OfflineMapState.NotSaved -> "Save map for offline use" to true
+        is OfflineMapState.Downloading -> (state.percent?.let { "Saving map… $it%" } ?: "Saving map…") to false
+        OfflineMapState.Saved -> "Map saved for offline use ✓" to false
+        is OfflineMapState.Failed -> "Saving failed: try again" to true
+    }
+    TextButton(onClick = onSave, enabled = enabled) {
+        Text(label, color = TrailTrackerCream.copy(alpha = if (enabled) 1f else 0.85f))
+    }
+}
+
+/** "4.2 of 13.1 mi along · 8.9 mi to Staines", measured along the map line. */
+@Composable
+private fun PositionPanel(uiState: TrailMapUiState, modifier: Modifier = Modifier) {
+    val position = uiState.position
+    Surface(
+        shape = MaterialTheme.shapes.medium,
+        tonalElevation = 3.dp,
+        shadowElevation = 3.dp,
+        modifier = modifier.semantics { liveRegion = LiveRegionMode.Polite },
+    ) {
+        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+            if (position == null) {
+                Text("Finding your position…", style = MaterialTheme.typography.bodyMedium)
+                return@Column
+            }
+            val main = when (position) {
+                is StagePosition.InStage ->
+                    "${miles(position.milesAlong)} of ${miles(position.stageMiles)} mi along · " +
+                        "${miles(position.milesToEnd)} mi to ${position.endName}"
+                is StagePosition.BeforeStart -> "${miles(position.milesToStart)} mi before the start, at ${position.startName}"
+                is StagePosition.PastEnd -> "${miles(position.milesPastEnd)} mi past the end, at ${position.endName}"
+            }
+            Text(main, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold)
+            if (position.offRouteMetres > StageLocator.OFF_ROUTE_WARNING_METRES) {
+                Text(
+                    "⚠ ${distance(position.offRouteMetres)} from the route",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.error,
                 )
             }
+            uiState.accuracyMetres?.takeIf { it > SHOW_ACCURACY_ABOVE_METRES }?.let {
+                Text(
+                    "Location accurate to about ${distance(it.toDouble())}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            Text(
+                "Distances along the map line",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }
+
+private fun miles(value: Double) = "%.1f".format(Locale.UK, value)
+
+private fun distance(metres: Double) =
+    if (metres < 1000) "%.0f m".format(Locale.UK, metres) else "%.1f mi".format(Locale.UK, metres / 1609.344)
 
 @Composable
 private fun TrailMap(
     uiState: TrailMapUiState,
+    contentDescription: String,
     wholeColour: Int,
     stageColour: Int,
     centreRequests: Int,
+    onLocation: (lat: Double, lon: Double, accuracyMetres: Float?) -> Unit,
     onBaseMapOffline: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
+    val currentOnLocation by rememberUpdatedState(onLocation)
     val mapView = remember {
         MapLibre.getInstance(context)
         MapView(context).apply { onCreate(null) }
     }
     var map by remember { mutableStateOf<MapLibreMap?>(null) }
     var style by remember { mutableStateOf<Style?>(null) }
-    // Fit the camera once; switching line versions must not move it, so versions can be compared.
+    // Fit the camera once, not on every state change.
     var cameraFitted by rememberSaveable { mutableStateOf(false) }
 
     // Forward the screen's lifecycle to the MapView. Stopping the MapView also stops location updates.
@@ -253,7 +299,7 @@ private fun TrailMap(
             m.uiSettings.isLogoEnabled = true
             var fellBack = false
             mapView.addOnDidFailLoadingMapListener {
-                // No connection (and nothing cached): show the trail on a plain background instead.
+                // No connection and nothing saved: show the trail on a plain background instead.
                 if (!fellBack) {
                     fellBack = true
                     onBaseMapOffline()
@@ -287,10 +333,19 @@ private fun TrailMap(
         }
     }
 
+    // Live location: only once the walker has asked for it, and only while the screen is started.
     LaunchedEffect(map, style, uiState.showLocation) {
         val m = map ?: return@LaunchedEffect
         val s = style ?: return@LaunchedEffect
-        if (uiState.showLocation) enableLocation(context, m, s)
+        if (!uiState.showLocation || !enableLocation(context, m, s)) return@LaunchedEffect
+        lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            while (true) {
+                m.locationComponent.lastKnownLocation?.let { loc ->
+                    currentOnLocation(loc.latitude, loc.longitude, if (loc.hasAccuracy()) loc.accuracy else null)
+                }
+                delay(POSITION_POLL_MILLIS)
+            }
+        }
     }
 
     LaunchedEffect(centreRequests) {
@@ -305,7 +360,11 @@ private fun TrailMap(
         )
     }
 
-    AndroidView(factory = { mapView }, modifier = modifier)
+    AndroidView(
+        factory = { mapView },
+        update = { it.contentDescription = contentDescription },
+        modifier = modifier,
+    )
 }
 
 private fun addTrailLayers(style: Style, wholeColour: Int, stageColour: Int) {
@@ -359,11 +418,14 @@ private fun addTrailLayers(style: Style, wholeColour: Int, stageColour: Int) {
     )
 }
 
-/** Turns on the live location dot. Only called after the walker asked for it and permission is held. */
-private fun enableLocation(context: Context, map: MapLibreMap, style: Style) {
+/**
+ * Turns on the live location dot. Only called after the walker asked for it. Returns false (and
+ * does nothing) if permission isn't held.
+ */
+private fun enableLocation(context: Context, map: MapLibreMap, style: Style): Boolean {
     val fine = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
     val coarse = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION)
-    if (fine != PackageManager.PERMISSION_GRANTED && coarse != PackageManager.PERMISSION_GRANTED) return
+    if (fine != PackageManager.PERMISSION_GRANTED && coarse != PackageManager.PERMISSION_GRANTED) return false
     val component = map.locationComponent
     if (!component.isLocationComponentActivated) {
         component.activateLocationComponent(
@@ -375,6 +437,7 @@ private fun enableLocation(context: Context, map: MapLibreMap, style: Style) {
     component.isLocationComponentEnabled = true
     component.cameraMode = CameraMode.NONE
     component.renderMode = RenderMode.COMPASS
+    return true
 }
 
 private fun lineFeatures(points: List<GeoPoint>): FeatureCollection =

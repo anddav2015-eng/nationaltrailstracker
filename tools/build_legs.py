@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Finds landmark coordinates and cuts each trail route line into landmark-to-landmark legs.
 
-Run after tools/build_map_geojson.py (which makes the route lines). For each trail in
+Run after tools/build_map_geojson.py (which makes the route lines in trail-data/map-lines/). For
+each trail in
 tools/landmark_config.json:
 
 1. Each landmark gets a position:
@@ -11,13 +12,13 @@ tools/landmark_config.json:
      limited to a box around the route line. Of up to 10 results, the one that fits best is used:
      close to the line, and at a point along the line that matches the landmark's table mileage.
    Results are cached in trail-data/geocode-cache/ (not committed), so re-runs make no requests.
-2. Each position is snapped to the reference line. Landmarks are checked for order along the line
+2. Each position is snapped to the map line ('mapLine' in the config: the line the app shows). Landmarks are checked for order along the line
    and for agreement with the table mileages (after scaling the table to the line's length), and
    anything doubtful is flagged. Nothing is changed in trail-data; fix problems with an override.
 3. Writes trail-data/landmark-coords/<slug>.json (the trail-point coordinates and how each was
    found). tools/convert_trails.py merges these into the landmarks' lat/lon.
-4. For each line version, writes app/src/main/assets/trails/<slug>-<version>-legs.geojson: one
-   LineString per leg (landmark i to i+1), in the trail's walking direction (first landmark first).
+4. Writes app/src/main/assets/trails/<slug>-legs.geojson from the map line: one LineString per
+   leg (landmark i to i+1), in the trail's walking direction (first landmark first).
    Leg properties hold the table miles and the miles measured along the line. Table mileages are
    never changed.
 
@@ -48,6 +49,7 @@ TRAIL_DATA_DIR = REPO_ROOT / "trail-data"
 CACHE_DIR = TRAIL_DATA_DIR / "geocode-cache"
 COORDS_DIR = TRAIL_DATA_DIR / "landmark-coords"
 ASSETS_TRAILS = REPO_ROOT / "app" / "src" / "main" / "assets" / "trails"
+LINES_DIR = TRAIL_DATA_DIR / "map-lines"
 
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 USER_AGENT = "NationalTrailsTracker-build-tool/1.0 (personal, non-commercial)"
@@ -122,7 +124,7 @@ class Line:
 
 
 def load_line(slug, version):
-    path = ASSETS_TRAILS / f"{slug}-{version}.geojson"
+    path = LINES_DIR / f"{slug}-{version}.geojson"
     if not path.exists():
         sys.exit(f"Missing {path}; run tools/build_map_geojson.py first")
     gj = json.loads(path.read_text(encoding="utf-8"))
@@ -334,7 +336,7 @@ def write_legs(slug, version, line, landmarks, coords, stages):
     gj = {"type": "FeatureCollection",
           "properties": {"trail": slug, "line": version, "direction": f"{landmarks[0]['name']} -> {landmarks[-1]['name']}"},
           "features": features}
-    path = ASSETS_TRAILS / f"{slug}-{version}-legs.geojson"
+    path = ASSETS_TRAILS / f"{slug}-legs.geojson"
     path.write_text(json.dumps(gj, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
     total = sum(f["properties"]["lineMiles"] for f in features)
     print(f"  [{version}] {len(features)} legs, {total:.2f} mi along the line "
@@ -357,7 +359,7 @@ def build(slug, cfg):
     if unknown:
         sys.exit(f"  overrides for unknown landmark(s): {unknown}")
 
-    ref_version = cfg.get("referenceLine", cfg["lines"][0])
+    ref_version = cfg["mapLine"]
     ref = load_line(slug, ref_version)
     # Orient: find the first and last landmark with a rough search, so legs run in walking order.
     probe, _ = find_positions(slug, [landmarks[0], landmarks[-1]], overrides, ref)
@@ -372,11 +374,7 @@ def build(slug, cfg):
     path, coords = write_coords(slug, positions, ref, ref_version)
     print(f"  wrote {path.relative_to(REPO_ROOT)} ({len(coords)} of {len(landmarks)} landmarks)")
 
-    for version in cfg["lines"]:
-        line = ref if version == ref_version else orient(load_line(slug, version), landmarks,
-                                                          [(coords[0]["lat"], coords[0]["lon"]),
-                                                           (coords[-1]["lat"], coords[-1]["lon"])])
-        write_legs(slug, version, line, landmarks, coords, stages)
+    write_legs(slug, ref_version, ref, landmarks, coords, stages)
 
 
 def main():

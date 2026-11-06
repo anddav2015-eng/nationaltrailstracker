@@ -6,6 +6,7 @@ import com.anddav.nationaltrailstracker.data.geo.LegsAssetLoader
 import com.anddav.nationaltrailstracker.data.geo.RouteAssetLoader
 import com.anddav.nationaltrailstracker.data.local.AppDatabase
 import com.anddav.nationaltrailstracker.data.location.LocationClient
+import com.anddav.nationaltrailstracker.data.map.OfflineMapStore
 import com.anddav.nationaltrailstracker.data.seed.SeedProgressLoader
 import com.anddav.nationaltrailstracker.data.trail.TrailAssetLoader
 import com.anddav.nationaltrailstracker.repo.ProgressRepository
@@ -31,6 +32,8 @@ class AppContainer(context: Context) {
     )
 
     val locationClient = LocationClient(applicationContext)
+
+    val offlineMapStore = OfflineMapStore(applicationContext)
 
     val progressRepository = ProgressRepository(
         dao = database.stageLogDao(),

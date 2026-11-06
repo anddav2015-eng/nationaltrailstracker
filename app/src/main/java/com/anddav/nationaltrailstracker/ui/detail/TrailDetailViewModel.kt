@@ -77,7 +77,7 @@ class TrailDetailViewModel(
     init {
         viewModelScope.launch {
             val trail = trailRepository.trail(trailId)
-            val hasMap = trailRepository.mapLineVersions(trailId).isNotEmpty()
+            val hasMap = trailRepository.hasMap(trailId)
             progressRepository.observeForTrail(trailId).collect { logs ->
                 _uiState.value = buildUiState(trail, logs).copy(hasMap = hasMap)
             }

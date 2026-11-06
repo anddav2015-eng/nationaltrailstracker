@@ -26,25 +26,13 @@ data class MapLeg(
     val points: List<GeoPoint>,
 )
 
-/**
- * The route-line versions that tools/build_legs.py can produce. The full and simplified official
- * lines and the OpenStreetMap line are all shipped for now so the owner can compare them on the
- * phone; the unused ones will be removed once one is chosen.
- */
-enum class MapLineVersion(val key: String, val label: String, val fromOpenStreetMap: Boolean) {
-    FULL("full", "Official (full detail)", false),
-    SIMPLIFIED_2M("2m", "Official (2 m simplified)", false),
-    SIMPLIFIED_5M("5m", "Official (5 m simplified)", false),
-    OSM("osm", "OpenStreetMap", true),
-    ;
-
-    fun assetPath(trailId: String) = "trails/$trailId-$key-legs.geojson"
-}
-
 object MapLegs {
+    /** The bundled legs file for a trail, written by tools/build_legs.py. */
+    fun assetPath(trailId: String) = "trails/$trailId-legs.geojson"
+
     private val json = Json { ignoreUnknownKeys = true }
 
-    /** Parses a <slug>-<version>-legs.geojson file: one LineString feature per leg, [lon, lat(, ele)]. */
+    /** Parses a <slug>-legs.geojson file: one LineString feature per leg, [lon, lat(, ele)]. */
     fun parse(geoJson: String): List<MapLeg> {
         val features = json.parseToJsonElement(geoJson).jsonObject["features"]?.jsonArray ?: return emptyList()
         return features.map { feature ->

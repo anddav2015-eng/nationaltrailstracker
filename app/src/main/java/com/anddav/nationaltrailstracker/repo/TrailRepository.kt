@@ -5,7 +5,6 @@ import com.anddav.nationaltrailstracker.data.geo.RouteAssetLoader
 import com.anddav.nationaltrailstracker.data.trail.TrailAssetLoader
 import com.anddav.nationaltrailstracker.domain.RoutePoint
 import com.anddav.nationaltrailstracker.domain.map.MapLeg
-import com.anddav.nationaltrailstracker.domain.map.MapLineVersion
 import com.anddav.nationaltrailstracker.model.Trail
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -30,13 +29,13 @@ class TrailRepository(
         trail.gpxAsset?.let(routeLoader::load)
     }
 
-    /** The map route-line versions bundled for this trail; empty if it has no map yet. */
-    suspend fun mapLineVersions(trailId: String): List<MapLineVersion> = withContext(Dispatchers.IO) {
-        legsLoader.availableVersions(trailId)
+    /** True when a map route line is bundled for this trail. */
+    suspend fun hasMap(trailId: String): Boolean = withContext(Dispatchers.IO) {
+        legsLoader.hasMap(trailId)
     }
 
-    /** The trail's route line cut into landmark-to-landmark legs, for the map. */
-    suspend fun mapLegs(trailId: String, version: MapLineVersion): List<MapLeg> = withContext(Dispatchers.IO) {
-        legsLoader.load(trailId, version)
+    /** The trail's map route line cut into landmark-to-landmark legs. */
+    suspend fun mapLegs(trailId: String): List<MapLeg> = withContext(Dispatchers.IO) {
+        legsLoader.load(trailId)
     }
 }

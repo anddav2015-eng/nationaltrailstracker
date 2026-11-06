@@ -21,20 +21,26 @@ Not yet sourced. Each will be listed here with its licence before its route line
 
 ## Route lines (trail map)
 
-The `*-full/-2m/-5m.geojson` files in `app/src/main/assets/trails/` are built by
-`tools/build_map_geojson.py` from the official GPX downloads on <https://www.nationaltrail.co.uk>.
+The map shows `app/src/main/assets/trails/<slug>-legs.geojson`, cut by `tools/build_legs.py` from
+an OpenStreetMap route line. The official line (`trail-data/map-lines/<slug>-full.geojson`, not
+shipped) is built by `tools/build_map_geojson.py` from the official GPX downloads on
+<https://www.nationaltrail.co.uk>. It's used to check the OSM line, fill its gaps and give it
+elevation.
 
 - Attribution: National Trails / Natural England and Natural Resources Wales.
 - Base map (where shown): © OpenStreetMap contributors.
 - Licence of the GPX downloads: not yet confirmed.
 
-The `*-osm.geojson` files are built by the same script from OpenStreetMap route relations,
-fetched from the OSM API. A few short gaps are filled from the official GPX.
+The OSM line (`trail-data/map-lines/<slug>-osm.geojson`) is built by the same script from the
+trail's OpenStreetMap route relation, fetched from the OSM API.
 
 - Licence: [Open Database Licence 1.0](https://opendatacommons.org/licenses/odbl/1-0/)
 - Attribution: © OpenStreetMap contributors.
 
-Trails using these sources so far: Thames Path (official GPX, and OSM relation 14519665).
+Trails using these sources so far: Thames Path (OSM relation 14519665, plus the official GPX).
+
+In the app, these credits are shown in each mapped trail's ⓘ dialog under "Map sources". The
+base-map credit is also on the map, behind MapLibre's ⓘ button.
 
 ## Landmark coordinates
 

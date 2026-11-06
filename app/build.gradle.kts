@@ -17,6 +17,11 @@ android {
         applicationId = "com.anddav.nationaltrailstracker"
         minSdk = 26
         targetSdk = 37
+        // Only the owner's phone CPU type: keeps MapLibre's native library from quadrupling the APK.
+        // (A PC emulator would need x86_64 added here.)
+        ndk {
+            abiFilters += "arm64-v8a"
+        }
         versionCode = 1
         versionName = "1.0"
 

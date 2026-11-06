@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Builds map route lines (GeoJSON) from the official National Trails GPX files.
 
-For each trail in tools/map_geojson_config.json this writes three versions of the main route to
-app/src/main/assets/trails/:
+For each trail in tools/map_geojson_config.json this writes the main route to trail-data/map-lines/
+(committed, but not shipped in the app; tools/build_legs.py cuts the chosen line into the app's
+legs file):
   <slug>-full.geojson   every GPX point (no simplification)
-  <slug>-2m.geojson     Douglas-Peucker, 2 m tolerance
-  <slug>-5m.geojson     Douglas-Peucker, 5 m tolerance
+  <slug>-<n>m.geojson   Douglas-Peucker with an n-metre tolerance, for each n in the trail's optional
+                        "simplifyM" list (done in British National Grid, EPSG:27700)
 
-Simplification is done in metres in British National Grid (EPSG:27700), then converted back to
-WGS84. Coordinates are [lon, lat, elevation]: lon/lat rounded to 6 decimal places, elevation
+Coordinates are [lon, lat, elevation]: lon/lat rounded to 6 decimal places, elevation
 (metres, from the GPX) to 0.1 m.
 
 Nothing is silently repaired. The script prints a report of every track in the file, plus any
@@ -50,9 +50,8 @@ SOURCE_DIR = REPO_ROOT / "trail-data" / "gpx-source"
 OSM_SOURCE_DIR = REPO_ROOT / "trail-data" / "osm-source"
 OSM_API = "https://api.openstreetmap.org/api/0.6"
 USER_AGENT = "NationalTrailsTracker-build-tool/1.0 (personal, non-commercial)"
-OUT_DIR = REPO_ROOT / "app" / "src" / "main" / "assets" / "trails"
+OUT_DIR = REPO_ROOT / "trail-data" / "map-lines"
 
-VERSIONS = [("full", None), ("2m", 2.0), ("5m", 5.0)]  # (file suffix, tolerance in metres)
 COORD_DP = 6
 ELE_DP = 1
 METRES_PER_MILE = 1609.344
@@ -351,7 +350,8 @@ def build(slug, cfg):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     official = cfg.get("officialMiles")
     print(f"  {'version':<8}{'vertices':>10}{'miles':>9}{'vs official':>13}{'size KB':>10}")
-    for version, tol in VERSIONS:
+    versions = [("full", None)] + [(f"{m:g}m", float(m)) for m in cfg.get("simplifyM", [])]
+    for version, tol in versions:
         gj = to_geojson(slug, simplify(points, tol), version, tol, cfg["gpxUrl"], cfg["mainTracks"])
         path = OUT_DIR / f"{slug}-{version}.geojson"
         path.write_text(json.dumps(gj, separators=(",", ":")), encoding="utf-8")

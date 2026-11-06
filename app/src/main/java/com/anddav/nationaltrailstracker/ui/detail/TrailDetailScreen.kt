@@ -20,8 +20,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -63,6 +65,7 @@ import androidx.compose.ui.unit.sp
 import com.anddav.nationaltrailstracker.data.local.StageLogEntity
 import com.anddav.nationaltrailstracker.domain.StageMaths
 import com.anddav.nationaltrailstracker.model.Trail
+import com.anddav.nationaltrailstracker.ui.map.MapConfig
 import com.anddav.nationaltrailstracker.ui.parseHexColor
 import com.anddav.nationaltrailstracker.ui.stageChipColour
 import com.anddav.nationaltrailstracker.ui.theme.TrailTrackerCream
@@ -195,7 +198,20 @@ private fun TrailDetailContent(
         AlertDialog(
             onDismissRequest = { showFooter = false },
             title = { Text("About this route") },
-            text = { Text(trail.footer) },
+            text = {
+                Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                    Text(trail.footer)
+                    // Trails with a map also credit the route line, landmark positions and base map.
+                    if (onShowOnMap != null) {
+                        Text(
+                            "Map sources",
+                            style = MaterialTheme.typography.titleSmall,
+                            modifier = Modifier.padding(top = 16.dp, bottom = 4.dp).semantics { heading() },
+                        )
+                        Text(MapConfig.MAP_SOURCES, style = MaterialTheme.typography.bodySmall)
+                    }
+                }
+            },
             confirmButton = {
                 TextButton(onClick = { showFooter = false }) { Text("Close") }
             },

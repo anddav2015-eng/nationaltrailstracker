@@ -1,36 +1,99 @@
 {
-  "_comment": "Per-trail settings for tools/build_legs.py. 'lines' are the route-line versions (from build_map_geojson.py) to cut into legs. 'referenceLine' is the one landmarks are snapped to for the lat/lon stored in the trail JSON. 'overrides' maps a landmark name (exactly as in trail-data) to {\"query\": \"...\"} (a better Nominatim search, e.g. the town's bridge rather than the town), {\"interpolate\": true, \"why\": \"...\"} (place it between its neighbours by table mileage), or {\"point\": [lat, lon], \"why\": \"...\"} (a hand-set position; put it on the path).",
+  "_comment": "Per-trail settings for tools/build_legs.py. 'mapLine' is the route-line version (from build_map_geojson.py, in trail-data/map-lines/) that the app shows: landmarks are snapped to it and it's cut into the legs file. 'overrides' maps a landmark name (exactly as in trail-data) to {\"query\": \"...\"} (a better Nominatim search, e.g. the town's bridge rather than the town), {\"interpolate\": true, \"why\": \"...\"} (place it between its neighbours by table mileage), or {\"point\": [lat, lon], \"why\": \"...\"} (a hand-set position; put it on the path).",
   "thames-path": {
-    "lines": ["full", "2m", "5m", "osm"],
-    "referenceLine": "osm",
+    "mapLine": "osm",
     "overrides": {
-      "Richmond": { "query": "Richmond Bridge" },
-      "Ham House Ferry / Twickenham": { "query": "Hammerton's Ferry" },
-      "Kingston upon Thames": { "query": "Kingston Bridge" },
-      "Walton-on-Thames": { "query": "Walton Bridge" },
-      "Staines": { "query": "Staines Bridge" },
-      "Albert Bridge, Old Windsor": { "query": "Albert Bridge" },
-      "Eton & Windsor": { "query": "Windsor Bridge" },
-      "Dorney Lake": { "interpolate": true, "why": "the lake is 2 km long and inland of the path" },
-      "Maidenhead": { "query": "Maidenhead Bridge" },
-      "Marlow": { "query": "Marlow Bridge" },
-      "Hurley": { "query": "Hurley Lock" },
-      "Henley-on-Thames": { "query": "Henley Bridge" },
-      "Shiplake College Boathouse": { "interpolate": true, "why": "not in OpenStreetMap" },
-      "Sonning": { "query": "Sonning Bridge" },
-      "Kennet Canal / Reading": { "interpolate": true, "why": "the Kennet mouth is not named in OpenStreetMap" },
-      "Goring & Streatley": { "query": "Goring Bridge" },
-      "Cholsey": { "interpolate": true, "why": "the village is 1.5 km from the river" },
-      "Wallingford": { "query": "Wallingford Bridge" },
-      "Shillingford": { "query": "Shillingford Bridge" },
-      "Dorchester": { "interpolate": true, "why": "the village is 800 m from the river" },
-      "Days Lock / Little Wittenham": { "query": "Day's Lock" },
-      "Clifton Hampden": { "query": "Clifton Hampden Bridge" },
-      "Abingdon": { "query": "Abingdon Bridge" },
-      "Buscot": { "query": "Buscot Lock" },
-      "Lechlade": { "query": "Ha'penny Bridge" },
-      "Water Hay Car Park": { "interpolate": true, "why": "not in OpenStreetMap by this name" },
-      "Source of the Thames": { "point": [51.694413, -2.029508], "why": "start of the official GPX line, at the Thames Head stone" }
+      "Richmond": {
+        "query": "Richmond Bridge"
+      },
+      "Ham House Ferry / Twickenham": {
+        "query": "Hammerton's Ferry"
+      },
+      "Kingston upon Thames": {
+        "query": "Kingston Bridge"
+      },
+      "Walton-on-Thames": {
+        "query": "Walton Bridge"
+      },
+      "Staines": {
+        "query": "Staines Bridge"
+      },
+      "Albert Bridge, Old Windsor": {
+        "query": "Albert Bridge"
+      },
+      "Eton & Windsor": {
+        "query": "Windsor Bridge"
+      },
+      "Dorney Lake": {
+        "interpolate": true,
+        "why": "the lake is 2 km long and inland of the path"
+      },
+      "Maidenhead": {
+        "query": "Maidenhead Bridge"
+      },
+      "Marlow": {
+        "query": "Marlow Bridge"
+      },
+      "Hurley": {
+        "query": "Hurley Lock"
+      },
+      "Henley-on-Thames": {
+        "query": "Henley Bridge"
+      },
+      "Shiplake College Boathouse": {
+        "interpolate": true,
+        "why": "not in OpenStreetMap"
+      },
+      "Sonning": {
+        "query": "Sonning Bridge"
+      },
+      "Kennet Canal / Reading": {
+        "interpolate": true,
+        "why": "the Kennet mouth is not named in OpenStreetMap"
+      },
+      "Goring & Streatley": {
+        "query": "Goring Bridge"
+      },
+      "Cholsey": {
+        "interpolate": true,
+        "why": "the village is 1.5 km from the river"
+      },
+      "Wallingford": {
+        "query": "Wallingford Bridge"
+      },
+      "Shillingford": {
+        "query": "Shillingford Bridge"
+      },
+      "Dorchester": {
+        "interpolate": true,
+        "why": "the village is 800 m from the river"
+      },
+      "Days Lock / Little Wittenham": {
+        "query": "Day's Lock"
+      },
+      "Clifton Hampden": {
+        "query": "Clifton Hampden Bridge"
+      },
+      "Abingdon": {
+        "query": "Abingdon Bridge"
+      },
+      "Buscot": {
+        "query": "Buscot Lock"
+      },
+      "Lechlade": {
+        "query": "Ha'penny Bridge"
+      },
+      "Water Hay Car Park": {
+        "interpolate": true,
+        "why": "not in OpenStreetMap by this name"
+      },
+      "Source of the Thames": {
+        "point": [
+          51.694413,
+          -2.029508
+        ],
+        "why": "start of the official GPX line, at the Thames Head stone"
+      }
     }
   }
 }
