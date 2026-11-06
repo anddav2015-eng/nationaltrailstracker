@@ -1,7 +1,5 @@
 package com.anddav.nationaltrailstracker.ui.trails
 
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,22 +24,18 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -51,7 +45,6 @@ import androidx.compose.ui.unit.dp
 import com.anddav.nationaltrailstracker.ui.parseHexColor
 import com.anddav.nationaltrailstracker.ui.theme.TrailTrackerCream
 import com.anddav.nationaltrailstracker.ui.theme.TrailTrackerDarkGreen
-import kotlinx.coroutines.launch
 import java.util.Locale
 
 @Composable
@@ -59,49 +52,18 @@ fun TrailsListScreen(
     viewModel: TrailsListViewModel,
     onTrailClick: (String) -> Unit,
     onSummaryClick: () -> Unit,
+    onSettingsClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
-    val coroutineScope = rememberCoroutineScope()
-    val snackbarHostState = remember { SnackbarHostState() }
-
-    val exportLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
-        if (uri == null) return@rememberLauncherForActivityResult
-        coroutineScope.launch {
-            val result = runCatching {
-                val json = viewModel.exportBackup()
-                context.contentResolver.openOutputStream(uri)?.use { it.write(json.toByteArray(Charsets.UTF_8)) }
-                    ?: error("Couldn't open the file for writing")
-            }
-            snackbarHostState.showSnackbar(
-                if (result.isSuccess) "Backup exported" else "Export failed: ${result.exceptionOrNull()?.message}",
-            )
-        }
-    }
-    val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        if (uri == null) return@rememberLauncherForActivityResult
-        coroutineScope.launch {
-            val result = runCatching {
-                val text = context.contentResolver.openInputStream(uri)?.bufferedReader(Charsets.UTF_8)?.use { it.readText() }
-                    ?: error("Couldn't open the file for reading")
-                viewModel.importBackup(text)
-            }
-            snackbarHostState.showSnackbar(
-                if (result.isSuccess) "Backup imported" else "Import failed: ${result.exceptionOrNull()?.message}",
-            )
-        }
-    }
 
     Box(modifier = modifier.fillMaxSize()) {
         TrailsListContent(
             uiState = uiState,
             onTrailClick = onTrailClick,
             onSummaryClick = onSummaryClick,
-            onExportClick = { exportLauncher.launch("national-trails-backup.json") },
-            onImportClick = { importLauncher.launch(arrayOf("application/json")) },
+            onSettingsClick = onSettingsClick,
         )
-        SnackbarHost(hostState = snackbarHostState, modifier = Modifier.align(Alignment.BottomCenter))
     }
 }
 
@@ -110,8 +72,7 @@ private fun TrailsListContent(
     uiState: TrailsListUiState,
     onTrailClick: (String) -> Unit,
     onSummaryClick: () -> Unit,
-    onExportClick: () -> Unit,
-    onImportClick: () -> Unit,
+    onSettingsClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -133,7 +94,7 @@ private fun TrailsListContent(
                 color = TrailTrackerCream,
                 modifier = Modifier.weight(1f),
             )
-            BackupMenu(onExportClick = onExportClick, onImportClick = onImportClick)
+            OptionsMenu(onSettingsClick = onSettingsClick)
         }
 
         if (uiState.isLoading) {
@@ -232,7 +193,7 @@ private fun formatMiles(miles: Double): String = String.format(Locale.UK, "%.1f"
 /** Export/import, kept as a plain overflow menu rather than the full Settings screen (that's a
  * later milestone) - see CLAUDE.md's v1 screen list. */
 @Composable
-private fun BackupMenu(onExportClick: () -> Unit, onImportClick: () -> Unit) {
+private fun OptionsMenu(onSettingsClick: () -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     Box {
         Text(
@@ -247,12 +208,8 @@ private fun BackupMenu(onExportClick: () -> Unit, onImportClick: () -> Unit) {
         )
         DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             DropdownMenuItem(
-                text = { Text("Export backup") },
-                onClick = { expanded = false; onExportClick() },
-            )
-            DropdownMenuItem(
-                text = { Text("Import backup") },
-                onClick = { expanded = false; onImportClick() },
+                text = { Text("Settings") },
+                onClick = { expanded = false; onSettingsClick() },
             )
         }
     }

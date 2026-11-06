@@ -74,10 +74,4 @@ class TrailsListViewModel(
             totalMilesWalked = items.sumOf { it.milesWalked },
         )
     }
-
-    /** Plain suspend functions (not viewModelScope.launch) so the caller - the SAF file-picker
-     * flow in TrailsListScreen - can await completion and show success/error feedback. */
-    suspend fun exportBackup(): String = progressRepository.exportBackupJson()
-
-    suspend fun importBackup(text: String) = progressRepository.importBackupJson(text)
 }

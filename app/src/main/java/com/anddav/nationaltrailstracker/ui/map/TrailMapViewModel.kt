@@ -9,6 +9,7 @@ import com.anddav.nationaltrailstracker.domain.map.GeoBounds
 import com.anddav.nationaltrailstracker.domain.map.GeoPoint
 import com.anddav.nationaltrailstracker.domain.map.MapLegs
 import com.anddav.nationaltrailstracker.domain.map.MapMarker
+import com.anddav.nationaltrailstracker.domain.map.OfflineMapKeys
 import com.anddav.nationaltrailstracker.domain.map.StageLocator
 import com.anddav.nationaltrailstracker.domain.map.StagePosition
 import com.anddav.nationaltrailstracker.model.Trail
@@ -56,7 +57,7 @@ class TrailMapViewModel(
 
     private var stageLocator: StageLocator? = null
     private var downloadJob: Job? = null
-    private val offlineKey = "$trailId/stage-${stageIndex ?: "all"}"
+    private val offlineKey = OfflineMapKeys.forStage(trailId, stageIndex)
 
     init {
         viewModelScope.launch {

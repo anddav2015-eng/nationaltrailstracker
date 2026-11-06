@@ -15,6 +15,8 @@ import com.anddav.nationaltrailstracker.ui.detail.TrailDetailScreen
 import com.anddav.nationaltrailstracker.ui.detail.TrailDetailViewModel
 import com.anddav.nationaltrailstracker.ui.map.TrailMapScreen
 import com.anddav.nationaltrailstracker.ui.map.TrailMapViewModel
+import com.anddav.nationaltrailstracker.ui.settings.SettingsScreen
+import com.anddav.nationaltrailstracker.ui.settings.SettingsViewModel
 import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsScreen
 import com.anddav.nationaltrailstracker.ui.summary.SummaryStatsViewModel
 import com.anddav.nationaltrailstracker.ui.trails.TrailsListScreen
@@ -26,6 +28,7 @@ private const val TRAILS_LIST_ROUTE = "trails"
 private const val TRAIL_DETAIL_ROUTE = "trails/{trailId}"
 private const val TRAIL_ID_ARG = "trailId"
 private const val SUMMARY_ROUTE = "summary"
+private const val SETTINGS_ROUTE = "settings"
 private const val WHERE_AM_I_ROUTE = "trails/{trailId}/where"
 private const val MAP_ROUTE = "trails/{trailId}/map?stage={stage}&locate={locate}"
 private const val STAGE_ARG = "stage"
@@ -47,7 +50,18 @@ fun NationalTrailsNavGraph(modifier: Modifier = Modifier) {
                 viewModel = viewModel,
                 onTrailClick = { trailId -> navController.navigate("trails/$trailId") },
                 onSummaryClick = { navController.navigate(SUMMARY_ROUTE) },
+                onSettingsClick = { navController.navigate(SETTINGS_ROUTE) },
             )
+        }
+        composable(SETTINGS_ROUTE) {
+            val viewModel: SettingsViewModel = viewModel(
+                factory = viewModelFactory {
+                    initializer {
+                        SettingsViewModel(container.progressRepository, container.trailRepository, container.offlineMapStore)
+                    }
+                },
+            )
+            SettingsScreen(viewModel = viewModel)
         }
         composable(SUMMARY_ROUTE) {
             val viewModel: SummaryStatsViewModel = viewModel(

@@ -166,7 +166,7 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
 - **Shipped map data:** only `assets/trails/<slug>-legs.geojson` (the OSM line cut into legs). Source lines live in `trail-data/map-lines/`. The app builds for arm64 only, to keep MapLibre's native library small.
 - **Where am I** uses the same OSM legs line when a trail has a map. Its mileages stay in my table miles: within each leg, mileage is spread in proportion to distance along the line, so each landmark sits at its table mileage. Older `assets/geo` lines from `tools/build_geo.py` are only a fallback.
 - **"Miles along" panel:** distances are measured along the map (OSM) line, not scaled to my table. All tables, totals and progress keep my table mileages.
-- **Offline maps:** a "Save map for offline use" button saves the base map around the stage (MapLibre offline region, up to zoom 14).
+- **Offline maps:** a "Save map for offline use" button saves the base map around the stage (MapLibre offline region, up to zoom 14). Saved maps never expire, so Settings (the ⋮ menu on the trails list) lists them with sizes, with Remove and Remove all.
 - **Opening the map:** tap any landmark row in the Landmarks table. The map opens with that landmark's whole stage highlighted. (Tapping a stage on the Stages tab still opens the log sheet.)
 - **From Where am I:** a "Show on map" button opens the map on the stage you're in, with live location already on (you've just asked for it).
 - **Live location:** off when the map opens. A "Show my location" button asks for foreground permission if needed, then shows a live dot until the walker leaves the screen.

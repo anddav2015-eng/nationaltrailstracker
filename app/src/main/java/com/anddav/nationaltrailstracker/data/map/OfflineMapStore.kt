@@ -24,6 +24,15 @@ sealed interface OfflineMapState {
     data class Failed(val message: String) : OfflineMapState
 }
 
+/** One saved area, for the Settings list. */
+data class SavedOfflineMap(
+    val key: String,
+    /** Bytes downloaded for this area. Areas can share tiles, so sizes may overlap a little. */
+    val sizeBytes: Long,
+    /** False if the download was paused before it finished. */
+    val isComplete: Boolean,
+)
+
 /**
  * Saves the base map for an area so it works without signal, using MapLibre's offline regions.
  * Each area is keyed (e.g. "thames-path/stage-3") so it can be found again. Call from the main
@@ -40,6 +49,32 @@ class OfflineMapStore(context: Context) {
         val region = findRegion(key) ?: return OfflineMapState.NotSaved
         val status = regionStatus(region) ?: return OfflineMapState.NotSaved
         return if (status.isComplete) OfflineMapState.Saved else OfflineMapState.NotSaved
+    }
+
+    /** Every saved (or part-saved) area. */
+    suspend fun list(): List<SavedOfflineMap> = allRegions().map { region ->
+        val status = regionStatus(region)
+        SavedOfflineMap(
+            key = region.metadata.decodeToString(),
+            sizeBytes = status?.completedResourceSize ?: 0L,
+            isComplete = status?.isComplete == true,
+        )
+    }
+
+    /** Deletes the saved area; returns false if it couldn't be deleted. */
+    suspend fun delete(key: String): Boolean {
+        val region = findRegion(key) ?: return true
+        return suspendCancellableCoroutine { cont ->
+            region.delete(object : OfflineRegion.OfflineRegionDeleteCallback {
+                override fun onDelete() {
+                    cont.resume(true)
+                }
+
+                override fun onError(error: String) {
+                    cont.resume(false)
+                }
+            })
+        }
     }
 
     /** Downloads (or resumes) the area. Cancelling the flow pauses the download. */
@@ -87,14 +122,17 @@ class OfflineMapStore(context: Context) {
             }
         }
 
-    private suspend fun findRegion(key: String): OfflineRegion? = suspendCancellableCoroutine { cont ->
+    private suspend fun findRegion(key: String): OfflineRegion? =
+        allRegions().firstOrNull { it.metadata.decodeToString() == key }
+
+    private suspend fun allRegions(): List<OfflineRegion> = suspendCancellableCoroutine { cont ->
         manager.listOfflineRegions(object : OfflineManager.ListOfflineRegionsCallback {
             override fun onList(offlineRegions: Array<OfflineRegion>?) {
-                cont.resume(offlineRegions?.firstOrNull { it.metadata.decodeToString() == key })
+                cont.resume(offlineRegions?.toList().orEmpty())
             }
 
             override fun onError(error: String) {
-                cont.resume(null)
+                cont.resume(emptyList())
             }
         })
     }
