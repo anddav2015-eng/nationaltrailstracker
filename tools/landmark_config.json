@@ -2,7 +2,7 @@
   "_comment": "Per-trail settings for tools/build_legs.py. 'lines' are the route-line versions (from build_map_geojson.py) to cut into legs. 'referenceLine' is the one landmarks are snapped to for the lat/lon stored in the trail JSON. 'overrides' maps a landmark name (exactly as in trail-data) to {\"query\": \"...\"} (a better Nominatim search, e.g. the town's bridge rather than the town), {\"interpolate\": true, \"why\": \"...\"} (place it between its neighbours by table mileage), or {\"point\": [lat, lon], \"why\": \"...\"} (a hand-set position; put it on the path).",
   "thames-path": {
     "lines": ["full", "2m", "5m", "osm"],
-    "referenceLine": "full",
+    "referenceLine": "osm",
     "overrides": {
       "Richmond": { "query": "Richmond Bridge" },
       "Ham House Ferry / Twickenham": { "query": "Hammerton's Ferry" },

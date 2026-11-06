@@ -12,666 +12,666 @@
       "name": "Woolwich Ferry",
       "milesFromStart": 0.0,
       "note": null,
-      "lat": 51.494099,
-      "lon": 0.062231
+      "lat": 51.494092,
+      "lon": 0.062174
     },
     {
       "name": "Thames Barrier",
       "milesFromStart": 1.2,
       "note": null,
-      "lat": 51.495027,
-      "lon": 0.037524
+      "lat": 51.495065,
+      "lon": 0.038079
     },
     {
       "name": "North Greenwich",
       "milesFromStart": 2.8,
       "note": null,
-      "lat": 51.501931,
-      "lon": 0.007668
+      "lat": 51.501936,
+      "lon": 0.007729
     },
     {
       "name": "Greenwich",
       "milesFromStart": 5.3,
       "note": null,
-      "lat": 51.484114,
-      "lon": -0.006325
+      "lat": 51.484094,
+      "lon": -0.006265
     },
     {
       "name": "Canary Wharf Pier",
       "milesFromStart": 7.7,
       "note": null,
-      "lat": 51.504377,
-      "lon": -0.032447
+      "lat": 51.503791,
+      "lon": -0.032453
     },
     {
       "name": "Rotherhithe & Wapping",
       "milesFromStart": 9.4,
       "note": null,
-      "lat": 51.501958,
-      "lon": -0.052651
+      "lat": 51.501889,
+      "lon": -0.052605
     },
     {
       "name": "Tower Bridge",
       "milesFromStart": 10.5,
       "note": null,
-      "lat": 51.504279,
-      "lon": -0.075942
+      "lat": 51.504424,
+      "lon": -0.076399
     },
     {
       "name": "London Bridge",
       "milesFromStart": 11.2,
       "note": null,
-      "lat": 51.506507,
-      "lon": -0.088319
+      "lat": 51.506475,
+      "lon": -0.08834
     },
     {
       "name": "Southwark Bridge",
       "milesFromStart": 11.5,
       "note": null,
-      "lat": 51.507945,
-      "lon": -0.094602
+      "lat": 51.508073,
+      "lon": -0.094839
     },
     {
       "name": "Blackfriars Bridge",
       "milesFromStart": 11.9,
       "note": null,
-      "lat": 51.508604,
-      "lon": -0.104324
+      "lat": 51.50857,
+      "lon": -0.104786
     },
     {
       "name": "Waterloo Bridge",
       "milesFromStart": 12.5,
       "note": null,
-      "lat": 51.507308,
-      "lon": -0.115857
+      "lat": 51.507353,
+      "lon": -0.115747
     },
     {
       "name": "Westminster Bridge",
       "milesFromStart": 13.0,
       "note": null,
-      "lat": 51.500748,
-      "lon": -0.119928
+      "lat": 51.500646,
+      "lon": -0.119961
     },
     {
       "name": "Lambeth Bridge",
       "milesFromStart": 13.4,
       "note": null,
-      "lat": 51.494372,
-      "lon": -0.121399
+      "lat": 51.494357,
+      "lon": -0.121263
     },
     {
       "name": "Vauxhall Bridge",
       "milesFromStart": 14.1,
       "note": null,
-      "lat": 51.487238,
-      "lon": -0.12556
+      "lat": 51.487186,
+      "lon": -0.125479
     },
     {
       "name": "Chelsea Bridge",
       "milesFromStart": 15.6,
       "note": null,
-      "lat": 51.483334,
-      "lon": -0.150296
+      "lat": 51.483338,
+      "lon": -0.150132
     },
     {
       "name": "Albert Bridge",
       "milesFromStart": 16.4,
       "note": null,
-      "lat": 51.481312,
-      "lon": -0.166321
+      "lat": 51.481023,
+      "lon": -0.166106
     },
     {
       "name": "Battersea Bridge",
       "milesFromStart": 16.6,
       "note": null,
-      "lat": 51.480165,
-      "lon": -0.171654
+      "lat": 51.480228,
+      "lon": -0.171419
     },
     {
       "name": "Wandsworth Bridge",
       "milesFromStart": 18.1,
       "note": null,
-      "lat": 51.464101,
-      "lon": -0.187168
+      "lat": 51.46419,
+      "lon": -0.186842
     },
     {
       "name": "Putney Bridge (cross to north)",
       "milesFromStart": 19.7,
       "note": null,
-      "lat": 51.465947,
-      "lon": -0.21425
+      "lat": 51.465996,
+      "lon": -0.214026
     },
     {
       "name": "Hammersmith Bridge (cross to south)",
       "milesFromStart": 21.4,
       "note": null,
-      "lat": 51.487717,
-      "lon": -0.231156
+      "lat": 51.487674,
+      "lon": -0.231078
     },
     {
       "name": "Barnes Bridge",
       "milesFromStart": 23.2,
       "note": null,
-      "lat": 51.472405,
-      "lon": -0.253211
+      "lat": 51.472343,
+      "lon": -0.253224
     },
     {
       "name": "Kew Bridge",
       "milesFromStart": 25.3,
       "note": null,
-      "lat": 51.486469,
-      "lon": -0.287403
+      "lat": 51.48643,
+      "lon": -0.287439
     },
     {
       "name": "Richmond Lock & Isleworth",
       "milesFromStart": 27.2,
       "note": null,
-      "lat": 51.462645,
-      "lon": -0.316769
+      "lat": 51.462702,
+      "lon": -0.316684
     },
     {
       "name": "Richmond",
       "milesFromStart": 28.3,
       "note": null,
-      "lat": 51.457679,
-      "lon": -0.306543
+      "lat": 51.457686,
+      "lon": -0.306471
     },
     {
       "name": "Ham House Ferry / Twickenham",
       "milesFromStart": 29.3,
       "note": null,
-      "lat": 51.446417,
-      "lon": -0.313078
+      "lat": 51.446331,
+      "lon": -0.313124
     },
     {
       "name": "Teddington Lock",
       "milesFromStart": 31.1,
       "note": null,
-      "lat": 51.431638,
-      "lon": -0.323484
+      "lat": 51.431622,
+      "lon": -0.323502
     },
     {
       "name": "Kingston upon Thames",
       "milesFromStart": 32.7,
       "note": null,
-      "lat": 51.41122,
-      "lon": -0.308903
+      "lat": 51.411098,
+      "lon": -0.307986
     },
     {
       "name": "Hampton Court",
       "milesFromStart": 35.6,
       "note": null,
-      "lat": 51.403223,
-      "lon": -0.343058
+      "lat": 51.403203,
+      "lon": -0.343028
     },
     {
       "name": "Sunbury Lock",
       "milesFromStart": 38.7,
       "note": null,
-      "lat": 51.405003,
-      "lon": -0.406024
+      "lat": 51.405,
+      "lon": -0.406005
     },
     {
       "name": "Walton-on-Thames",
       "milesFromStart": 40.4,
       "note": null,
-      "lat": 51.387625,
-      "lon": -0.431285
+      "lat": 51.387179,
+      "lon": -0.430769
     },
     {
       "name": "Shepperton Ferry (cross to north)",
       "milesFromStart": 41.8,
       "note": null,
-      "lat": 51.388125,
-      "lon": -0.454465
+      "lat": 51.382628,
+      "lon": -0.456884
     },
     {
       "name": "Chertsey Bridge",
       "milesFromStart": 43.7,
       "note": null,
-      "lat": 51.388922,
-      "lon": -0.485963
+      "lat": 51.388858,
+      "lon": -0.485956
     },
     {
       "name": "Laleham",
       "milesFromStart": 45.2,
       "note": null,
-      "lat": 51.409234,
-      "lon": -0.492227
+      "lat": 51.40907,
+      "lon": -0.492196
     },
     {
       "name": "Staines",
       "milesFromStart": 47.6,
       "note": null,
-      "lat": 51.433555,
-      "lon": -0.516551
+      "lat": 51.433635,
+      "lon": -0.516536
     },
     {
       "name": "Runnymede",
       "milesFromStart": 50.3,
       "note": null,
-      "lat": 51.44253,
-      "lon": -0.557841
+      "lat": 51.442494,
+      "lon": -0.557881
     },
     {
       "name": "Bells of Ouzeley",
       "milesFromStart": 50.7,
       "note": null,
-      "lat": 51.452225,
-      "lon": -0.573892
+      "lat": 51.452285,
+      "lon": -0.573786
     },
     {
       "name": "Albert Bridge, Old Windsor",
       "milesFromStart": 52.5,
       "note": null,
-      "lat": 51.471285,
-      "lon": -0.584087
+      "lat": 51.471272,
+      "lon": -0.584079
     },
     {
       "name": "Datchet",
       "milesFromStart": 54.2,
       "note": null,
-      "lat": 51.481875,
-      "lon": -0.581584
+      "lat": 51.481917,
+      "lon": -0.581611
     },
     {
       "name": "Eton & Windsor",
       "milesFromStart": 55.6,
       "note": null,
-      "lat": 51.48568,
-      "lon": -0.608149
+      "lat": 51.485913,
+      "lon": -0.608333
     },
     {
       "name": "Dorney Lake",
       "milesFromStart": 57.9,
       "note": null,
-      "lat": 51.488357,
-      "lon": -0.648944
+      "lat": 51.488169,
+      "lon": -0.64911
     },
     {
       "name": "Dorney / Bray Marina",
       "milesFromStart": 59.7,
       "note": null,
-      "lat": 51.498648,
-      "lon": -0.680166
+      "lat": 51.498814,
+      "lon": -0.680327
     },
     {
       "name": "Maidenhead",
       "milesFromStart": 62.2,
       "note": null,
-      "lat": 51.523968,
-      "lon": -0.702035
+      "lat": 51.523934,
+      "lon": -0.702036
     },
     {
       "name": "Cookham",
       "milesFromStart": 65.4,
       "note": null,
-      "lat": 51.559924,
-      "lon": -0.707178
+      "lat": 51.559867,
+      "lon": -0.707101
     },
     {
       "name": "Bourne End",
       "milesFromStart": 66.8,
       "note": null,
-      "lat": 51.575658,
-      "lon": -0.713926
+      "lat": 51.575583,
+      "lon": -0.713833
     },
     {
       "name": "Marlow",
       "milesFromStart": 69.8,
       "note": null,
-      "lat": 51.56755,
-      "lon": -0.773409
+      "lat": 51.567438,
+      "lon": -0.773319
     },
     {
       "name": "Hurley",
       "milesFromStart": 72.1,
       "note": null,
-      "lat": 51.55134,
-      "lon": -0.808809
+      "lat": 51.551321,
+      "lon": -0.808785
     },
     {
       "name": "Aston",
       "milesFromStart": 75.2,
       "note": null,
-      "lat": 51.551162,
-      "lon": -0.870222
+      "lat": 51.551185,
+      "lon": -0.870181
     },
     {
       "name": "Hambleden Lock",
       "milesFromStart": 76.5,
       "note": null,
-      "lat": 51.559947,
-      "lon": -0.873537
+      "lat": 51.559971,
+      "lon": -0.873455
     },
     {
       "name": "Remenham",
       "milesFromStart": 77.1,
       "note": null,
-      "lat": 51.551813,
-      "lon": -0.891608
+      "lat": 51.551747,
+      "lon": -0.891642
     },
     {
       "name": "Henley-on-Thames",
       "milesFromStart": 78.3,
       "note": null,
-      "lat": 51.537533,
-      "lon": -0.900321
+      "lat": 51.537539,
+      "lon": -0.90032
     },
     {
       "name": "Shiplake",
       "milesFromStart": 82.0,
       "note": null,
-      "lat": 51.511609,
-      "lon": -0.882705
+      "lat": 51.511564,
+      "lon": -0.882729
     },
     {
       "name": "Shiplake College Boathouse",
       "milesFromStart": 84.3,
       "note": null,
-      "lat": 51.492208,
-      "lon": -0.895926
+      "lat": 51.497374,
+      "lon": -0.892825
     },
     {
       "name": "Sonning",
       "milesFromStart": 86.4,
       "note": null,
-      "lat": 51.475702,
-      "lon": -0.913961
+      "lat": 51.475726,
+      "lon": -0.913927
     },
     {
       "name": "Kennet Canal / Reading",
       "milesFromStart": 88.6,
       "note": null,
-      "lat": 51.459141,
-      "lon": -0.949962
+      "lat": 51.459088,
+      "lon": -0.949868
     },
     {
       "name": "Reading Bridge",
       "milesFromStart": 89.5,
       "note": null,
-      "lat": 51.460734,
-      "lon": -0.968037
+      "lat": 51.460668,
+      "lon": -0.967844
     },
     {
       "name": "Tilehurst",
       "milesFromStart": 92.8,
       "note": null,
-      "lat": 51.471979,
-      "lon": -1.029292
+      "lat": 51.471961,
+      "lon": -1.029255
     },
     {
       "name": "Purley on Thames",
       "milesFromStart": 93.7,
       "note": null,
-      "lat": 51.47872,
-      "lon": -1.046236
+      "lat": 51.478812,
+      "lon": -1.046121
     },
     {
       "name": "Whitchurch & Pangbourne",
       "milesFromStart": 96.3,
       "note": null,
-      "lat": 51.48685,
-      "lon": -1.085248
+      "lat": 51.486145,
+      "lon": -1.085155
     },
     {
       "name": "Goring & Streatley",
       "milesFromStart": 100.7,
       "note": null,
-      "lat": 51.522957,
-      "lon": -1.141523
+      "lat": 51.522941,
+      "lon": -1.141522
     },
     {
       "name": "Moulsford",
       "milesFromStart": 102.9,
       "note": null,
-      "lat": 51.551881,
-      "lon": -1.150255
+      "lat": 51.551854,
+      "lon": -1.1502
     },
     {
       "name": "Cholsey",
       "milesFromStart": 104.7,
       "note": null,
-      "lat": 51.567331,
-      "lon": -1.130229
+      "lat": 51.567336,
+      "lon": -1.130153
     },
     {
       "name": "Wallingford",
       "milesFromStart": 107.4,
       "note": null,
-      "lat": 51.600556,
-      "lon": -1.122195
+      "lat": 51.600546,
+      "lon": -1.122148
     },
     {
       "name": "Benson",
       "milesFromStart": 109.2,
       "note": null,
-      "lat": 51.619072,
-      "lon": -1.114304
+      "lat": 51.619022,
+      "lon": -1.114194
     },
     {
       "name": "Shillingford",
       "milesFromStart": 110.2,
       "note": null,
-      "lat": 51.625245,
-      "lon": -1.139347
+      "lat": 51.624385,
+      "lon": -1.139351
     },
     {
       "name": "Dorchester",
       "milesFromStart": 112.1,
       "note": null,
-      "lat": 51.634623,
-      "lon": -1.168796
+      "lat": 51.634585,
+      "lon": -1.16829
     },
     {
       "name": "Days Lock / Little Wittenham",
       "milesFromStart": 112.8,
       "note": null,
-      "lat": 51.638218,
-      "lon": -1.179261
+      "lat": 51.638179,
+      "lon": -1.179198
     },
     {
       "name": "Clifton Hampden",
       "milesFromStart": 115.2,
       "note": null,
-      "lat": 51.654585,
-      "lon": -1.210396
+      "lat": 51.6546,
+      "lon": -1.210388
     },
     {
       "name": "Culham Lock",
       "milesFromStart": 118.4,
       "note": null,
-      "lat": 51.650478,
-      "lon": -1.267737
+      "lat": 51.650465,
+      "lon": -1.267732
     },
     {
       "name": "Culham Old Bridge",
       "milesFromStart": 119.7,
       "note": null,
-      "lat": 51.658216,
-      "lon": -1.277903
+      "lat": 51.658246,
+      "lon": -1.277876
     },
     {
       "name": "Abingdon",
       "milesFromStart": 120.6,
       "note": null,
-      "lat": 51.668252,
-      "lon": -1.278633
+      "lat": 51.668229,
+      "lon": -1.278766
     },
     {
       "name": "Radley Boat House",
       "milesFromStart": 124.3,
       "note": null,
-      "lat": 51.686045,
-      "lon": -1.222443
+      "lat": 51.68609,
+      "lon": -1.222442
     },
     {
       "name": "Sandford Lock",
       "milesFromStart": 126.0,
       "note": null,
-      "lat": 51.708312,
-      "lon": -1.232973
+      "lat": 51.708297,
+      "lon": -1.232974
     },
     {
       "name": "Iffley Lock",
       "milesFromStart": 127.7,
       "note": null,
-      "lat": 51.729278,
-      "lon": -1.240609
+      "lat": 51.72925,
+      "lon": -1.240556
     },
     {
       "name": "Donnington Bridge",
       "milesFromStart": 128.1,
       "note": null,
-      "lat": 51.735583,
-      "lon": -1.242334
+      "lat": 51.735591,
+      "lon": -1.242344
     },
     {
       "name": "Folly Bridge, Oxford",
       "milesFromStart": 129.1,
       "note": null,
-      "lat": 51.745896,
-      "lon": -1.256316
+      "lat": 51.745894,
+      "lon": -1.25628
     },
     {
       "name": "Osney Bridge, Oxford",
       "milesFromStart": 130.2,
       "note": null,
-      "lat": 51.752539,
-      "lon": -1.272632
+      "lat": 51.752517,
+      "lon": -1.272629
     },
     {
       "name": "Godstow Bridge",
       "milesFromStart": 132.6,
       "note": null,
-      "lat": 51.779395,
-      "lon": -1.299955
+      "lat": 51.779415,
+      "lon": -1.299892
     },
     {
       "name": "Swinford Bridge",
       "milesFromStart": 136.2,
       "note": null,
-      "lat": 51.774602,
-      "lon": -1.357678
+      "lat": 51.774332,
+      "lon": -1.358807
     },
     {
       "name": "Pinkhill Lock",
       "milesFromStart": 137.2,
       "note": null,
-      "lat": 51.761232,
-      "lon": -1.362755
+      "lat": 51.761283,
+      "lon": -1.362694
     },
     {
       "name": "Bablock Hythe",
       "milesFromStart": 140.0,
       "note": null,
-      "lat": 51.734824,
-      "lon": -1.373149
+      "lat": 51.734813,
+      "lon": -1.373123
     },
     {
       "name": "Northmoor Lock",
       "milesFromStart": 141.5,
       "note": null,
-      "lat": 51.716355,
-      "lon": -1.377012
+      "lat": 51.716347,
+      "lon": -1.376994
     },
     {
       "name": "Newbridge",
       "milesFromStart": 143.7,
       "note": null,
-      "lat": 51.709876,
-      "lon": -1.417268
+      "lat": 51.709875,
+      "lon": -1.41721
     },
     {
       "name": "Shifford Lock",
       "milesFromStart": 146.4,
       "note": null,
-      "lat": 51.706711,
-      "lon": -1.464924
+      "lat": 51.706731,
+      "lon": -1.464737
     },
     {
       "name": "Tadpole Bridge",
       "milesFromStart": 149.7,
       "note": null,
-      "lat": 51.701673,
-      "lon": -1.517299
+      "lat": 51.701691,
+      "lon": -1.517294
     },
     {
       "name": "Radcot Bridge",
       "milesFromStart": 153.7,
       "note": null,
-      "lat": 51.693377,
-      "lon": -1.588356
+      "lat": 51.693346,
+      "lon": -1.588347
     },
     {
       "name": "Kelmscott",
       "milesFromStart": 156.4,
       "note": null,
-      "lat": 51.686957,
-      "lon": -1.639155
+      "lat": 51.687034,
+      "lon": -1.638888
     },
     {
       "name": "Buscot",
       "milesFromStart": 158.2,
       "note": null,
-      "lat": 51.681127,
-      "lon": -1.66809
+      "lat": 51.681142,
+      "lon": -1.668087
     },
     {
       "name": "Lechlade",
       "milesFromStart": 160.1,
       "note": null,
-      "lat": 51.692241,
-      "lon": -1.692789
+      "lat": 51.692245,
+      "lon": -1.692868
     },
     {
       "name": "Hannington Bridge",
       "milesFromStart": 164.5,
       "note": null,
-      "lat": 51.66192,
-      "lon": -1.748365
+      "lat": 51.661926,
+      "lon": -1.748349
     },
     {
       "name": "Castle Eaton",
       "milesFromStart": 166.6,
       "note": null,
-      "lat": 51.660637,
-      "lon": -1.791707
+      "lat": 51.660654,
+      "lon": -1.791746
     },
     {
       "name": "Cricklade",
       "milesFromStart": 170.9,
       "note": null,
-      "lat": 51.643181,
-      "lon": -1.854944
+      "lat": 51.643174,
+      "lon": -1.854916
     },
     {
       "name": "Water Hay Car Park",
       "milesFromStart": 175.0,
       "note": null,
-      "lat": 51.639505,
-      "lon": -1.91207
+      "lat": 51.639501,
+      "lon": -1.911696
     },
     {
       "name": "Ashton Keynes",
       "milesFromStart": 176.3,
       "note": null,
-      "lat": 51.647737,
-      "lon": -1.931845
+      "lat": 51.647725,
+      "lon": -1.931435
     },
     {
       "name": "Somerford Keynes",
       "milesFromStart": 178.8,
       "note": null,
-      "lat": 51.651491,
-      "lon": -1.974779
+      "lat": 51.65163,
+      "lon": -1.974725
     },
     {
       "name": "Source of the Thames",
       "milesFromStart": 183.1,
       "note": null,
-      "lat": 51.694413,
-      "lon": -2.029508
+      "lat": 51.694382,
+      "lon": -2.029629
     }
   ],
   "defaultStages": [

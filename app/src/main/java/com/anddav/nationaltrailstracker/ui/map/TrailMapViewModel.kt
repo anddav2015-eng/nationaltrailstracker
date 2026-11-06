@@ -47,7 +47,8 @@ class TrailMapViewModel(
             val trail = trailRepository.trail(trailId)
             val versions = trailRepository.mapLineVersions(trailId)
             _uiState.update { it.copy(trail = trail, versions = versions) }
-            val first = versions.firstOrNull()
+            // The owner chose the OpenStreetMap line; fall back to whatever else is bundled.
+            val first = versions.firstOrNull { it == MapLineVersion.OSM } ?: versions.firstOrNull()
             if (first == null) {
                 _uiState.update { it.copy(isLoading = false, message = "There's no map for this trail yet.") }
             } else {

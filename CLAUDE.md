@@ -155,8 +155,9 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
 ### Decisions already made
 - **Map library:** MapLibre Native for Android. Avoid Google Maps (needs a billing account).
 - **Base map tiles:** OpenFreeMap (`https://tiles.openfreemap.org/styles/liberty`), no API key. The service is provided as-is, so keep the style URL in one config place so it's easy to swap. Don't use tile.openstreetmap.org (usage policy).
-- **Trail data source:** the official GPX file for each trail from nationaltrail.co.uk (found on each trail's "Trail information & map" page). An OpenStreetMap version of the line (from the trail's OSM route relation) is also built for comparison, because it lines up with the paths on the base map.
-    - Follow the official main route by default, even where I walked a different bank or diversion. Report differences, don't reshape the line.
+- **Trail data source:** the official GPX file for each trail from nationaltrail.co.uk (found on each trail's "Trail information & map" page), plus an OpenStreetMap version of the line built from the trail's OSM route relation.
+    - **The map uses the OSM line, as it is** (chosen after comparing on the phone): it sits on the paths drawn on the base map and matches what's on the ground better. Where OSM's routing differs from the official GPX, OSM wins; the build script still reports those stretches. The official GPX stays as the reference for checks, gap fills and elevation.
+    - Don't reshape the line to match the route I personally walked (banks, diversions). Report differences instead.
     - Known example: https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Thames-Path-elevation-1Nov24.gpx
     - The site warns the full GPX can contain multiple tracks. Always inspect and merge only the main route, and report anything odd (gaps, diversions, link routes).
     - Scottish trails are not on this site, so they need a separate source later.
@@ -180,5 +181,5 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
 ### Status
 - [x] Step 1 data prep
 - [x] Step 2 landmarks and legs
-- [ ] Step 3 map screen
+- [x] Step 3 map screen
 - [ ] Step 4 polish
