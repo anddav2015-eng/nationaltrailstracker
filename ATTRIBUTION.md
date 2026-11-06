@@ -19,6 +19,23 @@ Trails using this source so far: Thames Path.
 
 Not yet sourced. Each will be listed here with its licence before its route line is added.
 
+## Route lines (trail map)
+
+The `*-full/-2m/-5m.geojson` files in `app/src/main/assets/trails/` are built by
+`tools/build_map_geojson.py` from the official GPX downloads on <https://www.nationaltrail.co.uk>.
+
+- Attribution: National Trails / Natural England and Natural Resources Wales.
+- Base map (where shown): © OpenStreetMap contributors.
+- Licence of the GPX downloads: not yet confirmed.
+
+The `*-osm.geojson` files are built by the same script from OpenStreetMap route relations,
+fetched from the OSM API. A few short gaps are filled from the official GPX.
+
+- Licence: [Open Database Licence 1.0](https://opendatacommons.org/licenses/odbl/1-0/)
+- Attribution: © OpenStreetMap contributors.
+
+Trails using these sources so far: Thames Path (official GPX, and OSM relation 14519665).
+
 ## Trail mileages
 
 Landmark mileages and stage cuts come from the owner's HTML trackers (England and Wales) and from
