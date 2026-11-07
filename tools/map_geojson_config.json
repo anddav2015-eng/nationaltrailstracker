@@ -29,5 +29,13 @@
     ],
     "officialMiles": 100.0,
     "osmRelation": 77976
+  },
+  "cleveland-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Cleveland_Way_Elev.gpx",
+    "mainTracks": [
+      "Cleveland Way"
+    ],
+    "officialMiles": 109.0,
+    "osmRelation": 4087652
   }
 }

@@ -241,5 +241,61 @@
         "why": "end of the official route line"
       }
     }
+  },
+  "cleveland-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Helmsley": {
+        "point": [
+          54.2468,
+          -1.065271
+        ],
+        "why": "start of the official route line"
+      },
+      "Lord Stones": {
+        "point": [
+          54.41973,
+          -1.19351
+        ],
+        "why": "Lordstones Cafe (OSM), 47 m from the trail"
+      },
+      "Wainstones": {
+        "point": [
+          54.42442,
+          -1.14044
+        ],
+        "why": "The Wainstones viewpoint (OSM)"
+      },
+      "Urra Moor (Round Hill)": {
+        "point": [
+          54.40636,
+          -1.08593
+        ],
+        "why": "Round Hill summit on Urra Moor (OSM), 85 m from the trail"
+      },
+      "Highcliffe Nab": {
+        "point": [
+          54.51617,
+          -1.05889
+        ],
+        "why": "Highcliffe peak (OSM)"
+      },
+      "Boulby Cliff": {
+        "query": "Boulby"
+      },
+      "Filey Brigg": {
+        "point": [
+          54.218599,
+          -0.276591
+        ],
+        "why": "end of the official route line, at the root of the Brigg"
+      },
+      "Filey Country Park": {
+        "query": "Filey Country Park"
+      },
+      "Scarborough": {
+        "query": "Scalby Mills, Scarborough"
+      }
+    }
   }
 }

@@ -46,7 +46,7 @@ window.TRAILS["cleveland-way"] = {
     ["Cloughton Wyke", 92.1],
     ["Scarborough", 96.1, "station"],
     ["Cayton Bay", 100.1],
-    ["Filey", 105.1, "station"],
+    ["Filey Country Park", 105.1, "Filey station ~1 mile"],
     ["Filey Brigg", 106.6, "finish"],
   ],
   stages: [
