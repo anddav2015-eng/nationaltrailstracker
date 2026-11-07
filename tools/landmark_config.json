@@ -376,5 +376,94 @@
         "why": "end of the route line, at Bath Abbey"
       }
     }
+  },
+  "glyndwrs-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Knighton": {
+        "point": [
+          52.344474,
+          -3.049855
+        ],
+        "why": "start of the route line, Knighton town clock"
+      },
+      "Welshpool": {
+        "point": [
+          52.658497,
+          -3.14447
+        ],
+        "why": "end of the route line, by the Montgomery Canal in Welshpool"
+      }
+    }
+  },
+  "hadrians-wall-path": {
+    "mapLine": "osm",
+    "overrides": {
+      "Wallsend (Segedunum)": {
+        "point": [
+          54.987978,
+          -1.530249
+        ],
+        "why": "start of the route line, at Segedunum"
+      },
+      "Port Gate (A68)": {
+        "point": [
+          55.01209,
+          -2.01782
+        ],
+        "why": "Milecastle 22 (Portgate), by the A68 junction (OSM)"
+      },
+      "Bowness-on-Solway": {
+        "point": [
+          54.953968,
+          -3.211565
+        ],
+        "why": "end of the route line, at the Banks Promenade pavilion"
+      }
+    }
+  },
+  "offas-dyke-path": {
+    "mapLine": "osm",
+    "overrides": {
+      "Sedbury Cliffs": {
+        "point": [
+          51.632526,
+          -2.648325
+        ],
+        "why": "start of the route line, the stone on Sedbury Cliffs"
+      },
+      "Llangwyfan (Penycloddiau car park)": {
+        "point": [
+          53.19177,
+          -3.29029
+        ],
+        "why": "the forest car park at Bwlch Llangwyfan, on the trail (OSM)"
+      },
+      "Prestatyn": {
+        "point": [
+          53.342419,
+          -3.412531
+        ],
+        "why": "end of the route line, on the seafront"
+      },
+      "Brompton Crossroads": {
+        "point": [
+          52.53201,
+          -3.10676
+        ],
+        "why": "where the trail crosses the A489 at the B4385 crossroads, Brompton (OSM)"
+      },
+      "Chirk Mill": {
+        "point": [
+          52.93057,
+          -3.09672
+        ],
+        "why": "where the trail crosses the River Ceiriog below Chirk Castle (OSM)"
+      },
+      "Hatterrall Ridge (Longtown path)": {
+        "interpolate": true,
+        "why": "the path junction for Longtown isn't named in OpenStreetMap"
+      }
+    }
   }
 }

@@ -12,309 +12,309 @@
       "name": "Sedbury Cliffs",
       "milesFromStart": 0.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.632526,
+      "lon": -2.648325
     },
     {
       "name": "Chepstow",
       "milesFromStart": 1.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.639038,
+      "lon": -2.665594
     },
     {
       "name": "Devil's Pulpit (above Tintern)",
       "milesFromStart": 6.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.692554,
+      "lon": -2.662789
     },
     {
       "name": "Brockweir",
       "milesFromStart": 8.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.711309,
+      "lon": -2.662739
     },
     {
       "name": "Redbrook",
       "milesFromStart": 13.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.784031,
+      "lon": -2.672094
     },
     {
       "name": "The Kymin",
       "milesFromStart": 16.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.808772,
+      "lon": -2.686224
     },
     {
       "name": "Monmouth",
       "milesFromStart": 17.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
-    },
-    {
-      "name": "White Castle",
-      "milesFromStart": 24.5,
-      "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.810792,
+      "lon": -2.71768
     },
     {
       "name": "Llantilio Crossenny",
       "milesFromStart": 27.0,
       "note": "taxi/Uber",
-      "lat": null,
-      "lon": null
+      "lat": 51.829034,
+      "lon": -2.878427
+    },
+    {
+      "name": "White Castle",
+      "milesFromStart": 28.5,
+      "note": null,
+      "lat": 51.846168,
+      "lon": -2.903424
     },
     {
       "name": "Llangattock Lingoed",
       "milesFromStart": 30.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.875674,
+      "lon": -2.929412
     },
     {
       "name": "Pandy",
       "milesFromStart": 34.25,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.890581,
+      "lon": -2.970634
     },
     {
       "name": "Hatterrall Hill",
       "milesFromStart": 36.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.925953,
+      "lon": -3.005926
     },
     {
       "name": "Hatterrall Ridge (Longtown path)",
       "milesFromStart": 40.0,
       "note": "descend 1.5 mi to Longtown; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 51.967359,
+      "lon": -3.041763
     },
     {
       "name": "Hay Bluff",
       "milesFromStart": 45.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.025468,
+      "lon": -3.098815
     },
     {
       "name": "Hay-on-Wye",
       "milesFromStart": 51.75,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.073339,
+      "lon": -3.125252
     },
     {
       "name": "Newchurch",
       "milesFromStart": 57.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.149906,
+      "lon": -3.147585
     },
     {
       "name": "Gladestry",
       "milesFromStart": 60.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.188319,
+      "lon": -3.126027
     },
     {
       "name": "Hergest Ridge",
       "milesFromStart": 63.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.201223,
+      "lon": -3.091755
     },
     {
       "name": "Kington",
       "milesFromStart": 66.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.204371,
+      "lon": -3.032041
     },
     {
       "name": "Rushock Hill",
       "milesFromStart": 70.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.227397,
+      "lon": -3.038168
     },
     {
       "name": "Pilleth",
       "milesFromStart": 74.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.268008,
+      "lon": -3.072246
     },
     {
       "name": "Knighton",
       "milesFromStart": 80.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.344295,
+      "lon": -3.049653
     },
     {
       "name": "Llanfair Hill",
       "milesFromStart": 84.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.406304,
+      "lon": -3.100736
     },
     {
       "name": "Newcastle on Clun",
       "milesFromStart": 88.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.435884,
+      "lon": -3.095379
     },
     {
       "name": "Churchtown",
       "milesFromStart": 92.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.478677,
+      "lon": -3.085146
     },
     {
       "name": "Brompton Crossroads",
       "milesFromStart": 95.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.532008,
+      "lon": -3.106763
     },
     {
       "name": "Montgomery",
       "milesFromStart": 97.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.565832,
+      "lon": -3.127329
     },
     {
       "name": "Beacon Ring",
       "milesFromStart": 103.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.644681,
+      "lon": -3.088838
     },
     {
       "name": "Buttington Bridge (Welshpool)",
       "milesFromStart": 107.3,
       "note": "station at Welshpool",
-      "lat": null,
-      "lon": null
+      "lat": 52.67265,
+      "lon": -3.115691
     },
     {
       "name": "Four Crosses",
       "milesFromStart": 113.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.758913,
+      "lon": -3.082576
     },
     {
       "name": "Llanymynech",
       "milesFromStart": 117.8,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.787865,
+      "lon": -3.097483
     },
     {
       "name": "Trefonen",
       "milesFromStart": 123.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.833846,
+      "lon": -3.101782
     },
     {
       "name": "Oswestry Old Racecourse",
       "milesFromStart": 126.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.874082,
+      "lon": -3.103045
     },
     {
       "name": "Chirk Mill",
       "milesFromStart": 131.8,
       "note": "Chirk station",
-      "lat": null,
-      "lon": null
+      "lat": 52.93057,
+      "lon": -3.096716
     },
     {
       "name": "Froncysyllte (Pontcysyllte Aqueduct)",
       "milesFromStart": 136.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.964013,
+      "lon": -3.08494
     },
     {
       "name": "World's End",
       "milesFromStart": 142.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.021788,
+      "lon": -3.14509
     },
     {
       "name": "Llandegla",
       "milesFromStart": 147.3,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.063434,
+      "lon": -3.200948
     },
     {
       "name": "Clwyd Gate",
       "milesFromStart": 152.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.113894,
+      "lon": -3.250797
     },
     {
       "name": "Moel Famau (Jubilee Tower)",
       "milesFromStart": 156.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.154227,
+      "lon": -3.256086
     },
     {
       "name": "Moel Arthur",
       "milesFromStart": 159.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.183639,
+      "lon": -3.277475
     },
     {
       "name": "Llangwyfan (Penycloddiau car park)",
       "milesFromStart": 161.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 53.191762,
+      "lon": -3.290286
     },
     {
       "name": "Bodfari",
       "milesFromStart": 164.8,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.230055,
+      "lon": -3.356099
     },
     {
       "name": "Rhuallt",
       "milesFromStart": 169.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.264795,
+      "lon": -3.389259
     },
     {
       "name": "Prestatyn",
       "milesFromStart": 176.8,
       "note": "finish; station",
-      "lat": null,
-      "lon": null
+      "lat": 53.342419,
+      "lon": -3.412531
     }
   ],
   "defaultStages": [

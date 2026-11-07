@@ -208,11 +208,13 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
       the Cleveland Way junction; the A19 detour before Ingleby Cross isn't in the table's miles
 - [x] Cotswold Way: the GPX is a reversed `<rte>`; OSM
       includes the Stinchcombe Hill loop
+- [x] Glyndŵr's Way: Castell y Blaidd moved to 20 mi (it comes before Llanbadarn Fynydd)
+- [x] Hadrian's Wall Path: the GPX is a reversed `<rte>` with no elevation
+- [x] Offa's Dyke Path: White Castle moved to 28.5 mi (it comes after Llantilio Crossenny);
+      Brompton Crossroads and Chirk Mill pinned to the A489 and River Ceiriog crossings;
+      Hatterrall Ridge (Longtown path) is still placed by table mileage
 
 **To do** (England and Wales: official GPX from nationaltrail.co.uk):
-- [ ] Glyndŵr's Way
-- [ ] Hadrian's Wall Path
-- [ ] Offa's Dyke Path
 - [ ] Peddars Way and Norfolk Coast Path
 - [ ] Pembrokeshire Coast Path
 - [ ] Pennine Bridleway
@@ -233,3 +235,6 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
 - South Downs Way: Housedean Farm and Devil's Dyke → Pyecombe
 - Coast to Coast: Blakey Ridge (Lion Inn) is about 3 mi too far along
 - Cotswold Way: Painswick is about 1.2 mi too far along
+- Glyndŵr's Way: Dolanog is about 2.7 mi too early (Dolanog → Meifod is 7.1 mi on the line, 10.0 in the table)
+- Hadrian's Wall Path: Birdoswald → Carlisle is 18.0 mi on the line, 16.0 in the table
+- Offa's Dyke Path: Hay Bluff and Hay-on-Wye (Hatterrall Ridge → Hay is 8.9 mi on the line, 11.8 in the table)

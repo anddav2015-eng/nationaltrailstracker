@@ -54,5 +54,30 @@
     "officialMiles": 102.0,
     "reverse": true,
     "osmRelation": 65239
+  },
+  "glyndwrs-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/GlyndwrWay_25K_web_line_polyline042022-elevation.gpx",
+    "mainTracks": [
+      "GlyndwrWay_25K_web_line_polyline042022"
+    ],
+    "officialMiles": 135.0,
+    "osmRelation": 77256
+  },
+  "hadrians-wall-path": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Hadrians_Wall_Path-1.gpx",
+    "mainTracks": [
+      "Hadrians Wall Path"
+    ],
+    "officialMiles": 84.0,
+    "reverse": true,
+    "osmRelation": 38791
+  },
+  "offas-dyke-path": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/ODP_loops_elev.gpx",
+    "mainTracks": [
+      "Offa's Dyke Path"
+    ],
+    "officialMiles": 177.0,
+    "osmRelation": 9649
   }
 }

@@ -12,155 +12,155 @@
       "name": "Wallsend (Segedunum)",
       "milesFromStart": 0.0,
       "note": "Metro",
-      "lat": null,
-      "lon": null
+      "lat": 54.987978,
+      "lon": -1.530249
     },
     {
       "name": "Newcastle Quayside",
       "milesFromStart": 4.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.969204,
+      "lon": -1.584414
     },
     {
       "name": "Newburn",
       "milesFromStart": 10.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.981276,
+      "lon": -1.742414
     },
     {
       "name": "Heddon-on-the-Wall",
       "milesFromStart": 15.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.995917,
+      "lon": -1.791992
     },
     {
       "name": "Harlow Hill",
       "milesFromStart": 20.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.009272,
+      "lon": -1.87792
     },
     {
       "name": "Port Gate (A68)",
       "milesFromStart": 24.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.012188,
+      "lon": -2.017777
     },
     {
       "name": "Chollerford",
       "milesFromStart": 30.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 55.029793,
+      "lon": -2.128499
     },
     {
       "name": "Limestone Corner",
       "milesFromStart": 33.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.03892,
+      "lon": -2.194896
     },
     {
       "name": "Housesteads Fort",
       "milesFromStart": 39.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.013825,
+      "lon": -2.330477
     },
     {
       "name": "Steel Rigg (Once Brewed)",
       "milesFromStart": 42.0,
       "note": "AD122 bus",
-      "lat": null,
-      "lon": null
+      "lat": 55.0034,
+      "lon": -2.37872
     },
     {
       "name": "Walltown Crags",
       "milesFromStart": 47.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.992753,
+      "lon": -2.506254
     },
     {
       "name": "Greenhead",
       "milesFromStart": 48.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.986702,
+      "lon": -2.535128
     },
     {
       "name": "Gilsland",
       "milesFromStart": 51.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.989909,
+      "lon": -2.571124
     },
     {
       "name": "Birdoswald Fort",
       "milesFromStart": 53.0,
       "note": "AD122 bus",
-      "lat": null,
-      "lon": null
+      "lat": 54.990248,
+      "lon": -2.603053
     },
     {
       "name": "Banks",
       "milesFromStart": 56.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.975013,
+      "lon": -2.679203
     },
     {
       "name": "Walton",
       "milesFromStart": 58.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.971893,
+      "lon": -2.747638
     },
     {
       "name": "Crosby-on-Eden",
       "milesFromStart": 63.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.928347,
+      "lon": -2.859244
     },
     {
       "name": "Carlisle",
       "milesFromStart": 69.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.898988,
+      "lon": -2.938195
     },
     {
       "name": "Burgh by Sands",
       "milesFromStart": 74.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.921127,
+      "lon": -3.061122
     },
     {
       "name": "Drumburgh",
       "milesFromStart": 78.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.9266,
+      "lon": -3.148223
     },
     {
       "name": "Port Carlisle",
       "milesFromStart": 82.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.949034,
+      "lon": -3.186123
     },
     {
       "name": "Bowness-on-Solway",
       "milesFromStart": 84.0,
       "note": "finish; buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.953968,
+      "lon": -3.211565
     }
   ],
   "defaultStages": [

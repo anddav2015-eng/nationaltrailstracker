@@ -12,176 +12,176 @@
       "name": "Knighton",
       "milesFromStart": 0.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.344474,
+      "lon": -3.049855
     },
     {
       "name": "Llangunllo",
       "milesFromStart": 6.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.334535,
+      "lon": -3.158296
     },
     {
       "name": "Beacon Hill",
       "milesFromStart": 11.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.379167,
+      "lon": -3.214372
     },
     {
       "name": "Felindre",
       "milesFromStart": 15.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.421627,
+      "lon": -3.222114
+    },
+    {
+      "name": "Castell y Blaidd",
+      "milesFromStart": 20.0,
+      "note": null,
+      "lat": 52.408835,
+      "lon": -3.28733
     },
     {
       "name": "Llanbadarn Fynydd",
       "milesFromStart": 22.0,
       "note": null,
-      "lat": null,
-      "lon": null
-    },
-    {
-      "name": "Castell y Blaidd",
-      "milesFromStart": 25.0,
-      "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.393882,
+      "lon": -3.327535
     },
     {
       "name": "Abbeycwmhir",
       "milesFromStart": 30.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.331477,
+      "lon": -3.390039
     },
     {
       "name": "Bwlch-y-sarnau",
       "milesFromStart": 34.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.361342,
+      "lon": -3.427026
     },
     {
       "name": "Llanidloes",
       "milesFromStart": 46.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.448611,
+      "lon": -3.540169
     },
     {
       "name": "Clywedog Dam",
       "milesFromStart": 50.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.470153,
+      "lon": -3.601668
     },
     {
       "name": "Staylittle",
       "milesFromStart": 57.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.5157,
+      "lon": -3.658589
     },
     {
       "name": "Dylife",
       "milesFromStart": 60.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.527194,
+      "lon": -3.677025
     },
     {
       "name": "Glaslyn",
       "milesFromStart": 64.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.529917,
+      "lon": -3.726399
     },
     {
       "name": "Foel Fadian",
       "milesFromStart": 65.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.541848,
+      "lon": -3.727472
     },
     {
       "name": "Machynlleth",
       "milesFromStart": 75.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.590572,
+      "lon": -3.849385
     },
     {
       "name": "Abercegir",
       "milesFromStart": 82.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.600575,
+      "lon": -3.767463
     },
     {
       "name": "Commins Coch",
       "milesFromStart": 86.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.613273,
+      "lon": -3.724722
     },
     {
       "name": "Llanbrynmair",
       "milesFromStart": 91.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.613021,
+      "lon": -3.605316
     },
     {
       "name": "Llangadfan",
       "milesFromStart": 100.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.686183,
+      "lon": -3.465649
     },
     {
       "name": "Llanwddyn (Lake Vyrnwy)",
       "milesFromStart": 109.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.759217,
+      "lon": -3.456212
     },
     {
       "name": "Dolanog",
       "milesFromStart": 114.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.704888,
+      "lon": -3.38477
     },
     {
       "name": "Pontrobert",
       "milesFromStart": 118.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.70367,
+      "lon": -3.323488
     },
     {
       "name": "Meifod",
       "milesFromStart": 124.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.708888,
+      "lon": -3.2535
     },
     {
       "name": "Y Golfa",
       "milesFromStart": 131.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.655426,
+      "lon": -3.209951
     },
     {
       "name": "Welshpool",
       "milesFromStart": 135.0,
       "note": "finish; station",
-      "lat": null,
-      "lon": null
+      "lat": 52.658497,
+      "lon": -3.14447
     }
   ],
   "defaultStages": [

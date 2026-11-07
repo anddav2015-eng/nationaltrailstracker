@@ -469,7 +469,9 @@ def build(slug, cfg):
                 "source": f"OpenStreetMap relation {rel['id']} v{rel['version']} ({rel['timestamp']})",
                 "licence": "ODbL 1.0",
                 "attribution": OSM_ATTRIBUTION,
-                "elevation": "approximate, from the nearest point on the official GPX line",
+                "elevation": ("approximate, from the nearest point on the official GPX line"
+                              if any(p[2] is not None for p in points)
+                              else "none (the official GPX has no elevation)"),
                 "gpxFilledGaps": fills,
             })
             path = OUT_DIR / f"{slug}-osm.geojson"
