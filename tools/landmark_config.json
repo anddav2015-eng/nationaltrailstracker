@@ -560,5 +560,123 @@
         "why": "end of the route line, at The Street, Ravenstonedale"
       }
     }
+  },
+  "pennine-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Edale": {
+        "point": [
+          53.370476,
+          -1.816864
+        ],
+        "why": "start of the route line, Edale"
+      },
+      "Ponden": {
+        "query": "Ponden Reservoir"
+      },
+      "Calder Valley (Hebden Bridge)": {
+        "point": [
+          53.73414,
+          -2.04453
+        ],
+        "why": "where the trail crosses the River Calder in the Calder valley (OSM)"
+      },
+      "God's Bridge": {
+        "point": [
+          54.5085,
+          -2.06795
+        ],
+        "why": "the official line passes 600 m east of God's Bridge; placed at the nearest point"
+      },
+      "Kirk Yetholm": {
+        "point": [
+          55.547144,
+          -2.275479
+        ],
+        "why": "end of the route line, Kirk Yetholm"
+      }
+    }
+  },
+  "ridgeway": {
+    "mapLine": "osm",
+    "overrides": {
+      "Overton Hill (near Avebury)": {
+        "point": [
+          51.411488,
+          -1.830593
+        ],
+        "why": "start of the route line, Overton Hill"
+      },
+      "Segsbury Camp": {
+        "point": [
+          51.55777,
+          -1.44598
+        ],
+        "why": "Segsbury (Letcombe Castle) hillfort (OSM)"
+      },
+      "A34 underpass": {
+        "point": [
+          51.54926,
+          -1.29826
+        ],
+        "why": "where the trail passes under the A34 (OSM)"
+      },
+      "Ivinghoe Beacon": {
+        "point": [
+          51.842134,
+          -0.608403
+        ],
+        "why": "end of the route line, Ivinghoe Beacon"
+      }
+    }
+  },
+  "south-west-coast-path": {
+    "mapLine": "osm",
+    "overrides": {
+      "Minehead": {
+        "point": [
+          51.211011,
+          -3.473577
+        ],
+        "why": "start of the route line, the Minehead marker"
+      },
+      "Plymouth": {
+        "point": [
+          50.36486,
+          -4.16599
+        ],
+        "why": "Admiral's Hard, Stonehouse: the Cremyll ferry landing in Plymouth (start of official GPX part 6)"
+      },
+      "River Yealm (Wembury)": {
+        "point": [
+          50.31249,
+          -4.05352
+        ],
+        "why": "Warren Point, the River Yealm ferry landing (end of official GPX part 6)"
+      },
+      "Ferry Bridge (Wyke Regis)": {
+        "point": [
+          50.582951,
+          -2.471205
+        ],
+        "pass": 1,
+        "why": "Ferry Bridge, on the way out to Portland"
+      },
+      "Ferry Bridge (after Portland loop)": {
+        "point": [
+          50.582951,
+          -2.471205
+        ],
+        "pass": 2,
+        "why": "Ferry Bridge, on the way back from Portland"
+      },
+      "South Haven Point (Poole Harbour)": {
+        "point": [
+          50.679475,
+          -1.950198
+        ],
+        "why": "end of the route line, South Haven Point"
+      }
+    }
   }
 }

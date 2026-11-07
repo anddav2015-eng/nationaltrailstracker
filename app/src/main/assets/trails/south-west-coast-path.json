@@ -12,372 +12,372 @@
       "name": "Minehead",
       "milesFromStart": 0.0,
       "note": "start; buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.211011,
+      "lon": -3.473577
     },
     {
       "name": "Porlock Weir",
       "milesFromStart": 9.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.218941,
+      "lon": -3.628238
     },
     {
       "name": "Lynmouth",
       "milesFromStart": 21.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.23075,
+      "lon": -3.829879
     },
     {
       "name": "Combe Martin",
       "milesFromStart": 34.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.206599,
+      "lon": -4.037759
     },
     {
       "name": "Woolacombe",
       "milesFromStart": 47.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.172444,
+      "lon": -4.207678
     },
     {
       "name": "Braunton",
       "milesFromStart": 62.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.10135,
+      "lon": -4.162577
     },
     {
       "name": "Instow",
       "milesFromStart": 75.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.052785,
+      "lon": -4.181417
     },
     {
       "name": "Westward Ho!",
       "milesFromStart": 86.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.042911,
+      "lon": -4.235986
     },
     {
       "name": "Clovelly",
       "milesFromStart": 97.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.996843,
+      "lon": -4.398924
     },
     {
       "name": "Hartland Quay",
       "milesFromStart": 107.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.994613,
+      "lon": -4.533565
     },
     {
       "name": "Bude",
       "milesFromStart": 122.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.828575,
+      "lon": -4.547034
     },
     {
       "name": "Crackington Haven",
       "milesFromStart": 132.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.74064,
+      "lon": -4.632516
     },
     {
       "name": "Tintagel",
       "milesFromStart": 143.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.666773,
+      "lon": -4.757578
     },
     {
       "name": "Port Isaac",
       "milesFromStart": 152.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.59491,
+      "lon": -4.828752
     },
     {
       "name": "Padstow",
       "milesFromStart": 164.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.542569,
+      "lon": -4.936258
     },
     {
       "name": "Porthcothan",
       "milesFromStart": 177.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.508526,
+      "lon": -5.022018
     },
     {
       "name": "Newquay",
       "milesFromStart": 188.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.413481,
+      "lon": -5.084911
     },
     {
       "name": "Perranporth",
       "milesFromStart": 199.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.345928,
+      "lon": -5.15491
     },
     {
       "name": "Portreath",
       "milesFromStart": 211.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.260498,
+      "lon": -5.289657
     },
     {
       "name": "Hayle",
       "milesFromStart": 223.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.186069,
+      "lon": -5.421654
     },
     {
       "name": "St Ives",
       "milesFromStart": 229.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.214897,
+      "lon": -5.479496
     },
     {
       "name": "Pendeen",
       "milesFromStart": 243.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.164516,
+      "lon": -5.670578
     },
     {
       "name": "Sennen Cove",
       "milesFromStart": 252.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.077695,
+      "lon": -5.702156
     },
     {
       "name": "Lamorna",
       "milesFromStart": 264.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.062667,
+      "lon": -5.564406
     },
     {
       "name": "Marazion",
       "milesFromStart": 273.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.12359,
+      "lon": -5.472446
     },
     {
       "name": "Porthleven",
       "milesFromStart": 284.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.084907,
+      "lon": -5.316076
     },
     {
       "name": "The Lizard",
       "milesFromStart": 297.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 49.959784,
+      "lon": -5.201915
     },
     {
       "name": "Coverack",
       "milesFromStart": 308.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.023054,
+      "lon": -5.096938
     },
     {
       "name": "Helford",
       "milesFromStart": 321.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.09319,
+      "lon": -5.13579
     },
     {
       "name": "Falmouth",
       "milesFromStart": 331.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.15519,
+      "lon": -5.068871
     },
     {
       "name": "Portloe",
       "milesFromStart": 345.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.218618,
+      "lon": -4.892751
     },
     {
       "name": "Mevagissey",
       "milesFromStart": 357.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.269646,
+      "lon": -4.787004
     },
     {
       "name": "Par",
       "milesFromStart": 369.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.348943,
+      "lon": -4.706264
     },
     {
       "name": "Polperro",
       "milesFromStart": 382.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.331467,
+      "lon": -4.518403
     },
     {
       "name": "Portwrinkle",
       "milesFromStart": 394.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.361657,
+      "lon": -4.311233
     },
     {
       "name": "Plymouth",
       "milesFromStart": 407.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.364758,
+      "lon": -4.165863
     },
     {
       "name": "River Yealm (Wembury)",
       "milesFromStart": 422.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.312486,
+      "lon": -4.053521
     },
     {
       "name": "Bigbury-on-Sea",
       "milesFromStart": 436.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.283746,
+      "lon": -3.896066
     },
     {
       "name": "Salcombe",
       "milesFromStart": 450.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.235455,
+      "lon": -3.768354
     },
     {
       "name": "Torcross",
       "milesFromStart": 463.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.265957,
+      "lon": -3.652954
     },
     {
       "name": "Dartmouth",
       "milesFromStart": 473.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.348972,
+      "lon": -3.577953
     },
     {
       "name": "Brixham",
       "milesFromStart": 484.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.396164,
+      "lon": -3.512906
     },
     {
       "name": "Babbacombe",
       "milesFromStart": 495.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.478741,
+      "lon": -3.508964
     },
     {
       "name": "Exmouth",
       "milesFromStart": 511.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.615911,
+      "lon": -3.415841
     },
     {
       "name": "Sidmouth",
       "milesFromStart": 524.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.678124,
+      "lon": -3.237181
     },
     {
       "name": "Seaton",
       "milesFromStart": 535.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.703524,
+      "lon": -3.067686
     },
     {
       "name": "Seatown",
       "milesFromStart": 549.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.723272,
+      "lon": -2.822446
     },
     {
       "name": "Abbotsbury",
       "milesFromStart": 561.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.657302,
+      "lon": -2.577969
     },
     {
       "name": "Ferry Bridge (Wyke Regis)",
       "milesFromStart": 572.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.58294,
+      "lon": -2.471281
     },
     {
       "name": "Ferry Bridge (after Portland loop)",
       "milesFromStart": 585.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.582964,
+      "lon": -2.47113
     },
     {
       "name": "Lulworth Cove",
       "milesFromStart": 599.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.618554,
+      "lon": -2.2434
     },
     {
       "name": "Worth Matravers",
       "milesFromStart": 613.5,
-      "note": null,
-      "lat": null,
-      "lon": null
+      "note": "village 1.1 km off the trail",
+      "lat": 50.591443,
+      "lon": -2.024706
     },
     {
       "name": "South Haven Point (Poole Harbour)",
       "milesFromStart": 627.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.679475,
+      "lon": -1.950198
     }
   ],
   "defaultStages": [

@@ -220,11 +220,14 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
 - [x] Pennine Bridleway: the eastern side of the Mary Towneley Loop (the western side, Settle Loop and
       spurs are left out); Hebden Bridge and Pendragon Castle are 1.7 and 2.2 km off the trail
       (notes added)
+- [x] Pennine Way: God's Bridge is 600 m off the official line (placed at the nearest point);
+      Calder Valley stage end pinned to the River Calder crossing
+- [x] The Ridgeway: A34 underpass moved to 37.6 mi (it comes after Bury Down)
+- [x] South West Coast Path: routed per official GPX part, with straight lines for the 10 ferry
+      crossings (included in line miles, about 7 mi); goes round Portland; Plymouth and River Yealm
+      stage ends pinned at the ferry landings; Ferry Bridge out and back via the new `"pass"` override
 
 **To do** (England and Wales: official GPX from nationaltrail.co.uk):
-- [ ] Pennine Way
-- [ ] The Ridgeway
-- [ ] South West Coast Path
 - [ ] Yorkshire Wolds Way
 
 **To do** (Scotland: not on nationaltrail.co.uk, so the source and licence need checking first):
@@ -246,3 +249,6 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
   Salthouse → Cromer (9.7 against 12.5)
 - Pennine Bridleway: Hebden Bridge → Wycoller (18.2 mi on the line, 12.5 in the table), Middleton Top → Hurdlow
   (13.4 against 16.5) and Garsdale Head → The Street (11.1 against 15.0)
+- Pennine Way: Wessenden Head → Calder Valley (19.7 mi on the line, 15.5 in the table), Keld → Baldersdale
+  (18.2 against 15.0), and Knarsdale (Garrigill → Knarsdale 9.8 against 13.0)
+- The Ridgeway: Bury Down is about 2.7 mi too far along (Bury Down → Nuffield 18.0 against 15.0)

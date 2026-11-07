@@ -54,6 +54,12 @@ For each trail it:
      point. The Norfolk Coast Path's GPX stops at Cromer, but the trail continues to Hopton-on-Sea.
      That stretch has no official reference, so it has no elevation and shows in the report as one
      long deviation.
+   - `"osmVia": [[lat, lon], ...]` makes the route pass through those points in order. The shortest
+     path would otherwise skip a loop the trail goes round (the Isle of Portland on the South West
+     Coast Path).
+   - `"osmPerTrack": true` routes each `mainTracks` entry separately and joins them with straight
+     lines (listed as `straightJoins` in the file). This is for ferry crossings too wide to bridge as
+     OSM gaps (the South West Coast Path's estuaries). The line's miles include the crossings.
    - The line follows the relation's ways from the node nearest the GPX start to the node nearest
      the GPX end, so it covers the same span as the official line. Ways more than 300 m from the
      official line cost 5 times their length, so where the relation holds alternative branches (e.g.
@@ -97,7 +103,9 @@ Settings are in `tools/landmark_config.json`. `mapLine` names the line the app s
    - `{"query": "Henley Bridge"}`: search for something more exact than the town.
    - `{"interpolate": true, "why": "..."}`: place it between its neighbours by table mileage (for
      lakes, villages away from the river, or things OSM doesn't name).
-   - `{"point": [lat, lon], "why": "..."}`: a hand-set point on the path.
+   - `{"point": [lat, lon], "why": "..."}`: a hand-set point on the path. Add `"pass": 2` when the line
+     goes past the same spot twice and the landmark is the second time (Ferry Bridge, before and
+     after the Isle of Portland).
 3. **Checks.** It prints a table of every landmark: table miles, line miles, `step` (how far it's
    out of step with its neighbours, in miles), metres off the line, how it was found, and flags.
    Fix flagged landmarks with an override; never by editing the generated files.

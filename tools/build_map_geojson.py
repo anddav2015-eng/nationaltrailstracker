@@ -291,9 +291,10 @@ def fetch_relation_ways(relation_id, depth=0):
     return rel, lonlat, unique
 
 
-def build_osm(slug, relation_ids, gpx_points, end_latlon=None):
+def build_osm(slug, relation_ids, gpx_points, end_latlon=None, vias=()):
     """Route through the OSM relations' ways from the GPX start to the GPX end (or to end_latlon,
-    when the trail carries on past the end of the official GPX)."""
+    when the trail carries on past the end of the official GPX), passing through each [lat, lon]
+    in vias in order (e.g. Portland Bill, so the line goes round a loop the shortest path skips)."""
     rels, lonlat, by_id = [], {}, {}
     for relation_id in relation_ids:
         print(f"  -- OpenStreetMap relation {relation_id} --")
@@ -377,24 +378,39 @@ def build_osm(slug, relation_ids, gpx_points, end_latlon=None):
         print(f"  start node {math.dist(xy[src], gpx.xy[0]):.0f} m from the GPX start, "
               f"end node {math.dist(xy[dst], gpx.xy[-1]):.0f} m from the GPX end")
 
-    dist, prev, heap = {src: 0.0}, {}, [(0.0, src)]
-    while heap:
-        d, n = heapq.heappop(heap)
-        if n == dst:
-            break
-        if d > dist[n]:
-            continue
-        for nb, c in adj[n].items():
-            if d + c < dist.get(nb, math.inf):
-                dist[nb], prev[nb] = d + c, n
-                heapq.heappush(heap, (d + c, nb))
-    if dst not in dist:
-        print("  WARNING: no OSM route between the ends, even with GPX gap fills; skipping OSM version")
-        return None
-    route = [dst]
-    while route[-1] != src:
-        route.append(prev[route[-1]])
-    route.reverse()
+    def shortest(a, b):
+        dist, prev, heap = {a: 0.0}, {}, [(0.0, a)]
+        while heap:
+            d, n = heapq.heappop(heap)
+            if n == b:
+                break
+            if d > dist[n]:
+                continue
+            for nb, c in adj[n].items():
+                if d + c < dist.get(nb, math.inf):
+                    dist[nb], prev[nb] = d + c, n
+                    heapq.heappush(heap, (d + c, nb))
+        if b not in dist:
+            return None
+        path = [b]
+        while path[-1] != a:
+            path.append(prev[path[-1]])
+        return path[::-1]
+
+    stops = [src]
+    for lat, lon in vias:
+        v_xy = TO_BNG.transform(lon, lat)
+        v = min(adj, key=lambda n: math.dist(xy[n], v_xy))
+        print(f"  via node {math.dist(xy[v], v_xy):.0f} m from {lat:.5f},{lon:.5f}")
+        stops.append(v)
+    stops.append(dst)
+    route = [src]
+    for a, b in zip(stops, stops[1:]):
+        part = shortest(a, b)
+        if part is None:
+            print("  WARNING: no OSM route between the ends, even with GPX gap fills; skipping OSM version")
+            return None
+        route += part[1:]
 
     points, fills = [], []
     for i, n in enumerate(route):
@@ -477,7 +493,36 @@ def build(slug, cfg):
 
     if "osmRelation" in cfg:
         ids = cfg["osmRelation"] if isinstance(cfg["osmRelation"], list) else [cfg["osmRelation"]]
-        result = build_osm(slug, ids, points, cfg.get("osmEnd"))
+        vias = cfg.get("osmVia", [])
+        joins = []
+        if cfg.get("osmPerTrack"):
+            # Route each official track separately and join them with straight lines: the joins
+            # are ferry crossings (South West Coast Path), too wide to bridge as OSM gaps.
+            pieces = [merge_main(gpx, [e]) for e in cfg["mainTracks"]]
+            refs = [LineString([TO_BNG.transform(p[0], p[1]) for p in pc]) for pc in pieces]
+            piece_vias = [[] for _ in pieces]
+            for v in vias:
+                v_pt = Point(TO_BNG.transform(v[1], v[0]))
+                piece_vias[min(range(len(refs)), key=lambda k: refs[k].distance(v_pt))].append(v)
+            result, all_fills = [], []
+            for k, (pc, pv) in enumerate(zip(pieces, piece_vias)):
+                print(f"  == OSM for track {track_name(cfg['mainTracks'][k])!r} ==")
+                r = build_osm(slug, ids, pc, None, pv)
+                if r is None:
+                    result = None
+                    break
+                if result:
+                    a, b = result[-1], r[0][0]
+                    gap = geodesic_miles([a[:2], b[:2]]) * METRES_PER_MILE
+                    joins.append({"from": [round(a[1], COORD_DP), round(a[0], COORD_DP)],
+                                  "to": [round(b[1], COORD_DP), round(b[0], COORD_DP)], "metres": round(gap)})
+                    print(f"  straight join (ferry) of {gap:.0f} m before {track_name(cfg['mainTracks'][k])!r}")
+                result += r[0]
+                all_fills += r[1]
+                rels = r[2]
+            result = (result, all_fills, rels) if result else None
+        else:
+            result = build_osm(slug, ids, points, cfg.get("osmEnd"), vias)
         if result:
             osm_points, fills, rels = result
             gj = to_geojson(slug, osm_points, "osm", None, cfg["gpxUrl"], cfg["mainTracks"])
@@ -494,6 +539,8 @@ def build(slug, cfg):
                               + (" (none past its end)" if cfg.get("osmEnd") else "")),
                 "gpxFilledGaps": fills,
             })
+            if joins:
+                props["straightJoins"] = joins
             path = OUT_DIR / f"{slug}-osm.geojson"
             path.write_text(json.dumps(gj, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
             diff = f"{props['lengthMiles'] - official:+.2f}" if official else ""

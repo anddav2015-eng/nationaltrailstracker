@@ -117,5 +117,46 @@
       "B - Pennine Bridleway Part 2"
     ],
     "osmRelation": 50288
+  },
+  "pennine-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Pennine-Way-elev-1.gpx",
+    "mainTracks": [
+      "Pennine Way"
+    ],
+    "officialMiles": 253.0,
+    "osmRelation": 4080347
+  },
+  "ridgeway": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/The_Ridgeway.gpx",
+    "mainTracks": [
+      "The Ridgeway"
+    ],
+    "officialMiles": 87.0,
+    "osmRelation": 8879
+  },
+  "south-west-coast-path": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads%2F2026%2F04%2FSouth_West_Coast_Path_Elev.gpx",
+    "mainTracks": [
+      "South West Coast Path Part 1",
+      "South West Coast Path Part 2",
+      "South West Coast Path Part 3",
+      "South West Coast Path Part 4",
+      "South West Coast Path Part 5",
+      "South West Coast Path Part 6",
+      "South West Coast Path Part 7",
+      "South West Coast Path Part 8",
+      "South West Coast Path Part 9",
+      "South West Coast Path Part 10",
+      "South West Coast Path Part 11"
+    ],
+    "officialMiles": 630.0,
+    "osmRelation": 2376086,
+    "osmPerTrack": true,
+    "osmVia": [
+      [
+        50.513633,
+        -2.45684
+      ]
+    ]
   }
 }

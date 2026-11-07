@@ -61,7 +61,7 @@ window.TRAILS["south-west-coast-path"] = {
     ["Ferry Bridge (Wyke Regis)", 572.5],
     ["Ferry Bridge (after Portland loop)", 585.5],
     ["Lulworth Cove", 599.5],
-    ["Worth Matravers", 613.5],
+    ["Worth Matravers", 613.5, "village 1.1 km off the trail"],
     ["South Haven Point (Poole Harbour)", 627.5],
   ],
   stages: [

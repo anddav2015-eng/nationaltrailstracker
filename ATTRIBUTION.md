@@ -46,8 +46,9 @@ Trails using these sources so far: Thames Path (OSM relation 14519665), North Do
 (OSM superroute 4087652 and its three section relations) Coast to Coast (OSM superroute 12145 and
 its three section relations), Cotswold Way (OSM relation 65239), Glyndŵr's Way (OSM relation 77256),
 Hadrian's Wall Path (OSM relation 38791), Offa's Dyke Path (OSM relation 9649), Peddars Way and Norfolk
-Coast Path (OSM relations 77958 and 77959), Pembrokeshire Coast Path (OSM superroute 77964) and Pennine
-Bridleway (OSM relation 50288), each with its official GPX. The Norfolk Coast Path from Cromer to
+Coast Path (OSM relations 77958 and 77959), Pembrokeshire Coast Path (OSM superroute 77964), Pennine
+Bridleway (OSM relation 50288), Pennine Way (OSM superroute 4080347), The Ridgeway (OSM relation
+8879) and South West Coast Path (OSM superroute 2376086), each with its official GPX. The Norfolk Coast Path from Cromer to
 Hopton-on-Sea is OSM only, because the official GPX stops at Cromer.
 
 In the app, these credits are shown in each mapped trail's ⓘ dialog under "Map sources". The

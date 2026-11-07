@@ -12,400 +12,400 @@
       "name": "Edale",
       "milesFromStart": 0.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 53.370476,
+      "lon": -1.816864
     },
     {
       "name": "Jacob's Ladder",
       "milesFromStart": 3.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.373375,
+      "lon": -1.869687
     },
     {
       "name": "Kinder Downfall",
       "milesFromStart": 6.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.396633,
+      "lon": -1.876827
     },
     {
       "name": "Mill Hill",
       "milesFromStart": 8.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.410519,
+      "lon": -1.909438
     },
     {
       "name": "Snake Pass (A57)",
       "milesFromStart": 10.0,
       "note": "taxi/Uber",
-      "lat": null,
-      "lon": null
+      "lat": 53.4329,
+      "lon": -1.868899
     },
     {
       "name": "Bleaklow Head",
       "milesFromStart": 12.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.461282,
+      "lon": -1.859661
     },
     {
       "name": "Crowden",
       "milesFromStart": 16.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.488803,
+      "lon": -1.898501
     },
     {
       "name": "Black Hill",
       "milesFromStart": 20.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.53876,
+      "lon": -1.883512
     },
     {
       "name": "Wessenden Head (A635)",
       "milesFromStart": 22.5,
       "note": "taxi; Marsden 3 mi",
-      "lat": null,
-      "lon": null
+      "lat": 53.563466,
+      "lon": -1.884585
     },
     {
       "name": "Standedge",
       "milesFromStart": 27.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.590366,
+      "lon": -1.982819
     },
     {
       "name": "Blackstone Edge",
       "milesFromStart": 31.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.643803,
+      "lon": -2.043501
     },
     {
       "name": "Stoodley Pike",
       "milesFromStart": 35.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.714132,
+      "lon": -2.042369
     },
     {
       "name": "Calder Valley (Hebden Bridge)",
       "milesFromStart": 38.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 53.734135,
+      "lon": -2.044533
     },
     {
       "name": "Walshaw Dean",
       "milesFromStart": 42.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.793832,
+      "lon": -2.060757
     },
     {
       "name": "Top Withins",
       "milesFromStart": 45.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.814693,
+      "lon": -2.029828
     },
     {
       "name": "Ponden",
       "milesFromStart": 47.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.829929,
+      "lon": -2.014898
     },
     {
       "name": "Ickornshaw (Cowling)",
       "milesFromStart": 54.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.882265,
+      "lon": -2.054505
     },
     {
       "name": "Lothersdale",
       "milesFromStart": 57.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.909776,
+      "lon": -2.063409
     },
     {
       "name": "Thornton-in-Craven",
       "milesFromStart": 61.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.931415,
+      "lon": -2.125759
     },
     {
       "name": "Gargrave",
       "milesFromStart": 65.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 53.983087,
+      "lon": -2.105724
     },
     {
       "name": "Airton",
       "milesFromStart": 68.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.029467,
+      "lon": -2.148393
     },
     {
       "name": "Malham",
       "milesFromStart": 71.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.061253,
+      "lon": -2.152978
     },
     {
       "name": "Malham Tarn",
       "milesFromStart": 73.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.092246,
+      "lon": -2.161195
     },
     {
       "name": "Fountains Fell",
       "milesFromStart": 77.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.1443,
+      "lon": -2.211353
     },
     {
       "name": "Pen-y-ghent",
       "milesFromStart": 81.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.156012,
+      "lon": -2.248786
     },
     {
       "name": "Horton in Ribblesdale",
       "milesFromStart": 85.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.147326,
+      "lon": -2.294195
     },
     {
       "name": "Cam End",
       "milesFromStart": 91.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.235164,
+      "lon": -2.28313
     },
     {
       "name": "Dodd Fell",
       "milesFromStart": 95.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.26336,
+      "lon": -2.248707
     },
     {
       "name": "Hawes",
       "milesFromStart": 99.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.304167,
+      "lon": -2.196534
     },
     {
       "name": "Great Shunner Fell",
       "milesFromStart": 105.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.370844,
+      "lon": -2.234478
     },
     {
       "name": "Thwaite",
       "milesFromStart": 108.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.379249,
+      "lon": -2.167884
     },
     {
       "name": "Keld",
       "milesFromStart": 111.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.406458,
+      "lon": -2.163078
     },
     {
       "name": "Tan Hill Inn",
       "milesFromStart": 116.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.455409,
+      "lon": -2.160273
     },
     {
       "name": "God's Bridge",
       "milesFromStart": 122.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.507864,
+      "lon": -2.058718
     },
     {
       "name": "Baldersdale",
       "milesFromStart": 126.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.558694,
+      "lon": -2.105924
     },
     {
       "name": "Middleton-in-Teesdale",
       "milesFromStart": 133.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.621425,
+      "lon": -2.085043
     },
     {
       "name": "High Force",
       "milesFromStart": 138.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.650192,
+      "lon": -2.187635
     },
     {
       "name": "Langdon Beck",
       "milesFromStart": 141.5,
       "note": "hotel/YHA; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.667104,
+      "lon": -2.229165
     },
     {
       "name": "Cauldron Snout",
       "milesFromStart": 145.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.65263,
+      "lon": -2.288856
     },
     {
       "name": "High Cup Nick",
       "milesFromStart": 150.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.630015,
+      "lon": -2.394874
     },
     {
       "name": "Dufton",
       "milesFromStart": 154.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.619512,
+      "lon": -2.480415
     },
     {
       "name": "Great Dun Fell",
       "milesFromStart": 159.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.684705,
+      "lon": -2.450668
     },
     {
       "name": "Cross Fell",
       "milesFromStart": 162.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.703035,
+      "lon": -2.486653
     },
     {
       "name": "Garrigill",
       "milesFromStart": 169.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.768607,
+      "lon": -2.398965
     },
     {
       "name": "Alston",
       "milesFromStart": 174.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.81245,
+      "lon": -2.445455
     },
     {
       "name": "Slaggyford",
       "milesFromStart": 179.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.865648,
+      "lon": -2.504538
     },
     {
       "name": "Knarsdale",
       "milesFromStart": 182.0,
       "note": "pub; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.868296,
+      "lon": -2.510147
     },
     {
       "name": "Greenhead",
       "milesFromStart": 190.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.986702,
+      "lon": -2.535128
     },
     {
       "name": "Steel Rigg (Once Brewed)",
       "milesFromStart": 196.5,
       "note": "AD122 bus",
-      "lat": null,
-      "lon": null
+      "lat": 55.002302,
+      "lon": -2.39124
     },
     {
       "name": "Warks Burn",
       "milesFromStart": 205.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.077384,
+      "lon": -2.302433
     },
     {
       "name": "Bellingham",
       "milesFromStart": 212.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 55.14415,
+      "lon": -2.254512
     },
     {
       "name": "Padon Hill",
       "milesFromStart": 218.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.228501,
+      "lon": -2.290044
     },
     {
       "name": "Byrness",
       "milesFromStart": 227.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 55.317003,
+      "lon": -2.365387
     },
     {
       "name": "Chew Green",
       "milesFromStart": 233.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.367684,
+      "lon": -2.337265
     },
     {
       "name": "Windy Gyle",
       "milesFromStart": 241.5,
       "note": "descend to Barrowburn; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 55.430504,
+      "lon": -2.230032
     },
     {
       "name": "Auchope Cairn",
       "milesFromStart": 247.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 55.472315,
+      "lon": -2.174172
     },
     {
       "name": "Kirk Yetholm",
       "milesFromStart": 254.5,
       "note": "finish; buses",
-      "lat": null,
-      "lon": null
+      "lat": 55.547144,
+      "lon": -2.275479
     }
   ],
   "defaultStages": [
