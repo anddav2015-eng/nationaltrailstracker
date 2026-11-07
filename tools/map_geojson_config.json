@@ -21,5 +21,13 @@
       "B - North Downs Way Loop 1"
     ],
     "osmRelation": 1957071
+  },
+  "south-downs-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/South_Downs_Way_Elev.gpx",
+    "mainTracks": [
+      "South Downs Way"
+    ],
+    "officialMiles": 100.0,
+    "osmRelation": 77976
   }
 }

@@ -182,5 +182,64 @@
         "why": "where the trail crosses Chevening Lane, the lane north to Knockholt Pound (owner's choice)"
       }
     }
+  },
+  "south-downs-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Winchester (King Alfred statue / City Mill)": {
+        "point": [
+          51.060899,
+          -1.307932
+        ],
+        "why": "start of the official route line"
+      },
+      "Millbury's Inn": {
+        "query": "The Milburys"
+      },
+      "Beacon Hill NNR": {
+        "query": "Beacon Hill Nature Reserve"
+      },
+      "Exton (River Meon)": {
+        "point": [
+          50.98742,
+          -1.12
+        ],
+        "why": "where the trail crosses the River Meon by Exton (OSM)"
+      },
+      "Queen Elizabeth Country Park": {
+        "query": "Queen Elizabeth Country Park Visitor Centre"
+      },
+      "Amberley (River Arun)": {
+        "point": [
+          50.89924,
+          -0.54885
+        ],
+        "why": "where the trail crosses the River Arun near Amberley station (OSM)"
+      },
+      "River Adur (Upper Beeding)": {
+        "point": [
+          50.87075,
+          -0.30127
+        ],
+        "why": "the trail's footbridge over the River Adur (OSM)"
+      },
+      "Alfriston (River Cuckmere)": {
+        "point": [
+          50.80752,
+          0.15887
+        ],
+        "why": "the trail's footbridge over the Cuckmere at Alfriston, where the walkers' route via the Seven Sisters leaves the bridleway (OSM)"
+      },
+      "Exceat / Seven Sisters Country Park": {
+        "query": "Seven Sisters Country Park Visitor Centre"
+      },
+      "Eastbourne": {
+        "point": [
+          50.751849,
+          0.267084
+        ],
+        "why": "end of the official route line"
+      }
+    }
   }
 }

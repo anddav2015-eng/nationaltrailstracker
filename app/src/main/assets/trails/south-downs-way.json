@@ -12,267 +12,267 @@
       "name": "Winchester (King Alfred statue / City Mill)",
       "milesFromStart": 0.0,
       "note": "station ~1 mile",
-      "lat": null,
-      "lon": null
+      "lat": 51.060899,
+      "lon": -1.307932
     },
     {
       "name": "Chilcomb",
       "milesFromStart": 3.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.052442,
+      "lon": -1.277918
     },
     {
       "name": "Cheesefoot Head",
       "milesFromStart": 4.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.047498,
+      "lon": -1.244726
     },
     {
       "name": "Holden Farm",
       "milesFromStart": 7.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.038126,
+      "lon": -1.200696
     },
     {
       "name": "Millbury's Inn",
       "milesFromStart": 9.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.017936,
+      "lon": -1.189374
     },
     {
       "name": "Beacon Hill NNR",
       "milesFromStart": 11.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.998533,
+      "lon": -1.142007
     },
     {
       "name": "Exton (River Meon)",
       "milesFromStart": 13.0,
       "note": "pub, buses",
-      "lat": null,
-      "lon": null
+      "lat": 50.987416,
+      "lon": -1.120002
     },
     {
       "name": "Old Winchester Hill",
       "milesFromStart": 15.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.979802,
+      "lon": -1.086188
     },
     {
       "name": "Sustainability Centre (East Meon)",
       "milesFromStart": 20.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.967983,
+      "lon": -1.037431
     },
     {
       "name": "Butser Hill",
       "milesFromStart": 23.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.974788,
+      "lon": -0.984925
     },
     {
       "name": "Queen Elizabeth Country Park",
       "milesFromStart": 25.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.961501,
+      "lon": -0.977216
     },
     {
       "name": "Buriton",
       "milesFromStart": 27.5,
       "note": "Petersfield station ~2.5 miles",
-      "lat": null,
-      "lon": null
+      "lat": 50.970564,
+      "lon": -0.950501
     },
     {
       "name": "Uppark",
       "milesFromStart": 30.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.9598,
+      "lon": -0.886715
     },
     {
       "name": "Harting Down",
       "milesFromStart": 32.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.959221,
+      "lon": -0.870675
     },
     {
       "name": "Devil's Jumps",
       "milesFromStart": 35.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.948404,
+      "lon": -0.8252
     },
     {
       "name": "Cocking Hill (A286)",
       "milesFromStart": 37.5,
       "note": "buses to Midhurst / Chichester",
-      "lat": null,
-      "lon": null
+      "lat": 50.942732,
+      "lon": -0.755278
     },
     {
       "name": "Graffham Down",
       "milesFromStart": 41.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.937714,
+      "lon": -0.683922
     },
     {
       "name": "Bignor Hill",
       "milesFromStart": 45.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.909827,
+      "lon": -0.605109
     },
     {
       "name": "Amberley (River Arun)",
       "milesFromStart": 49.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 50.899241,
+      "lon": -0.548847
     },
     {
       "name": "Rackham Hill",
       "milesFromStart": 51.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.90336,
+      "lon": -0.501922
     },
     {
       "name": "Washington (A24)",
       "milesFromStart": 55.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 50.90381,
+      "lon": -0.408019
     },
     {
       "name": "Chanctonbury Ring",
       "milesFromStart": 57.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.896184,
+      "lon": -0.381169
     },
     {
       "name": "River Adur (Upper Beeding)",
       "milesFromStart": 62.5,
       "note": "buses via Bramber / Steyning",
-      "lat": null,
-      "lon": null
+      "lat": 50.870747,
+      "lon": -0.30127
     },
     {
       "name": "Truleigh Hill",
       "milesFromStart": 64.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.881917,
+      "lon": -0.258788
     },
     {
       "name": "Devil's Dyke",
       "milesFromStart": 66.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.882781,
+      "lon": -0.205509
     },
     {
       "name": "Pyecombe (A23)",
       "milesFromStart": 71.0,
       "note": "buses – bail-out point",
-      "lat": null,
-      "lon": null
+      "lat": 50.898814,
+      "lon": -0.163739
     },
     {
       "name": "Jack & Jill Windmills, Clayton",
       "milesFromStart": 72.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.903767,
+      "lon": -0.145366
     },
     {
       "name": "Ditchling Beacon",
       "milesFromStart": 74.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.902021,
+      "lon": -0.10724
     },
     {
       "name": "Housedean Farm (A27)",
       "milesFromStart": 79.0,
       "note": "buses to Lewes / Brighton",
-      "lat": null,
-      "lon": null
+      "lat": 50.866437,
+      "lon": -0.05678
     },
     {
       "name": "Southease (River Ouse)",
       "milesFromStart": 83.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 50.831124,
+      "lon": 0.030407
     },
     {
       "name": "Firle Beacon",
       "milesFromStart": 87.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.833556,
+      "lon": 0.108041
     },
     {
       "name": "Alfriston (River Cuckmere)",
       "milesFromStart": 90.5,
       "note": "buses; Berwick station ~2.5 miles",
-      "lat": null,
-      "lon": null
+      "lat": 50.807524,
+      "lon": 0.158869
     },
     {
       "name": "Litlington",
       "milesFromStart": 92.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.794989,
+      "lon": 0.159811
     },
     {
       "name": "Exceat / Seven Sisters Country Park",
       "milesFromStart": 94.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.775132,
+      "lon": 0.153945
     },
     {
       "name": "Birling Gap",
       "milesFromStart": 97.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.742879,
+      "lon": 0.201118
     },
     {
       "name": "Belle Tout Lighthouse",
       "milesFromStart": 98.2,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.737114,
+      "lon": 0.219673
     },
     {
       "name": "Beachy Head",
       "milesFromStart": 99.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 50.738362,
+      "lon": 0.249301
     },
     {
       "name": "Eastbourne",
       "milesFromStart": 101.0,
       "note": "finish",
-      "lat": null,
-      "lon": null
+      "lat": 50.751849,
+      "lon": 0.267084
     }
   ],
   "defaultStages": [
