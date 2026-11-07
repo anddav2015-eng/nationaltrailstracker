@@ -678,5 +678,28 @@
         "why": "end of the route line, South Haven Point"
       }
     }
+  },
+  "yorkshire-wolds-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Hessle (Humber Bridge)": {
+        "point": [
+          53.717469,
+          -0.434698
+        ],
+        "why": "start of the route line, by the Humber Bridge at Hessle"
+      },
+      "High Hunsley Beacon": {
+        "interpolate": true,
+        "why": "the beacon isn't named in OpenStreetMap"
+      },
+      "Filey Brigg": {
+        "point": [
+          54.218599,
+          -0.276591
+        ],
+        "why": "end of the route line, at the root of the Brigg (where the Cleveland Way also ends)"
+      }
+    }
   }
 }

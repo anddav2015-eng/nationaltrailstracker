@@ -158,5 +158,13 @@
         -2.45684
       ]
     ]
+  },
+  "yorkshire-wolds-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Yorkshire_Wolds_Way_Elev.gpx",
+    "mainTracks": [
+      "Yorkshire Wolds Way"
+    ],
+    "officialMiles": 79.0,
+    "osmRelation": 16327216
   }
 }

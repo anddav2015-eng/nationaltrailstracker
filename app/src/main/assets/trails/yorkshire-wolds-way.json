@@ -12,155 +12,155 @@
       "name": "Hessle (Humber Bridge)",
       "milesFromStart": 0.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 53.717469,
+      "lon": -0.434698
     },
     {
       "name": "North Ferriby",
       "milesFromStart": 3.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 53.71436,
+      "lon": -0.501989
     },
     {
       "name": "Welton",
       "milesFromStart": 7.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.734182,
+      "lon": -0.546295
     },
     {
       "name": "Brantingham",
       "milesFromStart": 10.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.756131,
+      "lon": -0.569034
     },
     {
       "name": "South Cave",
       "milesFromStart": 13.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.773879,
+      "lon": -0.59078
     },
     {
       "name": "High Hunsley Beacon",
       "milesFromStart": 17.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.810465,
+      "lon": -0.570998
     },
     {
       "name": "Goodmanham",
       "milesFromStart": 25.0,
       "note": "Market Weighton buses ~1 mi",
-      "lat": null,
-      "lon": null
+      "lat": 53.876761,
+      "lon": -0.647438
     },
     {
       "name": "Londesborough",
       "milesFromStart": 28.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.897958,
+      "lon": -0.679434
     },
     {
       "name": "Nunburnholme",
       "milesFromStart": 30.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.920683,
+      "lon": -0.709309
     },
     {
       "name": "Millington",
       "milesFromStart": 33.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.95158,
+      "lon": -0.726389
     },
     {
       "name": "Huggate",
       "milesFromStart": 39.0,
       "note": "pub; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 53.989894,
+      "lon": -0.658306
     },
     {
       "name": "Fridaythorpe",
       "milesFromStart": 41.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.019785,
+      "lon": -0.666263
     },
     {
       "name": "Thixendale",
       "milesFromStart": 45.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.039118,
+      "lon": -0.715764
     },
     {
       "name": "Wharram Percy",
       "milesFromStart": 49.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.066738,
+      "lon": -0.690288
     },
     {
       "name": "Settrington Beacon",
       "milesFromStart": 55.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.123821,
+      "lon": -0.675305
     },
     {
       "name": "Wintringham",
       "milesFromStart": 58.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.148519,
+      "lon": -0.648857
     },
     {
       "name": "Sherburn",
       "milesFromStart": 64.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.170142,
+      "lon": -0.532544
     },
     {
       "name": "Ganton",
       "milesFromStart": 67.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.178938,
+      "lon": -0.492355
     },
     {
       "name": "Staxton Brow",
       "milesFromStart": 70.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.187107,
+      "lon": -0.437439
     },
     {
       "name": "Muston",
       "milesFromStart": 78.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.200652,
+      "lon": -0.320072
     },
     {
       "name": "Filey",
       "milesFromStart": 80.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.209654,
+      "lon": -0.288871
     },
     {
       "name": "Filey Brigg",
       "milesFromStart": 81.5,
       "note": "finish",
-      "lat": null,
-      "lon": null
+      "lat": 54.218599,
+      "lon": -0.276591
     }
   ],
   "defaultStages": [

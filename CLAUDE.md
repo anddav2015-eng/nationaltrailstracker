@@ -226,9 +226,10 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
 - [x] South West Coast Path: routed per official GPX part, with straight lines for the 10 ferry
       crossings (included in line miles, about 7 mi); goes round Portland; Plymouth and River Yealm
       stage ends pinned at the ferry landings; Ferry Bridge out and back via the new `"pass"` override
+- [x] Yorkshire Wolds Way: ends at the same point as the Cleveland Way (root of Filey Brigg);
+      High Hunsley Beacon is placed by table mileage
 
-**To do** (England and Wales: official GPX from nationaltrail.co.uk):
-- [ ] Yorkshire Wolds Way
+All 17 England and Wales trails are done.
 
 **To do** (Scotland: not on nationaltrail.co.uk, so the source and licence need checking first):
 - [ ] Great Glen Way

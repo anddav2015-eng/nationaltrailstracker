@@ -48,7 +48,8 @@ its three section relations), Cotswold Way (OSM relation 65239), Glyndŵr's Way 
 Hadrian's Wall Path (OSM relation 38791), Offa's Dyke Path (OSM relation 9649), Peddars Way and Norfolk
 Coast Path (OSM relations 77958 and 77959), Pembrokeshire Coast Path (OSM superroute 77964), Pennine
 Bridleway (OSM relation 50288), Pennine Way (OSM superroute 4080347), The Ridgeway (OSM relation
-8879) and South West Coast Path (OSM superroute 2376086), each with its official GPX. The Norfolk Coast Path from Cromer to
+8879), South West Coast Path (OSM superroute 2376086) and Yorkshire Wolds Way (OSM superroute 16327216),
+each with its official GPX. The Norfolk Coast Path from Cromer to
 Hopton-on-Sea is OSM only, because the official GPX stops at Cromer.
 
 In the app, these credits are shown in each mapped trail's ⓘ dialog under "Map sources". The
