@@ -33,7 +33,9 @@ For each trail it:
 3. Joins the tracks named in `mainTracks` into one line, in the order given. An entry can also be
    `{"name": "...", "until": [lat, lon]}` (or `"from"`) to cut a track at its nearest vertex, e.g. where
    a branch leaves it. The North Downs Way uses this: track A up to Boughton Lees, then the Canterbury
-   loop. Exact repeated points are dropped (reported). Gaps between segments are reported but not
+   loop. A GPX `<rte>` (route) is read as a one-segment track of the same name (the Cotswold Way's
+   file is one). `"reverse": true` turns the joined line round when the GPX runs the opposite way
+   to the table (the Cotswold Way's runs from Bath). Exact repeated points are dropped (reported). Gaps between segments are reported but not
    bridged. Long straight steps (over 400 m) and sharp reversals (over 150°) are
    listed so they can be checked by eye. Nothing is repaired automatically.
 4. Writes `trail-data/map-lines/<slug>-full.geojson`: every GPX point, as one `LineString` with

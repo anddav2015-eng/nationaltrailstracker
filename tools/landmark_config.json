@@ -347,5 +347,34 @@
         "why": "where the trail joins the Cleveland Way, 1.4 km north of the village (owner's choice)"
       }
     }
+  },
+  "cotswold-way": {
+    "mapLine": "osm",
+    "overrides": {
+      "Chipping Campden": {
+        "point": [
+          52.050547,
+          -1.781531
+        ],
+        "why": "start of the route line, Chipping Campden High Street"
+      },
+      "Dowdeswell": {
+        "query": "Dowdeswell Reservoir"
+      },
+      "Cleeve Common summit": {
+        "interpolate": true,
+        "why": "the summit trig point isn't named in OpenStreetMap"
+      },
+      "Lansdown": {
+        "query": "Lansdown Hill"
+      },
+      "Bath Abbey": {
+        "point": [
+          51.381368,
+          -2.359475
+        ],
+        "why": "end of the route line, at Bath Abbey"
+      }
+    }
   }
 }

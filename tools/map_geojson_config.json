@@ -45,5 +45,14 @@
     ],
     "officialMiles": 190.0,
     "osmRelation": 12145
+  },
+  "cotswold-way": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Cotswold-Way-2019.gpx",
+    "mainTracks": [
+      "Cotswold Way"
+    ],
+    "officialMiles": 102.0,
+    "reverse": true,
+    "osmRelation": 65239
   }
 }

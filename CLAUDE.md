@@ -186,5 +186,50 @@ Tapping a leg of a trail opens a map showing the trail line, the selected leg hi
 ### Status
 - [x] Step 1 data prep
 - [x] Step 2 landmarks and legs
-- [x] Step 3 map screen
+  - [x] Step 3 map screen
 - [x] Step 4 polish
+'
+### Latest status 6th NOv 26
+We have coded maps, location and plugged in the THames Path and North Downs Way. I will now try this
+out on the trail over the next couple of weeks, and identify and new features. 
+
+
+## Trail map data progress
+
+Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_trails.py` (see
+`tools/README.md`), then is committed after the owner reviews it. Claude keeps this list up to date.
+
+**Done** (map line, landmark coordinates and legs):
+- [x] Thames Path
+- [x] North Downs Way (via Canterbury)
+- [x] South Downs Way: OSM follows the official walking alternative near Washington
+- [x] Cleveland Way: "Filey" renamed "Filey Country Park"; Scarborough stage end at Scalby Mills
+- [x] Coast to Coast: "Gunnerside" renamed "Gunnerside Gill (Blakethwaite)"; Osmotherley pinned at
+      the Cleveland Way junction; the A19 detour before Ingleby Cross isn't in the table's miles
+- [x] Cotswold Way: the GPX is a reversed `<rte>`; OSM
+      includes the Stinchcombe Hill loop
+
+**To do** (England and Wales: official GPX from nationaltrail.co.uk):
+- [ ] Glyndŵr's Way
+- [ ] Hadrian's Wall Path
+- [ ] Offa's Dyke Path
+- [ ] Peddars Way and Norfolk Coast Path
+- [ ] Pembrokeshire Coast Path
+- [ ] Pennine Bridleway
+- [ ] Pennine Way
+- [ ] The Ridgeway
+- [ ] South West Coast Path
+- [ ] Yorkshire Wolds Way
+
+**To do** (Scotland: not on nationaltrail.co.uk, so the source and licence need checking first):
+- [ ] Great Glen Way
+- [ ] Southern Upland Way
+- [ ] Speyside Way
+- [ ] West Highland Way
+
+**Not planned:** King Charles III England Coast Path (a placeholder with no stages).
+
+**Open table questions** (line and table mileages differ; the table is unchanged until the owner decides):
+- South Downs Way: Housedean Farm and Devil's Dyke → Pyecombe
+- Coast to Coast: Blakey Ridge (Lion Inn) is about 3 mi too far along
+- Cotswold Way: Painswick is about 1.2 mi too far along

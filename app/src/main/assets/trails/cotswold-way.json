@@ -12,246 +12,246 @@
       "name": "Chipping Campden",
       "milesFromStart": 0.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.050547,
+      "lon": -1.781531
     },
     {
       "name": "Dover's Hill",
       "milesFromStart": 1.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.056488,
+      "lon": -1.79795
     },
     {
       "name": "Broadway Tower",
       "milesFromStart": 5.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.024367,
+      "lon": -1.835561
     },
     {
       "name": "Broadway",
       "milesFromStart": 6.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.035837,
+      "lon": -1.861979
     },
     {
       "name": "Stanton",
       "milesFromStart": 9.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.005745,
+      "lon": -1.902762
     },
     {
       "name": "Wood Stanway",
       "milesFromStart": 12.5,
       "note": "taxi/Uber",
-      "lat": null,
-      "lon": null
+      "lat": 51.979801,
+      "lon": -1.909661
     },
     {
       "name": "Hailes Abbey",
       "milesFromStart": 15.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.969386,
+      "lon": -1.92773
     },
     {
       "name": "Winchcombe",
       "milesFromStart": 17.9,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.952931,
+      "lon": -1.965423
     },
     {
       "name": "Belas Knap",
       "milesFromStart": 20.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.92764,
+      "lon": -1.970967
     },
     {
       "name": "Cleeve Hill",
       "milesFromStart": 23.5,
       "note": "buses to Cheltenham",
-      "lat": null,
-      "lon": null
+      "lat": 51.936017,
+      "lon": -2.022115
     },
     {
       "name": "Cleeve Common summit",
       "milesFromStart": 25.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.920158,
+      "lon": -2.015141
     },
     {
       "name": "Dowdeswell",
       "milesFromStart": 29.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.878146,
+      "lon": -2.019081
     },
     {
       "name": "Seven Springs",
       "milesFromStart": 31.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.852885,
+      "lon": -2.047273
     },
     {
       "name": "Leckhampton Hill",
       "milesFromStart": 33.7,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.864281,
+      "lon": -2.07604
     },
     {
       "name": "Crickley Hill Country Park",
       "milesFromStart": 36.5,
       "note": "taxi/Uber",
-      "lat": null,
-      "lon": null
+      "lat": 51.847609,
+      "lon": -2.100391
     },
     {
       "name": "Birdlip",
       "milesFromStart": 39.3,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.828171,
+      "lon": -2.112233
     },
     {
       "name": "Cooper's Hill",
       "milesFromStart": 42.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.830548,
+      "lon": -2.158052
     },
     {
       "name": "Painswick Beacon",
       "milesFromStart": 45.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.805716,
+      "lon": -2.191302
     },
     {
       "name": "Painswick",
       "milesFromStart": 47.9,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.785961,
+      "lon": -2.195142
     },
     {
       "name": "Haresfield Beacon",
       "milesFromStart": 51.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.778265,
+      "lon": -2.26176
     },
     {
       "name": "King's Stanley",
       "milesFromStart": 55.7,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.730776,
+      "lon": -2.270761
     },
     {
       "name": "Coaley Peak",
       "milesFromStart": 58.5,
       "note": "picnic site; taxi/Uber",
-      "lat": null,
-      "lon": null
+      "lat": 51.709199,
+      "lon": -2.299557
     },
     {
       "name": "Dursley",
       "milesFromStart": 62.9,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.681548,
+      "lon": -2.354934
     },
     {
       "name": "Stinchcombe Hill",
       "milesFromStart": 64.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.686063,
+      "lon": -2.374345
     },
     {
       "name": "Tyndale Monument",
       "milesFromStart": 67.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.658929,
+      "lon": -2.372413
     },
     {
       "name": "Wotton-under-Edge",
       "milesFromStart": 70.2,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.63777,
+      "lon": -2.352295
     },
     {
       "name": "Hawkesbury Upton",
       "milesFromStart": 77.6,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.581232,
+      "lon": -2.327758
     },
     {
       "name": "Horton",
       "milesFromStart": 80.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.556841,
+      "lon": -2.345416
     },
     {
       "name": "Old Sodbury",
       "milesFromStart": 83.0,
       "note": "pub; buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.534198,
+      "lon": -2.352699
     },
     {
       "name": "Tormarton",
       "milesFromStart": 85.3,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.507653,
+      "lon": -2.33446
     },
     {
       "name": "Dyrham",
       "milesFromStart": 88.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.479639,
+      "lon": -2.37584
     },
     {
       "name": "Cold Ashton",
       "milesFromStart": 91.9,
       "note": "taxi/Uber",
-      "lat": null,
-      "lon": null
+      "lat": 51.452098,
+      "lon": -2.360229
     },
     {
       "name": "Lansdown",
       "milesFromStart": 96.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.421204,
+      "lon": -2.411577
     },
     {
       "name": "Weston",
       "milesFromStart": 99.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.395578,
+      "lon": -2.392586
     },
     {
       "name": "Bath Abbey",
       "milesFromStart": 102.1,
       "note": "finish; station",
-      "lat": null,
-      "lon": null
+      "lat": 51.381368,
+      "lon": -2.359475
     }
   ],
   "defaultStages": [

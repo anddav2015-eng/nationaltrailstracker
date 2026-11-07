@@ -90,6 +90,18 @@ def fetch_gpx(url):
     return path
 
 
+def routes_as_tracks(gpx):
+    """Some GPX files (e.g. the Cotswold Way's, exported from OS Maps) hold the line as a <rte>
+    rather than a <trk>. Treat each route as a one-segment track of the same name."""
+    for r in gpx.routes:
+        seg = gpxpy.gpx.GPXTrackSegment(
+            [gpxpy.gpx.GPXTrackPoint(p.latitude, p.longitude, elevation=p.elevation) for p in r.points])
+        track = gpxpy.gpx.GPXTrack(name=r.name)
+        track.segments.append(seg)
+        gpx.tracks.append(track)
+        print(f"  route {r.name!r} ({len(r.points)} pts) read as a track")
+
+
 def describe_tracks(gpx):
     """Report every track/segment, so diversions and link routes are visible."""
     print(f"  waypoints: {len(gpx.waypoints)}, routes: {len(gpx.routes)}, tracks: {len(gpx.tracks)}")
@@ -417,6 +429,7 @@ def build(slug, cfg):
     gpx_path = fetch_gpx(cfg["gpxUrl"])
     with open(gpx_path, encoding="utf-8") as f:
         gpx = gpxpy.parse(f)
+    routes_as_tracks(gpx)
     describe_tracks(gpx)
     names = [track_name(e) for e in cfg["mainTracks"]]
     others = [t.name for t in gpx.tracks if t.name not in names]
@@ -425,6 +438,11 @@ def build(slug, cfg):
         print("  mainTracks is empty: pick the main-route track(s) from the list above, then re-run.")
         return
     points = merge_main(gpx, cfg["mainTracks"])
+    if cfg.get("reverse"):
+        # The GPX runs the opposite way to the table (e.g. Bath -> Chipping Campden).
+        points.reverse()
+        print(f"  reversed to walking order: start {points[0][1]:.5f},{points[0][0]:.5f} "
+              f"end {points[-1][1]:.5f},{points[-1][0]:.5f}")
     check_line(points)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
