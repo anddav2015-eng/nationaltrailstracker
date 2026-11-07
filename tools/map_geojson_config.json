@@ -37,5 +37,13 @@
     ],
     "officialMiles": 109.0,
     "osmRelation": 4087652
+  },
+  "coast-to-coast": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/2026/03/Coast_to_Coast_Elev.gpx",
+    "mainTracks": [
+      "Coast to Coast Main Route"
+    ],
+    "officialMiles": 190.0,
+    "osmRelation": 12145
   }
 }

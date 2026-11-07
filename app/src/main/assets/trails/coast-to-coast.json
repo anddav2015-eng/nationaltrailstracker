@@ -12,295 +12,295 @@
       "name": "St Bees",
       "milesFromStart": 0.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.490747,
+      "lon": -3.606694
     },
     {
       "name": "St Bees Head",
       "milesFromStart": 3.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.513331,
+      "lon": -3.638656
     },
     {
       "name": "Sandwith",
       "milesFromStart": 5.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.517462,
+      "lon": -3.601383
     },
     {
       "name": "Cleator",
       "milesFromStart": 11.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.506907,
+      "lon": -3.522511
     },
     {
       "name": "Dent Fell",
       "milesFromStart": 13.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.503618,
+      "lon": -3.487984
     },
     {
       "name": "Ennerdale Bridge",
       "milesFromStart": 17.1,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.529075,
+      "lon": -3.439016
     },
     {
       "name": "Ennerdale Water (foot)",
       "milesFromStart": 19.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.519662,
+      "lon": -3.38515
     },
     {
       "name": "Black Sail Hut",
       "milesFromStart": 26.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.500301,
+      "lon": -3.244832
     },
     {
       "name": "Honister Pass",
       "milesFromStart": 28.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.51521,
+      "lon": -3.178085
     },
     {
       "name": "Seatoller",
       "milesFromStart": 29.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.513707,
+      "lon": -3.168063
     },
     {
       "name": "Rosthwaite",
       "milesFromStart": 30.3,
       "note": "buses to Keswick",
-      "lat": null,
-      "lon": null
+      "lat": 54.522977,
+      "lon": -3.149164
     },
     {
       "name": "Greenup Edge",
       "milesFromStart": 34.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.485075,
+      "lon": -3.103678
     },
     {
       "name": "Grasmere",
       "milesFromStart": 37.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.467112,
+      "lon": -3.031156
     },
     {
       "name": "Grisedale Tarn",
       "milesFromStart": 40.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.498354,
+      "lon": -3.005088
     },
     {
       "name": "Patterdale",
       "milesFromStart": 44.2,
       "note": "buses to Penrith (seasonal)",
-      "lat": null,
-      "lon": null
+      "lat": 54.533842,
+      "lon": -2.935863
     },
     {
       "name": "Angle Tarn",
       "milesFromStart": 46.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.521131,
+      "lon": -2.899477
     },
     {
       "name": "Kidsty Pike",
       "milesFromStart": 50.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.505569,
+      "lon": -2.854953
     },
     {
       "name": "Burnbanks (Haweswater)",
       "milesFromStart": 55.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.537911,
+      "lon": -2.762196
     },
     {
       "name": "Shap Abbey",
       "milesFromStart": 58.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.531218,
+      "lon": -2.701182
     },
     {
       "name": "Shap",
       "milesFromStart": 59.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.530049,
+      "lon": -2.676971
     },
     {
       "name": "Orton",
       "milesFromStart": 64.9,
-      "note": "pub; taxi",
-      "lat": null,
-      "lon": null
+      "note": "village 1.2 km off the trail; pub; taxi",
+      "lat": 54.47547,
+      "lon": -2.570443
     },
     {
       "name": "Sunbiggin Tarn",
       "milesFromStart": 68.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.463248,
+      "lon": -2.504567
     },
     {
       "name": "Smardale Bridge",
       "milesFromStart": 73.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.448233,
+      "lon": -2.432258
     },
     {
       "name": "Kirkby Stephen",
       "milesFromStart": 78.9,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.472803,
+      "lon": -2.348442
     },
     {
       "name": "Nine Standards Rigg",
       "milesFromStart": 83.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.449923,
+      "lon": -2.270567
     },
     {
       "name": "Ravenseat",
       "milesFromStart": 87.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.425287,
+      "lon": -2.212646
     },
     {
       "name": "Keld",
       "milesFromStart": 89.8,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.405836,
+      "lon": -2.166381
     },
     {
-      "name": "Gunnerside",
+      "name": "Gunnerside Gill (Blakethwaite)",
       "milesFromStart": 95.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.41137,
+      "lon": -2.09857
     },
     {
       "name": "Reeth",
       "milesFromStart": 101.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.389138,
+      "lon": -1.942485
     },
     {
       "name": "Marrick Priory",
       "milesFromStart": 102.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.376139,
+      "lon": -1.898529
     },
     {
       "name": "Richmond",
       "milesFromStart": 111.3,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 54.403199,
+      "lon": -1.738376
     },
     {
       "name": "Bolton-on-Swale",
       "milesFromStart": 116.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.387563,
+      "lon": -1.613545
     },
     {
       "name": "Danby Wiske",
       "milesFromStart": 126.8,
       "note": "pub; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.381764,
+      "lon": -1.483022
     },
     {
       "name": "Ingleby Cross",
       "milesFromStart": 135.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.399271,
+      "lon": -1.30908
     },
     {
       "name": "Osmotherley",
       "milesFromStart": 140.8,
-      "note": "buses",
-      "lat": null,
-      "lon": null
+      "note": "village 1.4 km south along the Cleveland Way; buses",
+      "lat": 54.380913,
+      "lon": -1.302453
     },
     {
       "name": "Clay Bank Top",
       "milesFromStart": 151.7,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.422095,
+      "lon": -1.118588
     },
     {
       "name": "Blakey Ridge (Lion Inn)",
       "milesFromStart": 161.8,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.389329,
+      "lon": -0.956789
     },
     {
       "name": "Glaisdale",
       "milesFromStart": 168.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.440863,
+      "lon": -0.807691
     },
     {
       "name": "Grosmont",
       "milesFromStart": 171.9,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.435878,
+      "lon": -0.724517
     },
     {
       "name": "Littlebeck",
       "milesFromStart": 176.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.432407,
+      "lon": -0.645923
     },
     {
       "name": "Hawsker",
       "milesFromStart": 182.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.452952,
+      "lon": -0.573618
     },
     {
       "name": "Robin Hood's Bay",
       "milesFromStart": 186.9,
       "note": "finish",
-      "lat": null,
-      "lon": null
+      "lat": 54.430233,
+      "lon": -0.532027
     }
   ],
   "defaultStages": [

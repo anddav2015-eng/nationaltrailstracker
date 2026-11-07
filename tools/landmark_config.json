@@ -297,5 +297,55 @@
         "query": "Scalby Mills, Scarborough"
       }
     }
+  },
+  "coast-to-coast": {
+    "mapLine": "osm",
+    "overrides": {
+      "St Bees": {
+        "point": [
+          54.490747,
+          -3.606694
+        ],
+        "why": "start of the OSM route line, by the beach at St Bees (the official start is 175 m away)"
+      },
+      "St Bees Head": {
+        "query": "St Bees Lighthouse"
+      },
+      "Dent Fell": {
+        "point": [
+          54.50359,
+          -3.48802
+        ],
+        "why": "Dent summit (OSM), on the trail"
+      },
+      "Blakey Ridge (Lion Inn)": {
+        "point": [
+          54.38839,
+          -0.95587
+        ],
+        "why": "The Lion Inn (OSM), 120 m from the trail"
+      },
+      "Robin Hood's Bay": {
+        "point": [
+          54.430233,
+          -0.532027
+        ],
+        "why": "end of the route line, at the slipway"
+      },
+      "Gunnerside Gill (Blakethwaite)": {
+        "point": [
+          54.41137,
+          -2.09857
+        ],
+        "why": "where the main (high-level) route crosses Gunnerside Beck at the Blakethwaite mines (OSM)"
+      },
+      "Osmotherley": {
+        "point": [
+          54.38091,
+          -1.30245
+        ],
+        "why": "where the trail joins the Cleveland Way, 1.4 km north of the village (owner's choice)"
+      }
+    }
   }
 }
