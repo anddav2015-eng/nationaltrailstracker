@@ -12,239 +12,239 @@
       "name": "Knettishall Heath",
       "milesFromStart": 0.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.390613,
+      "lon": 0.854975
     },
     {
       "name": "Stonebridge (East Wretham)",
       "milesFromStart": 9.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.481021,
+      "lon": 0.835978
     },
     {
       "name": "Thompson Water",
       "milesFromStart": 11.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.517697,
+      "lon": 0.818307
     },
     {
       "name": "Little Cressingham",
       "milesFromStart": 14.5,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.56551,
+      "lon": 0.76297
     },
     {
       "name": "North Pickenham",
       "milesFromStart": 19.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.627077,
+      "lon": 0.750275
     },
     {
       "name": "Castle Acre",
       "milesFromStart": 26.2,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.703774,
+      "lon": 0.688251
     },
     {
       "name": "Great Massingham",
       "milesFromStart": 31.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.77086,
+      "lon": 0.642259
     },
     {
       "name": "Sedgeford",
       "milesFromStart": 40.1,
-      "note": "buses",
-      "lat": null,
-      "lon": null
+      "note": "village 1.1 km off the trail; buses",
+      "lat": 52.899806,
+      "lon": 0.559075
     },
     {
       "name": "Ringstead",
       "milesFromStart": 44.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.933476,
+      "lon": 0.538371
     },
     {
       "name": "Holme-next-the-Sea",
       "milesFromStart": 49.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.969614,
+      "lon": 0.53542
     },
     {
       "name": "Thornham",
       "milesFromStart": 52.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.961758,
+      "lon": 0.579199
     },
     {
       "name": "Brancaster Staithe",
       "milesFromStart": 55.5,
       "note": "Coasthopper bus",
-      "lat": null,
-      "lon": null
+      "lat": 52.967144,
+      "lon": 0.669955
     },
     {
       "name": "Burnham Overy Staithe",
       "milesFromStart": 65.1,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.964617,
+      "lon": 0.743659
     },
     {
       "name": "Holkham Gap",
       "milesFromStart": 68.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.969436,
+      "lon": 0.812467
     },
     {
       "name": "Wells-next-the-Sea",
       "milesFromStart": 70.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.957157,
+      "lon": 0.852622
     },
     {
       "name": "Stiffkey",
       "milesFromStart": 74.9,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.957405,
+      "lon": 0.936068
     },
     {
       "name": "Blakeney",
       "milesFromStart": 79.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.955544,
+      "lon": 1.015891
     },
     {
       "name": "Cley next the Sea",
       "milesFromStart": 81.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.952788,
+      "lon": 1.042604
     },
     {
       "name": "Salthouse",
       "milesFromStart": 83.5,
       "note": "Coasthopper bus",
-      "lat": null,
-      "lon": null
+      "lat": 52.957167,
+      "lon": 1.091012
     },
     {
       "name": "Weybourne",
       "milesFromStart": 87.4,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.948673,
+      "lon": 1.142558
     },
     {
       "name": "Sheringham",
       "milesFromStart": 90.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.945043,
+      "lon": 1.213755
     },
     {
       "name": "West Runton",
       "milesFromStart": 92.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.941365,
+      "lon": 1.246055
     },
     {
       "name": "Cromer",
       "milesFromStart": 96.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.931895,
+      "lon": 1.302185
     },
     {
       "name": "Overstrand",
       "milesFromStart": 98.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.920638,
+      "lon": 1.339936
     },
     {
       "name": "Mundesley",
       "milesFromStart": 103.75,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.878295,
+      "lon": 1.435165
     },
     {
       "name": "Bacton",
       "milesFromStart": 106.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.852386,
+      "lon": 1.481394
     },
     {
       "name": "Happisburgh",
       "milesFromStart": 109.75,
       "note": "buses; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 52.825241,
+      "lon": 1.533022
     },
     {
       "name": "Sea Palling",
       "milesFromStart": 113.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.788492,
+      "lon": 1.602148
     },
     {
       "name": "Horsey Gap",
       "milesFromStart": 116.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.758746,
+      "lon": 1.65028
     },
     {
       "name": "Winterton-on-Sea",
       "milesFromStart": 118.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.722417,
+      "lon": 1.694843
     },
     {
       "name": "Caister-on-Sea",
       "milesFromStart": 124.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.652263,
+      "lon": 1.732732
     },
     {
       "name": "Great Yarmouth",
       "milesFromStart": 127.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.605474,
+      "lon": 1.731779
     },
     {
       "name": "Gorleston-on-Sea",
       "milesFromStart": 130.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.578286,
+      "lon": 1.731597
     },
     {
       "name": "Hopton-on-Sea",
       "milesFromStart": 134.0,
       "note": "finish; buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.536241,
+      "lon": 1.737602
     }
   ],
   "defaultStages": [

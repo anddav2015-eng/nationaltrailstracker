@@ -291,12 +291,19 @@ def fetch_relation_ways(relation_id, depth=0):
     return rel, lonlat, unique
 
 
-def build_osm(slug, relation_id, gpx_points):
-    """Route through the OSM relation's ways from the GPX start to the GPX end."""
-    print(f"  -- OpenStreetMap relation {relation_id} --")
-    rel, lonlat, member_ways = fetch_relation_ways(relation_id)
-    print(f"  relation '{rel['tags'].get('name')}' v{rel['version']} ({rel['timestamp']}): "
-          f"{len(member_ways)} ways")
+def build_osm(slug, relation_ids, gpx_points, end_latlon=None):
+    """Route through the OSM relations' ways from the GPX start to the GPX end (or to end_latlon,
+    when the trail carries on past the end of the official GPX)."""
+    rels, lonlat, by_id = [], {}, {}
+    for relation_id in relation_ids:
+        print(f"  -- OpenStreetMap relation {relation_id} --")
+        rel, rel_lonlat, rel_ways = fetch_relation_ways(relation_id)
+        print(f"  relation '{rel['tags'].get('name')}' v{rel['version']} ({rel['timestamp']}): "
+              f"{len(rel_ways)} ways")
+        rels.append(rel)
+        lonlat.update(rel_lonlat)
+        by_id.update({w["id"]: w for w in rel_ways})
+    member_ways = list(by_id.values())
 
     xy = {n: TO_BNG.transform(*ll) for n, ll in lonlat.items()}
     adj = defaultdict(dict)   # node -> {neighbour: cost}
@@ -359,9 +366,16 @@ def build_osm(slug, relation_id, gpx_points):
                     off_edges += 1
     print(f"  {off_edges} OSM way segments more than {OSM_FOLLOW_M:.0f} m from the official line are avoided where possible")
     src = min(adj, key=lambda n: math.dist(xy[n], gpx.xy[0]))
-    dst = min(adj, key=lambda n: math.dist(xy[n], gpx.xy[-1]))
-    print(f"  start node {math.dist(xy[src], gpx.xy[0]):.0f} m from the GPX start, "
-          f"end node {math.dist(xy[dst], gpx.xy[-1]):.0f} m from the GPX end")
+    if end_latlon:
+        end_xy = TO_BNG.transform(end_latlon[1], end_latlon[0])
+        dst = min(adj, key=lambda n: math.dist(xy[n], end_xy))
+        print(f"  start node {math.dist(xy[src], gpx.xy[0]):.0f} m from the GPX start, "
+              f"end node {math.dist(xy[dst], end_xy):.0f} m from osmEnd {end_latlon[0]:.5f},{end_latlon[1]:.5f} "
+              f"(beyond the official GPX, which ends {math.dist(xy[dst], gpx.xy[-1]) / METRES_PER_MILE:.1f} mi away)")
+    else:
+        dst = min(adj, key=lambda n: math.dist(xy[n], gpx.xy[-1]))
+        print(f"  start node {math.dist(xy[src], gpx.xy[0]):.0f} m from the GPX start, "
+              f"end node {math.dist(xy[dst], gpx.xy[-1]):.0f} m from the GPX end")
 
     dist, prev, heap = {src: 0.0}, {}, [(0.0, src)]
     while heap:
@@ -394,9 +408,12 @@ def build_osm(slug, relation_id, gpx_points):
                   f"{math.dist(xy[a], xy[b]):.0f} m between {lonlat[a][1]:.5f},{lonlat[a][0]:.5f} "
                   f"and {lonlat[b][1]:.5f},{lonlat[b][0]:.5f}")
             points.extend(fill)
-        points.append((*lonlat[n], gpx.elevation_at(xy[n])))
+        # Elevation only where the official line is close; past its end (osmEnd) there is none.
+        ele = (None if end_latlon and gpx.line.distance(Point(xy[n])) >= OSM_FOLLOW_M
+               else gpx.elevation_at(xy[n]))
+        points.append((*lonlat[n], ele))
     report_deviation(points, gpx)
-    return points, fills, rel
+    return points, fills, rels
 
 
 def report_deviation(points, gpx):
@@ -459,19 +476,22 @@ def build(slug, cfg):
               f"{path.stat().st_size / 1024:>10.1f}")
 
     if "osmRelation" in cfg:
-        result = build_osm(slug, cfg["osmRelation"], points)
+        ids = cfg["osmRelation"] if isinstance(cfg["osmRelation"], list) else [cfg["osmRelation"]]
+        result = build_osm(slug, ids, points, cfg.get("osmEnd"))
         if result:
-            osm_points, fills, rel = result
+            osm_points, fills, rels = result
             gj = to_geojson(slug, osm_points, "osm", None, cfg["gpxUrl"], cfg["mainTracks"])
             props = gj["features"][0]["properties"]
             del props["sourceGpx"], props["sourceTracks"]
             props.update({
-                "source": f"OpenStreetMap relation {rel['id']} v{rel['version']} ({rel['timestamp']})",
+                "source": "; ".join(f"OpenStreetMap relation {rel['id']} v{rel['version']} ({rel['timestamp']})"
+                                    for rel in rels),
                 "licence": "ODbL 1.0",
                 "attribution": OSM_ATTRIBUTION,
-                "elevation": ("approximate, from the nearest point on the official GPX line"
-                              if any(p[2] is not None for p in points)
-                              else "none (the official GPX has no elevation)"),
+                "elevation": ("none (the official GPX has no elevation)"
+                              if all(p[2] is None for p in points)
+                              else "approximate, from the nearest point on the official GPX line"
+                              + (" (none past its end)" if cfg.get("osmEnd") else "")),
                 "gpxFilledGaps": fills,
             })
             path = OUT_DIR / f"{slug}-osm.geojson"

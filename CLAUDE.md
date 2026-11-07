@@ -213,11 +213,15 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
 - [x] Offa's Dyke Path: White Castle moved to 28.5 mi (it comes after Llantilio Crossenny);
       Brompton Crossroads and Chirk Mill pinned to the A489 and River Ceiriog crossings;
       Hatterrall Ridge (Longtown path) is still placed by table mileage
+- [x] Peddars Way and Norfolk Coast Path: the official GPX stops at Cromer, so Cromer → Hopton is the
+      OSM line only (no elevation); Sedgeford note says the village is 1.1 km off the trail
+- [x] Pembrokeshire Coast Path: OSM main route (the Castlemartin and Gann alternatives are left out);
+      St Ann's Head is placed by table mileage
+- [x] Pennine Bridleway: the eastern side of the Mary Towneley Loop (the western side, Settle Loop and
+      spurs are left out); Hebden Bridge and Pendragon Castle are 1.7 and 2.2 km off the trail
+      (notes added)
 
 **To do** (England and Wales: official GPX from nationaltrail.co.uk):
-- [ ] Peddars Way and Norfolk Coast Path
-- [ ] Pembrokeshire Coast Path
-- [ ] Pennine Bridleway
 - [ ] Pennine Way
 - [ ] The Ridgeway
 - [ ] South West Coast Path
@@ -238,3 +242,7 @@ Each trail goes through `build_map_geojson.py` → `build_legs.py` → `convert_
 - Glyndŵr's Way: Dolanog is about 2.7 mi too early (Dolanog → Meifod is 7.1 mi on the line, 10.0 in the table)
 - Hadrian's Wall Path: Birdoswald → Carlisle is 18.0 mi on the line, 16.0 in the table
 - Offa's Dyke Path: Hay Bluff and Hay-on-Wye (Hatterrall Ridge → Hay is 8.9 mi on the line, 11.8 in the table)
+- Peddars Way and Norfolk Coast Path: Brancaster Staithe → Wells (11.4 mi on the line, 15.0 in the table) and
+  Salthouse → Cromer (9.7 against 12.5)
+- Pennine Bridleway: Hebden Bridge → Wycoller (18.2 mi on the line, 12.5 in the table), Middleton Top → Hurdlow
+  (13.4 against 16.5) and Garsdale Head → The Street (11.1 against 15.0)

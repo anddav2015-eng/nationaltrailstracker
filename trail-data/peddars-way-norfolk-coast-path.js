@@ -17,7 +17,7 @@ window.TRAILS["peddars-way-norfolk-coast-path"] = {
     ["North Pickenham", 19],
     ["Castle Acre", 26.2, "taxi"],
     ["Great Massingham", 31],
-    ["Sedgeford", 40.1, "buses"],
+    ["Sedgeford", 40.1, "village 1.1 km off the trail; buses"],
     ["Ringstead", 44],
     ["Holme-next-the-Sea", 49],
     ["Thornham", 52],

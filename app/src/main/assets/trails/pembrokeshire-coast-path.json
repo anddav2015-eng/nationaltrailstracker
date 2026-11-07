@@ -12,302 +12,302 @@
       "name": "St Dogmaels",
       "milesFromStart": 0.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.089727,
+      "lon": -4.68254
     },
     {
       "name": "Poppit Sands",
       "milesFromStart": 1.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.104089,
+      "lon": -4.698043
     },
     {
       "name": "Cemaes Head",
       "milesFromStart": 4.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.115442,
+      "lon": -4.728882
     },
     {
       "name": "Ceibwr Bay (Moylegrove)",
       "milesFromStart": 8.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.078066,
+      "lon": -4.761507
     },
     {
       "name": "Newport",
       "milesFromStart": 15.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 52.020205,
+      "lon": -4.830426
     },
     {
       "name": "Dinas Island",
       "milesFromStart": 21.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.032854,
+      "lon": -4.909054
     },
     {
       "name": "Fishguard (Lower Town)",
       "milesFromStart": 27.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.995348,
+      "lon": -4.975293
     },
     {
       "name": "Goodwick",
       "milesFromStart": 29.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 52.004436,
+      "lon": -4.993366
     },
     {
       "name": "Strumble Head",
       "milesFromStart": 34.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 52.029135,
+      "lon": -5.070497
     },
     {
       "name": "Pwll Deri",
       "milesFromStart": 36.5,
       "note": "Strumble Shuttle",
-      "lat": null,
-      "lon": null
+      "lat": 52.007379,
+      "lon": -5.07223
     },
     {
       "name": "Abercastle",
       "milesFromStart": 43.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.959953,
+      "lon": -5.12634
     },
     {
       "name": "Trefin",
       "milesFromStart": 46.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.952282,
+      "lon": -5.148053
     },
     {
       "name": "Porthgain",
       "milesFromStart": 48.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.948389,
+      "lon": -5.181471
     },
     {
       "name": "Abereiddi",
       "milesFromStart": 50.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.935395,
+      "lon": -5.205759
     },
     {
       "name": "Whitesands Bay",
       "milesFromStart": 58.5,
       "note": "Celtic Coaster to St Davids",
-      "lat": null,
-      "lon": null
+      "lat": 51.892006,
+      "lon": -5.297667
     },
     {
       "name": "St Justinian's",
       "milesFromStart": 61.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.878934,
+      "lon": -5.30935
     },
     {
       "name": "Porthclais",
       "milesFromStart": 65.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.870442,
+      "lon": -5.283543
     },
     {
       "name": "Solva",
       "milesFromStart": 71.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.872107,
+      "lon": -5.196993
     },
     {
       "name": "Newgale",
       "milesFromStart": 76.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.857666,
+      "lon": -5.126898
     },
     {
       "name": "Nolton Haven",
       "milesFromStart": 79.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.82476,
+      "lon": -5.106519
     },
     {
       "name": "Broad Haven",
       "milesFromStart": 83.5,
       "note": "Puffin Shuttle",
-      "lat": null,
-      "lon": null
+      "lat": 51.780391,
+      "lon": -5.102791
     },
     {
       "name": "St Brides",
       "milesFromStart": 88.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.753532,
+      "lon": -5.18512
     },
     {
       "name": "Martin's Haven",
       "milesFromStart": 94.5,
       "note": "Puffin Shuttle",
-      "lat": null,
-      "lon": null
+      "lat": 51.734428,
+      "lon": -5.245266
     },
     {
       "name": "Marloes Sands",
       "milesFromStart": 97.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.720006,
+      "lon": -5.204491
     },
     {
       "name": "St Ann's Head",
       "milesFromStart": 101.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.687648,
+      "lon": -5.171583
     },
     {
       "name": "Dale",
       "milesFromStart": 104.5,
       "note": "Puffin Shuttle",
-      "lat": null,
-      "lon": null
+      "lat": 51.707511,
+      "lon": -5.169138
     },
     {
       "name": "Sandy Haven (tidal)",
       "milesFromStart": 111.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.724177,
+      "lon": -5.103535
     },
     {
       "name": "Milford Haven",
       "milesFromStart": 115.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.714171,
+      "lon": -5.0418
     },
     {
       "name": "Neyland",
       "milesFromStart": 120.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.707769,
+      "lon": -4.955384
     },
     {
       "name": "Pembroke Dock",
       "milesFromStart": 123.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.696088,
+      "lon": -4.938804
     },
     {
       "name": "Pembroke",
       "milesFromStart": 126.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.67592,
+      "lon": -4.921516
     },
     {
       "name": "Angle",
       "milesFromStart": 136.5,
       "note": "Coastal Cruiser",
-      "lat": null,
-      "lon": null
+      "lat": 51.675899,
+      "lon": -5.050883
     },
     {
       "name": "Freshwater West",
       "milesFromStart": 146.5,
       "note": "Coastal Cruiser",
-      "lat": null,
-      "lon": null
+      "lat": 51.659558,
+      "lon": -5.061551
     },
     {
       "name": "Stack Rocks",
       "milesFromStart": 150.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.612127,
+      "lon": -4.996192
     },
     {
       "name": "St Govan's Chapel",
       "milesFromStart": 154.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.599226,
+      "lon": -4.937131
     },
     {
       "name": "Broad Haven South",
       "milesFromStart": 156.5,
       "note": "Coastal Cruiser",
-      "lat": null,
-      "lon": null
+      "lat": 51.609689,
+      "lon": -4.922273
     },
     {
       "name": "Stackpole Quay",
       "milesFromStart": 159.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.624352,
+      "lon": -4.90141
     },
     {
       "name": "Freshwater East",
       "milesFromStart": 161.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.645234,
+      "lon": -4.86671
     },
     {
       "name": "Manorbier",
       "milesFromStart": 164.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.643665,
+      "lon": -4.803472
     },
     {
       "name": "Skrinkle Haven",
       "milesFromStart": 167.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 51.642645,
+      "lon": -4.777066
     },
     {
       "name": "Tenby",
       "milesFromStart": 172.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.67392,
+      "lon": -4.702194
     },
     {
       "name": "Saundersfoot",
       "milesFromStart": 177.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 51.710818,
+      "lon": -4.699235
     },
     {
       "name": "Amroth",
       "milesFromStart": 181.5,
       "note": "finish; buses",
-      "lat": null,
-      "lon": null
+      "lat": 51.734263,
+      "lon": -4.647344
     }
   ],
   "defaultStages": [

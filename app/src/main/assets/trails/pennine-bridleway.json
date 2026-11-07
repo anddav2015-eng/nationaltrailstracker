@@ -12,239 +12,239 @@
       "name": "Middleton Top",
       "milesFromStart": 0.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 53.093015,
+      "lon": -1.590534
     },
     {
       "name": "Minninglow",
       "milesFromStart": 6.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.120278,
+      "lon": -1.710681
     },
     {
       "name": "Parsley Hay",
       "milesFromStart": 12.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.170513,
+      "lon": -1.782696
     },
     {
       "name": "Hurdlow",
       "milesFromStart": 16.5,
       "note": "pub; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 53.19019,
+      "lon": -1.809843
     },
     {
       "name": "Chelmorton",
       "milesFromStart": 21.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.224972,
+      "lon": -1.822352
     },
     {
       "name": "Wormhill",
       "milesFromStart": 25.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.267443,
+      "lon": -1.816273
     },
     {
       "name": "Peak Forest",
       "milesFromStart": 29.5,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.319073,
+      "lon": -1.835565
     },
     {
       "name": "Roych Clough",
       "milesFromStart": 34.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.352856,
+      "lon": -1.896875
     },
     {
       "name": "Hayfield",
       "milesFromStart": 38.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.379288,
+      "lon": -1.945636
     },
     {
       "name": "Charlesworth",
       "milesFromStart": 43.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.432668,
+      "lon": -1.993761
     },
     {
       "name": "Tintwistle",
       "milesFromStart": 48.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.473711,
+      "lon": -1.970949
     },
     {
       "name": "Carrbrook",
       "milesFromStart": 52.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.505029,
+      "lon": -2.017587
     },
     {
       "name": "Uppermill",
       "milesFromStart": 57.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.546783,
+      "lon": -2.002477
     },
     {
       "name": "Diggle",
       "milesFromStart": 59.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.568061,
+      "lon": -1.990871
     },
     {
       "name": "Hollingworth Lake",
       "milesFromStart": 66.5,
       "note": "Smithy Bridge station",
-      "lat": null,
-      "lon": null
+      "lat": 53.631432,
+      "lon": -2.090854
     },
     {
       "name": "Summit (Mary Towneley Loop)",
       "milesFromStart": 73.6,
       "note": "Littleborough station ~1.5 mi",
-      "lat": null,
-      "lon": null
+      "lat": 53.665743,
+      "lon": -2.081474
     },
     {
       "name": "Mankinholes",
       "milesFromStart": 78.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.70812,
+      "lon": -2.061962
     },
     {
       "name": "Hebden Bridge (Heptonstall)",
       "milesFromStart": 83.5,
-      "note": "station",
-      "lat": null,
-      "lon": null
+      "note": "station; town 1.7 km off the trail",
+      "lat": 53.733874,
+      "lon": -2.0324
     },
     {
       "name": "Widdop",
       "milesFromStart": 87.5,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.789792,
+      "lon": -2.100135
     },
     {
       "name": "Hurstwood",
       "milesFromStart": 90.6,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.787409,
+      "lon": -2.156127
     },
     {
       "name": "Wycoller",
       "milesFromStart": 96.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 53.849562,
+      "lon": -2.104123
     },
     {
       "name": "Barnoldswick",
       "milesFromStart": 104.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 53.91095,
+      "lon": -2.179712
     },
     {
       "name": "Gisburn",
       "milesFromStart": 110.0,
       "note": "buses",
-      "lat": null,
-      "lon": null
+      "lat": 53.926757,
+      "lon": -2.257892
     },
     {
       "name": "Long Preston",
       "milesFromStart": 117.0,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.016949,
+      "lon": -2.255757
     },
     {
       "name": "Settle",
       "milesFromStart": 123.8,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.068781,
+      "lon": -2.275352
     },
     {
       "name": "Stainforth",
       "milesFromStart": 127.2,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.101686,
+      "lon": -2.274829
     },
     {
       "name": "Austwick",
       "milesFromStart": 131.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.114317,
+      "lon": -2.352033
     },
     {
       "name": "Clapham",
       "milesFromStart": 133.5,
       "note": "station",
-      "lat": null,
-      "lon": null
+      "lat": 54.120234,
+      "lon": -2.382415
     },
     {
       "name": "Selside",
       "milesFromStart": 139.0,
       "note": "taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.169209,
+      "lon": -2.325114
     },
     {
       "name": "Newby Head",
       "milesFromStart": 145.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.247326,
+      "lon": -2.316118
     },
     {
       "name": "Garsdale Head",
       "milesFromStart": 153.0,
       "note": "Garsdale station",
-      "lat": null,
-      "lon": null
+      "lat": 54.321561,
+      "lon": -2.328629
     },
     {
       "name": "Hell Gill",
       "milesFromStart": 159.0,
       "note": null,
-      "lat": null,
-      "lon": null
+      "lat": 54.366918,
+      "lon": -2.330294
     },
     {
       "name": "Pendragon Castle",
       "milesFromStart": 163.0,
-      "note": null,
-      "lat": null,
-      "lon": null
+      "note": "in the valley, 2 km below the trail",
+      "lat": 54.399185,
+      "lon": -2.335503
     },
     {
       "name": "The Street (Ravenstonedale)",
       "milesFromStart": 168.0,
       "note": "finish; taxi",
-      "lat": null,
-      "lon": null
+      "lat": 54.409075,
+      "lon": -2.405275
     }
   ],
   "defaultStages": [

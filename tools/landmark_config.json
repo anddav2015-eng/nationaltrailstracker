@@ -465,5 +465,100 @@
         "why": "the path junction for Longtown isn't named in OpenStreetMap"
       }
     }
+  },
+  "peddars-way-norfolk-coast-path": {
+    "mapLine": "osm",
+    "overrides": {
+      "Knettishall Heath": {
+        "point": [
+          52.390613,
+          0.854975
+        ],
+        "why": "start of the route line, Knettishall Heath"
+      },
+      "Great Massingham": {
+        "interpolate": true,
+        "why": "the village is 1.5 km west of the trail"
+      },
+      "Hopton-on-Sea": {
+        "point": [
+          52.536241,
+          1.737602
+        ],
+        "why": "end of the OSM route line at Hopton-on-Sea (the official GPX stops at Cromer)"
+      }
+    }
+  },
+  "pembrokeshire-coast-path": {
+    "mapLine": "osm",
+    "overrides": {
+      "St Dogmaels": {
+        "point": [
+          52.089727,
+          -4.68254
+        ],
+        "why": "start of the route line, St Dogmaels"
+      },
+      "Dinas Island": {
+        "query": "Dinas Head"
+      },
+      "Abereiddi": {
+        "query": "Abereiddy"
+      },
+      "St Ann's Head": {
+        "interpolate": true,
+        "why": "no usable geocode match for the headland"
+      },
+      "Amroth": {
+        "point": [
+          51.734263,
+          -4.647344
+        ],
+        "why": "end of the route line, Amroth"
+      }
+    }
+  },
+  "pennine-bridleway": {
+    "mapLine": "osm",
+    "overrides": {
+      "Middleton Top": {
+        "point": [
+          53.093015,
+          -1.590534
+        ],
+        "why": "start of the route line, Middleton Top"
+      },
+      "Hebden Bridge (Heptonstall)": {
+        "point": [
+          53.74064,
+          -2.00923
+        ],
+        "why": "the trail passes 1.7 km from Hebden Bridge; placed at the nearest point"
+      },
+      "Newby Head": {
+        "point": [
+          54.24733,
+          -2.31612
+        ],
+        "why": "where the trail crosses the B6255 at Newby Head (OSM)"
+      },
+      "Hell Gill": {
+        "query": "Hell Gill Bridge"
+      },
+      "Pendragon Castle": {
+        "point": [
+          54.41866,
+          -2.33779
+        ],
+        "why": "the castle is in Mallerstang, 2.2 km below the trail; placed at the nearest point"
+      },
+      "The Street (Ravenstonedale)": {
+        "point": [
+          54.409075,
+          -2.405275
+        ],
+        "why": "end of the route line, at The Street, Ravenstonedale"
+      }
+    }
   }
 }

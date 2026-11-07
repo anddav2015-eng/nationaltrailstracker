@@ -27,7 +27,7 @@ window.TRAILS["pennine-bridleway"] = {
     ["Hollingworth Lake", 66.5, "Smithy Bridge station"],
     ["Summit (Mary Towneley Loop)", 73.6, "Littleborough station ~1.5 mi"],
     ["Mankinholes", 78.5],
-    ["Hebden Bridge (Heptonstall)", 83.5, "station"],
+    ["Hebden Bridge (Heptonstall)", 83.5, "station; town 1.7 km off the trail"],
     ["Widdop", 87.5],
     ["Hurstwood", 90.6],
     ["Wycoller", 96, "taxi"],
@@ -42,7 +42,7 @@ window.TRAILS["pennine-bridleway"] = {
     ["Newby Head", 145],
     ["Garsdale Head", 153, "Garsdale station"],
     ["Hell Gill", 159],
-    ["Pendragon Castle", 163],
+    ["Pendragon Castle", 163, "in the valley, 2 km below the trail"],
     ["The Street (Ravenstonedale)", 168, "finish; taxi"],
   ],
   stages: [

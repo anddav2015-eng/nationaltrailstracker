@@ -103,7 +103,12 @@ class Line:
     """A route line in EPSG:27700, oriented in the trail's walking direction."""
 
     def __init__(self, coords_lonlat_ele):
-        self.xyz = [(*TO_BNG.transform(c[0], c[1]), c[2] if len(c) > 2 else 0.0) for c in coords_lonlat_ele]
+        # 3D only when every vertex has an elevation; otherwise 2D, so the legs file leaves
+        # elevation out rather than inventing it (Hadrian's Wall has none; the Norfolk coast
+        # beyond the official GPX has none).
+        has_ele = bool(coords_lonlat_ele) and all(len(c) > 2 and c[2] is not None for c in coords_lonlat_ele)
+        self.xyz = [(*TO_BNG.transform(c[0], c[1]), *([c[2]] if has_ele else []))
+                    for c in coords_lonlat_ele]
         self.line = LineString(self.xyz)
         self.length = self.line.length
 
@@ -140,7 +145,7 @@ def orient(line, landmarks, geocoded_first_last):
 
 
 def search_box(line):
-    lons, lats = zip(*(TO_WGS.transform(x, y) for x, y, _ in line.xyz[::20] + [line.xyz[-1]]))
+    lons, lats = zip(*(TO_WGS.transform(x, y) for x, y, *_ in line.xyz[::20] + [line.xyz[-1]]))
     m = SEARCH_BOX_MARGIN_DEG
     return f"{min(lons) - m:.4f},{max(lats) + m:.4f},{max(lons) + m:.4f},{min(lats) - m:.4f}"
 

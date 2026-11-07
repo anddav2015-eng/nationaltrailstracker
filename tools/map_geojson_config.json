@@ -79,5 +79,43 @@
     ],
     "officialMiles": 177.0,
     "osmRelation": 9649
+  },
+  "peddars-way-norfolk-coast-path": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Peddars_Way_and_Norfolk_Coast_Path_Elev.gpx",
+    "mainTracks": [
+      "Peddars Way",
+      {
+        "name": "Norfolk Coast Path",
+        "from": [
+          52.96608,
+          0.52444
+        ]
+      }
+    ],
+    "officialMiles": 158.0,
+    "osmRelation": [
+      77958,
+      77959
+    ],
+    "osmEnd": [
+      52.536241,
+      1.737602
+    ]
+  },
+  "pembrokeshire-coast-path": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/PCP-elev.gpx",
+    "mainTracks": [
+      "PCP"
+    ],
+    "officialMiles": 186.0,
+    "osmRelation": 77964
+  },
+  "pennine-bridleway": {
+    "gpxUrl": "https://nationaltrails.s3.eu-west-2.amazonaws.com/uploads/Pennine-Bridleway-revised-Sept23.gpx",
+    "mainTracks": [
+      "A - Pennine Bridleway Part 1",
+      "B - Pennine Bridleway Part 2"
+    ],
+    "osmRelation": 50288
   }
 }

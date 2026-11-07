@@ -48,7 +48,12 @@ For each trail it:
    OpenStreetMap, so it sits exactly on the paths drawn by the OSM-based base map.
    - The relation is fetched once from the OSM API into `trail-data/osm-source/` (delete the file to
      refresh it).
-   - Child relations (a trail split into sections) are included.
+   - Child relations (a trail split into sections) are included. `osmRelation` can also be a list
+     of relations to join (the Peddars Way and the Norfolk Coast Path are separate relations).
+   - `"osmEnd": [lat, lon]` makes the OSM line carry on past the end of the official GPX to that
+     point. The Norfolk Coast Path's GPX stops at Cromer, but the trail continues to Hopton-on-Sea.
+     That stretch has no official reference, so it has no elevation and shows in the report as one
+     long deviation.
    - The line follows the relation's ways from the node nearest the GPX start to the node nearest
      the GPX end, so it covers the same span as the official line. Ways more than 300 m from the
      official line cost 5 times their length, so where the relation holds alternative branches (e.g.
